@@ -1,77 +1,25 @@
-\subsection{Fundamentos cuánticos de la rotación molecular}
+\subsection{Espectroscopía Raman}
 
-El estudio de la rotación molecular se fundamenta en los principios de la mecánica cuántica aplicados al movimiento rotacional de un sistema diatómico. En este contexto, la molécula se considera un \textbf{rotor rígido lineal}, es decir, un sistema de dos masas puntuales unidas por un enlace de longitud fija $r_e$, que rota libremente en el espacio alrededor de su centro de masas \parencite[p.~95]{atkins2018molecular}.
+La espectroscopía Raman es una técnica espectroscópica vibracional basada en la interacción de la radiación electromagnética con la materia, específicamente en los procesos de dispersión que ocurren cuando un haz de luz monocromática incide sobre una muestra. Como resultado de esta interacción, la radiación puede ser dispersada de forma elástica o inelástica, dando lugar a distintos fenómenos espectroscópicos que constituyen el fundamento de la técnica Raman.
 
-\subsubsection*{Postulados básicos}
+\subsubsection{Dispersión elástica e inelástica}
 
-El movimiento rotacional está gobernado por el operador de momento angular $\hat{L}$, cuyo cuadrado total $\hat{L}^2$ y componente proyectada sobre el eje $z$ ($\hat{L}_z$) cumplen las relaciones de conmutación:
-\begin{equation}
-[\hat{L}_x, \hat{L}_y] = i\hbar \hat{L}_z, \qquad
-[\hat{L}^2, \hat{L}_z] = 0.
-\end{equation}
-De estas propiedades se deduce que existen funciones propias comunes de $\hat{L}^2$ y $\hat{L}_z$, las cuales se designan mediante los números cuánticos $J$ y $M$, respectivamente. Estos valores satisfacen:
-\begin{equation}
-\hat{L}^2 Y_{J,M}(\theta, \phi) = \hbar^2 J(J+1) Y_{J,M}(\theta, \phi),
-\end{equation}
-\begin{equation}
-\hat{L}_z Y_{J,M}(\theta, \phi) = \hbar M Y_{J,M}(\theta, \phi),
-\end{equation}
-donde $Y_{J,M}(\theta, \phi)$ son las \textbf{funciones esféricas armónicas}, base natural para describir estados angulares \parencite[p.~77]{atkins2018molecular}.
+Cuando la radiación incidente interactúa con las moléculas de una muestra, la mayor parte de la luz es dispersada de manera elástica, proceso conocido como dispersión de Rayleigh. En este caso, la energía del fotón dispersado es igual a la energía del fotón incidente, por lo que no se produce un cambio en la frecuencia de la radiación. Este tipo de dispersión no aporta información directa sobre la estructura molecular del sistema.
 
-\subsubsection*{Hamiltoniano rotacional}
+En contraste, una pequeña fracción de la radiación incidente experimenta dispersión inelástica, fenómeno conocido como dispersión Raman. Durante este proceso, se produce un intercambio de energía entre el fotón incidente y los modos vibracionales de la molécula, lo que da lugar a un cambio en la frecuencia de la radiación dispersada. Dependiendo del sentido del intercambio energético, se distinguen dos contribuciones: las líneas Stokes, asociadas a la transferencia de energía del fotón a la molécula, y las líneas anti-Stokes, correspondientes a la transferencia de energía desde la molécula al fotón.
 
-El Hamiltoniano que describe la energía cinética rotacional de una molécula diatómica rígida está dado por:
-\begin{equation}
-\hat{H}_{\text{rot}} = \frac{\hat{L}^2}{2I},
-\end{equation}
-donde $I = \mu r_e^2$ es el momento de inercia respecto al centro de masas, y $\mu = \frac{m_1 m_2}{m_1 + m_2}$ representa la masa reducida del sistema \parencite[p.~112]{bernath2016spectra}.  
-Este operador actúa únicamente sobre las coordenadas angulares $(\theta, \phi)$, pues la distancia internuclear $r_e$ se asume constante bajo la aproximación de rigidez.
+\subsubsection{Desplazamiento Raman}
 
-\subsubsection*{Ecuación de Schrödinger rotacional}
+La diferencia entre la frecuencia de la radiación incidente y la de la radiación dispersada se denomina desplazamiento Raman y constituye una de las magnitudes fundamentales en el análisis espectroscópico. Este desplazamiento se expresa habitualmente en unidades de número de onda y se define como
+\[
+\Delta \tilde{\nu} = \tilde{\nu}_0 - \tilde{\nu}_s,
+\]
+donde $\tilde{\nu}_0$ representa el número de onda de la radiación incidente y $\tilde{\nu}_s$ el número de onda de la radiación dispersada. Una característica importante del desplazamiento Raman es que su valor es independiente de la longitud de onda del láser utilizado, ya que depende exclusivamente de las propiedades vibracionales de la molécula analizada.
 
-Al sustituir el Hamiltoniano en la ecuación de Schrödinger estacionaria, se obtiene:
-\begin{equation}
-\hat{H}_{\text{rot}} \psi(\theta, \phi) = E \psi(\theta, \phi),
-\qquad
-\Rightarrow \qquad
-\frac{\hat{L}^2}{2I} \psi(\theta, \phi) = E \psi(\theta, \phi).
-\end{equation}
-El operador $\hat{L}^2$ en coordenadas esféricas se expresa como:
-\begin{equation}
-\hat{L}^2 = -\hbar^2
-\left[
-\frac{1}{\sin \theta} \frac{\partial}{\partial \theta}
-\left(\sin \theta \frac{\partial}{\partial \theta}\right)
-+ \frac{1}{\sin^2 \theta} \frac{\partial^2}{\partial \phi^2}
-\right].
-\end{equation}
-La ecuación diferencial resultante es idéntica a la ecuación angular del átomo de hidrógeno y sus soluciones normalizadas son las funciones esféricas armónicas $Y_{J,M}(\theta, \phi)$, con $J = 0, 1, 2, \ldots$ y $M = -J, -J+1, \ldots, J$.
+El desplazamiento Raman permite identificar las energías asociadas a los modos vibracionales moleculares, por lo que actúa como una huella espectral característica de cada sustancia. Esta propiedad resulta especialmente relevante en la identificación de biomoléculas complejas, como el ADN.
 
-\subsubsection*{Niveles de energía rotacional}
+\subsubsection{Relación con las vibraciones moleculares}
 
-Al aplicar el operador $\hat{L}^2$ sobre su función propia, se obtiene la energía asociada a cada nivel rotacional:
-\begin{equation}
-E_J = \frac{\hbar^2}{2I} J(J+1),
-\end{equation}
-que usualmente se expresa en unidades de energía por mol, o en términos de número de onda (cm$^{-1}$).  
-Definiendo la constante rotacional $B$ como:
-\begin{equation}
-B = \frac{h}{8\pi^2 I c},
-\end{equation}
-la energía rotacional se escribe:
-\begin{equation}
-E_J = B J(J+1),
-\end{equation}
-donde $h$ es la constante de Planck y $c$ la velocidad de la luz.  
-Esta forma demuestra que los niveles de energía están espaciados de manera no uniforme, con incrementos crecientes en función de $J$ \parencite[p.~90]{banwell1994fundamentals}.
+Desde un punto de vista físico, la dispersión Raman está directamente relacionada con las vibraciones moleculares y con la variación de la polarizabilidad inducida por el campo electromagnético incidente. Para que un modo vibracional sea Raman activo, es necesario que durante la vibración se produzca un cambio en la polarizabilidad de la molécula. Este criterio de selección explica por qué no todos los modos vibracionales observables en espectroscopía infrarroja son necesariamente visibles en espectroscopía Raman.
 
-\subsubsection*{Degeneración de los niveles}
-
-Cada nivel caracterizado por el número cuántico $J$ posee una degeneración $g_J = 2J + 1$, correspondiente a los posibles valores del número cuántico magnético $M$.  
-Las funciones de onda $Y_{J,M}(\theta, \phi)$ describen la orientación angular de la molécula en el espacio, y su ortogonalidad garantiza la independencia de los distintos estados rotacionales.  
-
-En el contexto espectroscópico, las transiciones entre estos niveles obedecen la regla de selección:
-\begin{equation}
-\Delta J = \pm 1,
-\end{equation}
-válida únicamente para moléculas con momento dipolar eléctrico permanente, condición esencial para la observación de espectros de microondas.
+Las vibraciones moleculares observadas en un espectro Raman corresponden a movimientos colectivos de los átomos dentro de la molécula, tales como estiramientos y flexiones de enlaces químicos. En el caso del ADN, estas vibraciones están asociadas a los enlaces del esqueleto fosfodiéster, a las bases nitrogenadas y a las interacciones intermoleculares, lo que permite obtener información estructural detallada. En consecuencia, la espectroscopía Raman se convierte en una herramienta adecuada para el análisis vibracional de biomoléculas y sienta las bases teóricas para su aplicación en técnicas de mayor sensibilidad, como la espectroscopía Raman mejorada en superficie (SERS).

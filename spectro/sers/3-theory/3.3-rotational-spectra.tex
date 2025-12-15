@@ -1,49 +1,35 @@
-\subsection{Espectro rotacional y constante rotacional}
+\subsection{Nanopartículas de plata}
 
-Una vez establecidas las reglas de selección y los niveles de energía del rotor rígido, es posible deducir las expresiones que describen el \textbf{espectro rotacional} observable en la región de microondas. Las transiciones entre niveles consecutivos de energía rotacional ($J \rightarrow J+1$) están determinadas por la ecuación:
+Las nanopartículas de plata desempeñan un papel central en la espectroscopía Raman mejorada en superficie debido a sus propiedades ópticas singulares, las cuales están estrechamente relacionadas con la respuesta colectiva de los electrones de conducción del metal. Estas propiedades hacen de la plata uno de los materiales más eficientes para la amplificación de señales Raman, especialmente en el rango espectral visible.
 
+\subsubsection{Propiedades ópticas}
+
+Las propiedades ópticas de las nanopartículas de plata están determinadas principalmente por su función dieléctrica compleja, la cual puede expresarse como
 \[
-\Delta E = E_{J+1} - E_J = B[(J+1)(J+2) - J(J+1)] = 2B(J+1),
+\varepsilon(\omega) = \varepsilon_1(\omega) + i\,\varepsilon_2(\omega),
 \]
-donde $B$ es la \textbf{constante rotacional}, relacionada directamente con el momento de inercia $I$ de la molécula a través de:
-\[
-B = \frac{h}{8\pi^2 I c}.
-\]
+donde $\varepsilon_1(\omega)$ representa la parte real asociada a la dispersión y $\varepsilon_2(\omega)$ la parte imaginaria relacionada con las pérdidas ópticas del material. En el caso de la plata, la parte real de la función dieléctrica toma valores negativos en un amplio rango de frecuencias del visible, mientras que las pérdidas ópticas se mantienen relativamente bajas, condición favorable para la excitación de plasmones superficiales bien definidos.
 
-Dado que cada transición cumple la condición de selección $\Delta J = +1$, el espectro rotacional de una molécula diatómica rígida consiste en una serie de líneas igualmente espaciadas, cuya \textbf{frecuencia} está dada por:
-\[
-\nu = \frac{\Delta E}{h} = 2B(J+1),
-\]
-con $J = 0, 1, 2, \ldots$.
-Cada línea corresponde a una transición entre dos niveles consecutivos de energía rotacional. El espaciamiento constante entre las líneas permite determinar experimentalmente el valor de la constante rotacional $B$ mediante la diferencia entre frecuencias adyacentes:
-\[
-2B = \nu_{J+1 \rightarrow J+2} - \nu_{J \rightarrow J+1}.
-\]
+A escala nanométrica, el confinamiento espacial de los electrones libres modifica la respuesta óptica del material, dando lugar a resonancias ópticas intensas que no se observan en el metal a granel. Estas resonancias son altamente sensibles al tamaño, forma y entorno dieléctrico de las nanopartículas, lo que permite ajustar sus propiedades ópticas mediante un control adecuado de su síntesis.
 
-\subsubsection*{Determinación del momento de inercia y del enlace molecular}
+\subsubsection{Resonancia de plasmones superficiales}
 
-A partir del valor experimental de $B$, se puede calcular el \textbf{momento de inercia} $I$ utilizando la relación:
+La resonancia de plasmones superficiales localizados en nanopartículas de plata se origina a partir de la oscilación colectiva de los electrones de conducción inducida por un campo electromagnético externo. En el régimen cuasiestático, aplicable cuando el tamaño de la nanopartícula es mucho menor que la longitud de onda de la radiación incidente, la condición de resonancia para una nanopartícula aproximadamente esférica puede expresarse como
 \[
-I = \frac{h}{8\pi^2 B c}.
+\mathrm{Re}\left[\varepsilon_m(\omega)\right] = -2\varepsilon_d,
 \]
-Para una molécula diatómica, el momento de inercia depende de la \textbf{masa reducida} $\mu$ y de la distancia internuclear $r$ según:
+donde $\varepsilon_m(\omega)$ es la función dieléctrica de la plata y $\varepsilon_d$ corresponde a la constante dieléctrica del medio circundante. Bajo esta condición, el campo electromagnético local en las inmediaciones de la nanopartícula se intensifica de manera significativa, dando lugar a una fuerte amplificación de la señal Raman de las moléculas cercanas.
+
+La resonancia plasmónica localizada es responsable de la aparición de regiones de campo intensificado, conocidas como \textit{hot spots}, particularmente en sistemas donde las nanopartículas se encuentran próximas entre sí o presentan geometrías con alta curvatura. Estas regiones son fundamentales para alcanzar los elevados factores de realce característicos de la técnica SERS.
+
+\subsubsection{Eficiencia de la plata en SERS}
+
+La plata es especialmente eficiente en espectroscopía Raman mejorada en superficie debido a la combinación de varios factores físicos. En primer lugar, presenta una alta densidad de electrones libres y pérdidas ópticas menores en comparación con otros metales, lo que permite una resonancia plasmónica más intensa y estrecha. En segundo lugar, su respuesta plasmónica se sitúa de forma natural en el rango visible, coincidiendo con las longitudes de onda comúnmente empleadas en espectroscopía Raman.
+
+Además, la plata facilita la generación de grandes factores de realce electromagnético, dado que la intensidad de la señal SERS depende aproximadamente de la cuarta potencia del campo eléctrico local,
 \[
-I = \mu r^2,
+I_{\text{SERS}} \propto |E_{\text{loc}}|^4.
 \]
-donde
-\[
-\mu = \frac{m_1 m_2}{m_1 + m_2},
-\]
-siendo $m_1$ y $m_2$ las masas de los átomos constituyentes.
+Este comportamiento hace que incluso pequeñas variaciones en la geometría o en la separación entre nanopartículas produzcan incrementos sustanciales en la señal Raman.
 
-Por tanto, midiendo las frecuencias de las líneas rotacionales, se puede determinar con alta precisión la longitud de enlace $r$:
-\[
-r = \sqrt{\frac{I}{\mu}} = \sqrt{\frac{h}{8\pi^2 \mu B c}}.
-\]
-Este procedimiento constituye una de las aplicaciones más importantes de la espectroscopía de microondas, ya que permite obtener \textbf{parámetros estructurales moleculares} con una precisión del orden de $10^{-4}$~\AA{} \cite[p.~214]{bernath2016spectra}.
-
-\subsubsection*{Interpretación física del espectro}
-
-Cada línea observada en el espectro rotacional corresponde a una transición entre niveles cuánticos de energía rotacional del rotor. El hecho de que las líneas estén igualmente espaciadas es consecuencia directa del carácter cuadrático de la dependencia $E_J = B J(J+1)$. En moléculas no rígidas (consideradas en secciones posteriores), este espaciado se desvía ligeramente debido a la corrección centrífuga, lo cual permite estudiar efectos de \textbf{vibración-rotación acoplada}.
-
-Finalmente, es importante resaltar que sólo las moléculas que poseen un \textbf{momento dipolar permanente} pueden presentar espectros rotacionales activos en microondas, ya que la interacción con la radiación electromagnética depende del acoplamiento entre el campo eléctrico y el dipolo molecular. Por ejemplo, moléculas como HCl o CO son activas, mientras que N$_2$ y O$_2$ no presentan espectros rotacionales debido a su simetría homonuclear \cite[p.~89]{hollas2004modern}.
+Finalmente, en aplicaciones de detección de ADN, las nanopartículas de plata permiten un control relativamente sencillo de su crecimiento y agregación, especialmente cuando dicho crecimiento es mediado por biomoléculas. Esta característica favorece la formación reproducible de \textit{hot spots} y contribuye a la alta sensibilidad observada en métodos SERS sin marcadores, consolidando a la plata como un material clave en el desarrollo de biosensores basados en SERS.

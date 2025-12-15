@@ -1,68 +1,41 @@
-\subsection{Reglas de selección}
+\subsection{Espectroscopía Raman Mejorada en Superficie (SERS)}
 
-Las transiciones rotacionales observables en espectroscopía de microondas ocurren cuando una molécula interacciona con la radiación electromagnética de una frecuencia que coincide con la diferencia de energía entre dos niveles rotacionales. Sin embargo, no todas las transiciones entre niveles cuánticos están permitidas. La probabilidad de transición está determinada por la \textbf{regla de selección}, que depende de la simetría del sistema y de la naturaleza del operador de interacción con el campo electromagnético.
+La espectroscopía Raman mejorada en superficie (Surface-Enhanced Raman Spectroscopy, SERS) es una técnica que permite amplificar de manera significativa la señal Raman de moléculas adsorbidas o próximas a superficies metálicas nanostructuradas. El fundamento físico de este fenómeno radica principalmente en el efecto plasmónico y en el consecuente incremento del campo electromagnético local, lo que conduce a factores de realce muy elevados y hace posible la detección de moléculas en concentraciones extremadamente bajas.
 
-\subsubsection*{Consideraciones de momento dipolar}
+\subsubsection{Efecto plasmónico}
 
-El acoplamiento entre la molécula y el campo de radiación proviene del término de interacción dipolar:
-\begin{equation}
-\hat{H}' = - \vec{\mu} \cdot \vec{E},
-\end{equation}
-donde $\vec{\mu}$ es el operador momento dipolar eléctrico de la molécula y $\vec{E}$ el campo eléctrico de la onda electromagnética incidente.  
-La probabilidad de transición entre un estado inicial $\psi_i$ y uno final $\psi_f$ está dada, según la teoría de perturbaciones de primer orden, por:
-\begin{equation}
-P_{i \rightarrow f} \propto \left| \langle \psi_f | \vec{\mu} \cdot \vec{E} | \psi_i \rangle \right|^2.
-\end{equation}
+El efecto plasmónico se origina cuando la radiación electromagnética incidente interactúa con los electrones libres presentes en un metal. En nanopartículas metálicas de tamaño menor que la longitud de onda de la luz incidente, esta interacción da lugar a la resonancia de plasmones superficiales localizados (LSPR, por sus siglas en inglés), fenómeno que consiste en la oscilación colectiva coherente de los electrones de conducción del metal.
 
-Para que la transición sea permitida, la integral de momento de transición debe ser diferente de cero:
-\begin{equation}
-\langle \psi_f | \vec{\mu} | \psi_i \rangle \neq 0.
-\end{equation}
-Esta condición impone que el operador de momento dipolar debe conectar funciones de onda cuyas simetrías difieran de manera compatible con los componentes espaciales de $\vec{\mu}$.  
-En el caso de una molécula diatómica lineal, las componentes relevantes son $\mu_x$, $\mu_y$ y $\mu_z$, que se comportan como los armónicos esféricos $Y_{1,1}$, $Y_{1,-1}$ y $Y_{1,0}$, respectivamente \parencite[p.~120]{bernath2016spectra}.
-
-\subsubsection*{Derivación de la regla de selección}
-
-El operador $\vec{\mu}$ actúa como un tensor de rango uno. Por lo tanto, de las propiedades de los armónicos esféricos y de los coeficientes de Clebsch–Gordan, se deduce que solo son posibles las transiciones entre niveles rotacionales con números cuánticos $J$ que difieran en una unidad:
-\begin{equation}
-\Delta J = \pm 1.
-\end{equation}
-
-Esto se obtiene al evaluar el elemento de matriz angular:
-\begin{equation}
-\langle J', M' | \mu_q | J, M \rangle \propto 
-\begin{pmatrix}
-J & 1 & J' \\
--M & q & M'
-\end{pmatrix},
-\end{equation}
-donde el símbolo de 3-$j$ de Wigner sólo es distinto de cero si se cumple la condición triangular:
-\begin{equation}
-|J' - J| \le 1 \le J' + J.
-\end{equation}
-De esta relación se desprende directamente que:
+La condición de resonancia plasmónica puede describirse, en el marco de la aproximación cuasiestática, mediante la función dieléctrica del metal $\varepsilon_m(\omega)$ y la del medio circundante $\varepsilon_d$. Para una nanopartícula esférica, la resonancia ocurre aproximadamente cuando
 \[
-\Delta J = J' - J = \pm 1.
+\mathrm{Re}\left[\varepsilon_m(\omega)\right] = -2\varepsilon_d.
 \]
-El caso $\Delta J = 0$ no contribuye al espectro rotacional porque no produce cambio en el momento dipolar efectivo y, por tanto, no emite ni absorbe radiación electromagnética en el rango de microondas \parencite[p.~91]{banwell1994fundamentals}.
+Bajo esta condición, el campo electromagnético cerca de la superficie de la nanopartícula se intensifica notablemente, lo que resulta esencial para el fenómeno SERS.
 
-\subsubsection*{Moléculas polares y actividad rotacional}
+\subsubsection{Incremento del campo electromagnético}
 
-La existencia de un \textbf{momento dipolar permanente} es condición indispensable para que una molécula sea activa en el dominio de microondas.  
-Cuando una molécula polar rota, la orientación de su momento dipolar cambia con el tiempo, generando una componente oscilante del campo eléctrico que puede acoplarse con la radiación incidente. En contraste, las moléculas no polares (como $\text{N}_2$, $\text{O}_2$ o $\text{CO}_2$) poseen simetría que cancela el momento dipolar neto, por lo que $\vec{\mu} = 0$ y el término de interacción $\vec{\mu} \cdot \vec{E}$ desaparece.  
-Consecuentemente, estas moléculas no presentan líneas en el espectro rotacional de microondas, aunque sí pueden ser activas en la región del infrarrojo debido a transiciones vibracionales que inducen dipolos temporales \parencite[p.~93]{hollas2004modern}.
+El incremento del campo electromagnético local es el principal responsable del realce de la señal Raman en SERS. La intensidad de la señal Raman dispersada es proporcional al cuadrado del momento dipolar inducido, el cual depende linealmente del campo eléctrico local. En consecuencia, la intensidad Raman $I_R$ puede expresarse de forma aproximada como
+\[
+I_R \propto |E_{\text{loc}}|^2 |E_{\text{sc}}|^2,
+\]
+donde $E_{\text{loc}}$ es el campo electromagnético local en la posición de la molécula y $E_{\text{sc}}$ es el campo asociado a la radiación dispersada. Considerando que ambos campos son amplificados por el efecto plasmónico, se obtiene la conocida relación
+\[
+I_R^{\text{SERS}} \propto |E_{\text{loc}}|^4.
+\]
+Esta dependencia de cuarta potencia explica por qué pequeñas variaciones en el campo electromagnético local pueden producir incrementos muy grandes en la señal Raman observada.
 
-\subsubsection*{Resumen de la selección rotacional}
+\subsubsection{Factores de realce}
 
-En resumen, las condiciones para que una transición rotacional sea observable son:
-\begin{itemize}
-    \item La molécula debe poseer un momento dipolar eléctrico permanente ($\mu \neq 0$).
-    \item La transición debe cumplir la regla de selección $\Delta J = \pm 1$.
-    \item La frecuencia de la radiación absorbida o emitida está dada por:
-    \[
-    \nu = 2B(J + 1),
-    \]
-    donde $B$ es la constante rotacional definida en la Ecuación~(9).
-\end{itemize}
+El factor de realce en SERS, denotado usualmente como $G$, cuantifica el aumento de la intensidad Raman respecto a la espectroscopía Raman convencional y se define como
+\[
+G = \frac{I_{\text{SERS}}}{I_{\text{Raman}}}.
+\]
+Los valores típicos del factor de realce pueden variar desde $10^4$ hasta $10^8$, y en condiciones óptimas, especialmente en regiones denominadas \textit{hot spots}, pueden alcanzar valores del orden de $10^{10}$ o superiores. Estas regiones corresponden a zonas donde el campo electromagnético está fuertemente confinado, como los espacios entre nanopartículas metálicas cercanas o en regiones de alta curvatura de la superficie.
 
-Estas reglas explican la estructura característica del espectro de microondas, constituido por una serie de líneas igualmente espaciadas en frecuencia, cuya separación es proporcional a la constante rotacional y, por tanto, inversamente proporcional al momento de inercia molecular.
+Además del mecanismo electromagnético, el factor de realce total puede incluir una contribución adicional asociada al realce químico, el cual está relacionado con la interacción electrónica entre la molécula y la superficie metálica. No obstante, el mecanismo electromagnético es el dominante y responsable de la mayor parte del realce observado en SERS.
+
+\subsubsection{Importancia de los metales nobles (Ag, Au)}
+
+La elección del material metálico es un aspecto crucial en la técnica SERS. Los metales nobles, en particular la plata (Ag) y el oro (Au), son los más utilizados debido a sus propiedades ópticas favorables en el rango visible y cercano al infrarrojo. Estos metales presentan una alta densidad de electrones libres y una función dieléctrica adecuada para soportar resonancias plasmónicas bien definidas con bajas pérdidas.
+
+La plata destaca por proporcionar los mayores factores de realce electromagnético, ya que presenta menores pérdidas ópticas en el rango visible, lo que conduce a campos locales más intensos. Por su parte, el oro ofrece una mayor estabilidad química y biocompatibilidad, lo que resulta ventajoso en aplicaciones biomédicas. En el contexto de la detección de ADN, el uso de nanopartículas de plata mediadas por ADN combina un alto factor de realce con la posibilidad de controla
