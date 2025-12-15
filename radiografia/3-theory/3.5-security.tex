@@ -1,0 +1,51 @@
+\subsection{Seguridad y dosis: Relación entre calidad de imagen y dosis efectiva}
+
+La calidad de imagen en tomografía computarizada (TC) está íntimamente relacionada con la dosis de radiación que recibe el paciente. Este equilibrio constituye uno de los principales desafíos en la optimización de los estudios radiológicos: obtener imágenes con la nitidez y el contraste necesarios para un diagnóstico preciso, pero con la menor dosis posible, siguiendo el principio \textbf{ALARA} (\textit{As Low As Reasonably Achievable}).
+
+\subsubsection{Relación física entre dosis y calidad de imagen}
+
+Desde el punto de vista físico, la calidad de imagen depende del número de fotones detectados por el sistema, el cual está directamente relacionado con la dosis impartida. Una mayor dosis incrementa la cantidad de fotones, reduciendo el \textit{ruido cuántico} y mejorando la relación señal-ruido (SNR), lo que se traduce en una mejor resolución y contraste. Sin embargo, un aumento excesivo de la dosis incrementa el riesgo de efectos biológicos adversos.
+
+El \textbf{ruido} en la imagen (\( \sigma \)) es inversamente proporcional a la raíz cuadrada del número de fotones (\( N \)) detectados:
+\[
+\sigma \propto \frac{1}{\sqrt{N}}
+\]
+Por tanto, duplicar la calidad en términos de reducción del ruido requeriría cuadruplicar la dosis, lo cual no resulta justificable clínicamente.
+
+\subsubsection{Dosis efectiva y órganos críticos}
+
+La \textbf{dosis efectiva} (\( E \)) es una medida ponderada que tiene en cuenta la sensibilidad de los distintos órganos a la radiación ionizante. Se expresa en sieverts (Sv) y se calcula mediante:
+\[
+E = \sum_{T} w_T \cdot H_T
+\]
+donde \( H_T \) es la dosis equivalente en el tejido \( T \), y \( w_T \) es el factor de ponderación tisular definido por la Comisión Internacional de Protección Radiológica (ICRP).
+
+Los órganos más sensibles durante un estudio de TC incluyen el cristalino, las glándulas tiroides y las gónadas, por lo que es esencial minimizar la exposición innecesaria mediante protocolos ajustados.
+
+\subsubsection{Optimización del protocolo}
+
+La optimización del protocolo de tomografía implica ajustar parámetros técnicos como:
+\begin{itemize}
+    \item \textbf{mAs (miliamperio-segundo):} controlan la cantidad de radiación emitida; valores altos reducen el ruido, pero aumentan la dosis.
+    \item \textbf{kVp (kilovoltaje pico):} determina la energía de los fotones; influye en el contraste y la penetración.
+    \item \textbf{Pitch:} relación entre el desplazamiento de la mesa por rotación del tubo y el ancho del haz; un pitch mayor reduce la dosis pero puede disminuir la resolución.
+    \item \textbf{Collimación y grosor de corte:} afectan la resolución espacial y el ruido.
+\end{itemize}
+
+El equilibrio entre estos parámetros permite mantener la dosis dentro de niveles aceptables sin comprometer la utilidad diagnóstica de la imagen.
+
+\subsubsection{Normas de seguridad radiológica}
+
+De acuerdo con la \textbf{OIEA (Organismo Internacional de Energía Atómica)} y la \textbf{ICRP}, todo servicio de radiología debe aplicar programas de aseguramiento de la calidad y protocolos de protección radiológica. Estos incluyen:
+\begin{itemize}
+    \item Uso de blindajes adecuados (batas plomadas, cortinas y barreras estructurales).
+    \item Capacitación continua del personal técnico y médico.
+    \item Registro y auditoría periódica de dosis promedio por tipo de estudio.
+    \item Empleo de software de control de dosis (DLP y CTDIvol) para la supervisión de exposiciones.
+\end{itemize}
+
+Asimismo, los hospitales deben adoptar herramientas de \textbf{optimización basada en diagnóstico}, donde cada estudio se justifica clínicamente, y la dosis se ajusta a las características del paciente (edad, sexo, peso y región anatómica).
+
+\subsubsection{Conclusión de la sección}
+
+En síntesis, la relación entre calidad de imagen y dosis efectiva es un compromiso físico-clínico que debe evaluarse en cada procedimiento. La aplicación del principio ALARA, junto con las recomendaciones de organismos internacionales como la OIEA y la ACR, garantiza una práctica radiológica segura, eficiente y ética, preservando la salud del paciente sin sacrificar la precisión diagnóstica.

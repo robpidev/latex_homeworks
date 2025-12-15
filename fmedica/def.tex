@@ -1,0 +1,141 @@
+\section{Dosis Absorbida}
+
+\subsection{Unidad en el SI\@: Gray (Gy)}
+\textbf{Definición} La dosis absorbida \(D\) se define como la energía \(E\) depositada por la radiación en una masa \(m\):
+  \[
+  D = \frac{E}{m}
+  \]
+  donde \(D\) es la dosis absorbida en grays (Gy), \(E\) es la energía en julios (J), y \(m\) es la masa en kilogramos (kg).  
+\\[1em]
+\noindent\textbf{Deducción}
+  Si \(E = 1 \text{ J}\) y \(m = 1 \text{ kg}\),
+  \[
+  D = \frac{1 \text{ J}}{1 \text{ kg}} = 1 \text{ Gy}
+  \]
+
+\subsection{Unidad en el sistema estadounidense: Rad}
+\textbf{Conversión}
+  \[
+  1 \text{ Gy} = 100 \text{ rad}
+  \]
+  Esto se deriva de la definición de rad, donde 1 rad = 0.01 Gy.
+
+\section{Dosis Equivalente}
+
+\subsection{Unidad en el SI\@: Sievert (Sv)}
+\textbf{Definición} La dosis equivalente \(H\) se define como la dosis absorbida \(D\) multiplicada por un factor de calidad \(Q\) que depende del tipo de radiación:
+  \[
+  H = D \times Q
+  \]
+  donde \(H\) es la dosis equivalente en sieverts (Sv), \(D\) es la dosis absorbida en grays (Gy), y \(Q\) es un factor adimensional específico para el tipo de radiación.
+\\[1em]
+\textbf{Deducción}
+  Si \(D = 1 \text{ Gy}\) y \(Q = 1\) (para radiación gamma o X),
+  \[
+  H = 1 \text{ Gy} \times 1 = 1 \text{ Sv}
+  \]
+
+El factor de calidad $Q$ no tiene límite de medida fijo;
+en cambio, tiene valores establecidos que dependen del tipo y la
+energía de radiación. Estos son algunos valores
+\begin{itemize}
+    \item Radiación gamma y rayos X: $Q=1$
+    \item Electrones y positrones: $Q=1$
+    \item Neutrones:
+    \begin{itemize}
+        \item $E < 10 keV: Q = 5$
+        \item $10keV < E < 100 keV: Q = 10$
+        \item $100keV < E < 2 MeV: Q = 20$
+        \item $2MeV < E < 20 MeV: Q = 10$
+    \end{itemize}
+    \item Protones: $Q = 2$
+    \item Partículas alfa y fragmentos de fisión: $Q = 20$
+\end{itemize}
+\subsection{Unidad en el sistema estadounidense: Rem}
+\textbf{Conversión}
+  \[
+  1 \text{ Sv} = 100 \text{ rem}
+  \]
+  Esto se deriva de la definición de De dosis absorbida.
+
+\section{Exposición}
+
+\subsection{Unidad en el SI\@: Coulomb por kilogramo (C/kg)}
+\textbf{Definición} La exposición \(X\) se define como la carga eléctrica total de iones de un signo producida en el aire por la radiación por unidad de masa:
+  \[
+  X = \frac{Q}{m}
+  \]
+  donde \(X\) es la exposición en coulombs por kilogramo (C/kg), \(Q\) es la carga en coulombs (C), y \(m\) es la masa de aire en kilogramos (kg).
+\\[1em]
+\textbf{Deducción}
+  Si \(Q = 1 \text{ C}\) y \(m = 1 \text{ kg}\),
+  \[
+  X = \frac{1 \text{ C}}{1 \text{ kg}} = 1 \text{ C/kg}
+  \]
+
+\subsection{Unidad en el sistema estadounidense: Becquerel (Bq)}
+\textbf{Conversión}
+  \[
+  1 \text{ R} \approx 2.58 \times 10^{-4} \text{ C/kg}
+  \]
+
+\section{Actividad Radiactiva}
+
+\subsection{Unidad en el SI: Becquerel (Bq)}
+\textbf{Definición} La actividad \(A\) se define como el número de desintegraciones por segundo:
+  \[
+  A = \frac{dN}{dt}
+  \]
+  donde \(A\) es la actividad en becquerels (Bq), \(dN\) es el número de desintegraciones, y \(dt\) es el tiempo en segundos (s).
+\\[1em]
+\textbf{Deducción}
+  Si \(dN = 1\) y \(dt = 1 \text{ s}\),
+  \[
+  A = \frac{1}{1 \text{ s}} = 1 \text{ Bq}
+  \]
+
+\subsection{Unidad en el sistema estadounidense: Becquerel (Bq)}
+\textbf{Conversión}
+  \[
+  1 \text{ Ci} = 3.7 \times 10^{10} \text{ Bq}
+  \]
+  Esto se basa en la definición de curie, que corresponde a la actividad de un gramo de radio-226.
+
+\section{Ejemplos de Uso en Máquinas y Aplicaciones}
+
+\begin{enumerate}
+    \item \textbf{Aceleradores Lineales}
+    \begin{itemize}
+        \item Usan: Grays (Gy)
+        \item Aplicación: Radioterapia para tratamiento del cáncer.
+        \item Máquina: Acelerador lineal entrega dosis precisas de radiación a tejidos malignos.
+    \end{itemize}
+
+    \item \textbf{Dosímetros Personales}
+    \begin{itemize}
+        \item Usan: Sieverts (Sv) y rems
+        \item Aplicación: Monitorear la dosis de radiación recibida por el personal.
+        \item Máquina: Dosímetro mide la dosis equivalente recibida durante un año de tiempo.
+    \end{itemize}
+
+    \item \textbf{Cámaras de Ionización}
+    \begin{itemize}
+        \item Usan: Coulomb por kilogramo (C/kg) o roentgen (R)
+        \item Aplicación: Medición de la exposición en ambientes radiológicos.
+        \item Máquina: Câmara de ionización mide la ionización producida por radiación en el aire.
+    \end{itemize}
+
+    \item \textbf{Contadores Geiger}
+    \begin{itemize}
+        \item Usan: Becquerel (Bq) y curie (Ci)
+        \item Aplicación: Conteo de la actividad radiactiva producida por radiación en el aire.
+        \item Máquina: Contador Geiger mide la actividad radiactiva producida por radiación en el aire.
+    \end{itemize}
+\end{enumerate}
+
+\section{Referencias}
+\indent International Atomic Energy Agency (IAEA). (2007). Dosimetry in Diagnostic Radiology: An International Code of Practice (IAEA Technical Reports Series No. 457). Vienna: IAEA.
+
+International Atomic Energy Agency (IAEA). (2000). Neutron Physics and Reactor Theory (IAEA Training Course Series No. 4). Vienna: IAEA.
+
+European Commission. (1999). European Guidelines on Quality Criteria for Computed Tomography. Luxembourg: Office for Official Publications of the European Communities.

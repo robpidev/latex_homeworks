@@ -1,0 +1,142 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[right=3cm, left=2.5cm, top=3cm, bottom=3.5cm]{geometry}
+%\usepackage[style=apa]{biblatex}
+%\addbibresource{references.bib}
+
+\title{Armónicos esféricos}
+\author{Torres Tarrillo Rober}
+
+% comandas
+\newcommand{\pars}[1]{\left(#1\right)}
+\newcommand{\pd}[2]{\frac{\partial}{\partial#2}\pars{#1}}
+\newcommand{\df}[2]{\frac{d}{d#2}\pars{#1}}
+\newcommand{\pu}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\du}[2]{\frac{d#1}{d#2}}
+\newcommand{\pds}[2]{\frac{\partial^2#1}{\partial#2^2}}
+\newcommand{\dfs}[2]{\frac{d^2#1}{d#2^2}}
+\begin{document}
+
+\maketitle
+
+\section*{Solución de la ecuación de onda.}
+
+La ecuación de onda una mecánica está dada por
+\begin{equation}
+    \nabla^2 \Psi - \frac{1}{v^2}\frac{\partial^2}{\partial t^2}\Psi = 0
+\end{equation}
+
+Utilizando el operador de Laplace $\nabla^2$ en coordenadas esféricas se
+obtiene
+
+\begin{gather}
+    \frac{1}{r^2}\pd{r^2\pu{\Psi}{r}}{r}
+    + \frac{1}{r^2\sin\theta} \pd{\sin\theta\pu{\Psi}{\theta}}{\theta}
+    + \frac{1}{r^2 \sin^2\theta}\pds{\Psi}{\phi}
+    - \frac{1}{v^2}\pds{\Psi}{t} = 0
+\end{gather}
+
+Utilizando separación de variables sea
+\begin{equation*}
+    \Psi(r, \theta, \phi, t) = R(t)\Theta(\theta)\Phi(\phi)T(t)
+\end{equation*}
+remplazando en la ecuación 2 tenemos
+
+\begin{gather*}
+    \frac{1}{r^2}\pd{r^2\pd{R(t)\Theta(\theta)\Phi(\phi)T(t)}{r}}{r}
+    + \frac{1}{r^2\sin\theta} \pd{\sin\theta\pd{R(t)\Theta(\theta)\Phi(\phi)T(t)}{\theta}}{\theta}\\
+    + \frac{1}{r^2 \sin^2\theta}\pds{R(t)\Theta(\theta)\Phi(\phi)T(t)}{\phi}
+    - \frac{1}{v^2}\pds{R(t)\Theta(\theta)\Phi(\phi)T(t)}{t} = 0
+\end{gather*}
+
+La ecuación queda como
+
+\begin{gather}
+    \frac{\Theta\Phi T }{r^2}\df{r^2\du{R}{r}}{r}
+    + \frac{R\Phi T}{r^2 \sin\theta}\df{\sin\theta \du{\Theta}{\theta}}{\theta}
+    + \frac{R\Theta T}{r^2 \sin^2\phi}\dfs{\Phi}{\phi}
+    - \frac{R\Theta\Phi}{v^2}\dfs{T}{t} = 0
+\end{gather}
+
+Dividiendo por $R(t)\Theta(\theta)\Phi(\phi)T(t)$
+
+\begin{gather}
+    \frac{1}{Rr^2}\df{r^2\du{R}{r}}{r}
+    + \frac{1}{\Theta r^2 \sin\theta}\df{\sin\theta \du{\Theta}{\theta}}{\theta}
+    + \frac{1}{\Phi r^2 \sin^2\phi}\dfs{\Phi}{\phi}
+    - \frac{1}{Tv^2}\dfs{T}{t} = 0
+\end{gather}
+
+De la ecuación 4 tomemos para $m\in\mathbb{z}$ que
+\begin{gather*}
+    1/\Phi \pds{\Phi}{\phi} = -m^2
+    \implies \pds{\Phi}{\phi} + \Phi m^2 = 0
+\end{gather*}
+\begin{gather}
+    \implies \Phi = \pm e^{\pm im\phi}
+\end{gather}
+
+Reemplazando en la ecuación 4 nos queda
+\begin{gather}
+    \frac{1}{Rr^2}\df{r^2\du{R}{r}}{dr}
+    + \frac{1}{\Theta r^2 \sin\theta}\df{\sin\theta \du{\Theta}{\theta}}{\theta}
+    - \frac{m^2}{r^2\sin^2\theta}
+    - \frac{1}{Tv^2}\dfs{T}{t} = 0
+\end{gather}
+
+Ahora tomemos
+\begin{gather}
+    + \frac{1}{\Theta \sin\theta}\df{\sin\theta \du{\Theta}{\theta}}{\theta}
+    - \frac{m^2}{\sin^2\theta} = -l(l + 1)
+\end{gather}
+
+Haciendo
+\begin{equation*}
+    x = \cos(\theta) \implies dx = - \sin\theta d\theta
+    \implies -\sin\theta\du{\theta}{x} = 1
+\end{equation*}
+
+Multiplicando a los términos (6) por 1, esto es $-\sin\theta\du{\theta}{x}$
+\begin{gather}
+    + \frac{1}{\Theta \sin\theta}\df{\sin\theta \du{\Theta}{\theta} \cdot \pars{-\sin\theta\du{\theta}{x}}}{\theta}\pars{-\sin\theta\du{\theta}{x}}
+    - \frac{m^2}{\sin^2\theta} = -l(l + 1)
+\end{gather}
+
+Multiplicando y utilizando la regla de la cadena se obtiene
+\begin{gather*}
+    \frac{1}{\Phi}\df{\sin^2\theta \du{\Theta}{x}}{x}-\frac{m^2}{\sin^2(x)} + l(l + 1) = 0\\
+    \implies
+    \frac{1}{\Phi}\df{\pars{1-x^2} \du{\Theta}{x}}{x}-\frac{m^2}{1-x^2} + l(l + 1) = 0
+\end{gather*}
+
+Multiplicando por $\Theta$ se obtiene la siguiente ecuación
+\begin{gather}
+    \pars{1 - x^2}\dfs{\Theta}{x} - 2x \du{\Theta}{x} + \Theta \pars{l(l + 1) - \frac{m^2}{1 - x^2}} = 0
+\end{gather}
+
+La cual tiene tiene por solución los Polinomios de Legendre Asociados
+\begin{gather*}
+    \Phi = P_l^m(x) = P_l^m(\cos(\theta)) \vee \Theta Q_l^m(x) = Q_l^m(\cos(\theta))
+\end{gather*}
+
+Finalmente La ecuación (4) quedará como
+\begin{gather}
+    \frac{1}{Rr^2}\df{r^2\du{R}{r}}{r} - \frac{1}{r^2}l(l + 1) - \frac{1}{Tv^2}\dfs{T}{t} = 0
+\end{gather}
+
+Para solucionar esta ultima depende de los valores de contorno
+Para $R$ y $T$ y la solución
+General a esta ecuación será
+
+\begin{gather}
+    \Psi(r, \theta, \phi, t) = R(t)\Theta(\theta)\Phi(\phi)T(t)
+    = R(r) \left\{P_m^l(\cos\theta)\vee Q_m^l(\cos\theta)\right\}
+    \left\{ {\pm e^{\pm im\phi}} \right\} T(t)
+\end{gather}    
+\section{Referencias}
+Arfken, G., Weber, H. y Harris, F. (2013). Methods for Physicists (7ma ed.). Oxford: Elsevier.
+\\
+Andrews, C., (1992). Special Functions of Mathematics for Engineers (2da ed.). New York: McGraw-Hill.
+\end{document}

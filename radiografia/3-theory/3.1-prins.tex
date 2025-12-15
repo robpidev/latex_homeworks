@@ -1,0 +1,45 @@
+\section{Marco Teórico}
+\subsection{Principios de la tomografía computarizada (TC)}
+
+La tomografía computarizada (TC) es una técnica de diagnóstico por imágenes que utiliza rayos X para obtener cortes transversales del cuerpo humano. A diferencia de la radiografía convencional, donde las estructuras se superponen en una sola proyección bidimensional, la TC reconstruye digitalmente volúmenes tridimensionales a partir de múltiples proyecciones adquiridas desde distintos ángulos alrededor del paciente.
+
+El principio físico fundamental de la TC se basa en la atenuación diferencial de los rayos X al atravesar distintos tejidos. Cada material presenta un coeficiente de atenuación lineal diferente, dependiendo de su número atómico, densidad y la energía del haz incidente. Los detectores registran la intensidad transmitida después de atravesar el cuerpo, y estos datos son utilizados por el sistema computacional para reconstruir la imagen.
+
+\subsubsection{Formación de imagen por rayos X}
+
+En el proceso de formación de imagen, el tubo de rayos X emite un haz colimado que gira alrededor del paciente, mientras que una serie de detectores mide la intensidad del haz que emerge. La intensidad registrada en cada detector \( I \) está relacionada con la intensidad inicial \( I_0 \) mediante la ley de Beer-Lambert:
+
+\[
+I = I_0 e^{-\int \mu(x) \, dx}
+\]
+
+donde \( \mu(x) \) es el \textbf{coeficiente de atenuación lineal} del material atravesado, que representa la probabilidad de que los fotones sean absorbidos o dispersados por unidad de longitud.
+
+En términos discretos, el sistema puede representarse como una serie de medidas lineales conocidas como \textit{proyecciones}, que representan la suma de las atenuaciones a lo largo de cada trayectoria del haz. Cada proyección contiene información parcial del objeto, y al combinar múltiples proyecciones desde diferentes ángulos, se puede reconstruir la distribución espacial de los coeficientes de atenuación.
+
+\subsubsection{Atenuación y reconstrucción de imagen}
+
+La reconstrucción de la imagen en TC consiste en estimar la distribución del coeficiente de atenuación \(\mu(x,y)\) a partir de las proyecciones adquiridas. Matemáticamente, este proceso se expresa mediante la \textbf{transformada de Radon}, que relaciona el conjunto de proyecciones con la función de atenuación del objeto:
+
+\[
+p(\theta, t) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \mu(x,y) \, \delta(x \cos \theta + y \sin \theta - t) \, dx \, dy
+\]
+
+donde \(p(\theta, t)\) representa la proyección del objeto para un ángulo \(\theta\) y una distancia \(t\) desde el centro de rotación.
+
+La reconstrucción de \(\mu(x,y)\) se logra aplicando el proceso inverso de la transformada de Radon. Uno de los algoritmos clásicos para esta tarea es la \textbf{retroproyección filtrada} (\textit{Filtered Back Projection}, FBP), que consiste en dos pasos fundamentales:
+
+\begin{enumerate}
+    \item \textbf{Filtrado:} cada proyección se filtra en el dominio de la frecuencia mediante un filtro de alta frecuencia (como el filtro Ram-Lak) para corregir el efecto de suavizado que genera la simple retroproyección.
+    \item \textbf{Retroproyección:} las proyecciones filtradas se distribuyen nuevamente sobre la imagen reconstruida en las direcciones correspondientes a sus ángulos de adquisición.
+\end{enumerate}
+
+El resultado final es una imagen que representa los coeficientes de atenuación en cada punto del plano, expresados en unidades de Hounsfield (HU), definidas como:
+
+\[
+HU = 1000 \cdot \frac{\mu - \mu_{\text{agua}}}{\mu_{\text{agua}}}
+\]
+
+donde \(\mu_{\text{agua}}\) es el coeficiente de atenuación del agua. Así, el agua se asigna a 0 HU, el aire a aproximadamente \(-1000\) HU y los huesos densos pueden alcanzar valores superiores a \(+1000\) HU.
+
+Estos valores permiten distinguir distintos tejidos biológicos en función de su densidad y composición, otorgando a la TC su capacidad de discriminación anatómica y diagnóstica.

@@ -1,0 +1,157 @@
+\section{Sólido rígido}
+\subsection{Velocidad en un sólido rígido}
+Un sólido rígido es un sistema de partículas en la que la distancia
+entre partículas permanece constante. La velocidad de una partícula
+ubicada en el punto $P(x, y, z)$, en un sólido que tiene una velocidad
+angular $\mathbf{\omega}$ y velocidad $\mathbf{v_0}$ en el punto $O(x_0, 
+y_0, z_0)$, estará dada por
+
+\begin{figure}[h]
+    \centering 
+    \includegraphics[scale=0.5]{img/1.png}
+    \caption{Gráfico de un sólido rígido y sus velocidades}
+\end{figure}
+
+\begin{equation}\label{eq:velocidad_angular}
+    \mathbf{v_p} = \mathbf{v_0} + \bm{\omega}\times\mathbf{r}
+\end{equation}
+
+La velocidad angular $\bm{\omega}$ es libre i.e es independiente
+de donde se elija el punto $O$, siempre será la misma.
+
+\subsection{Energía Cinética}
+Para un sistema de partículas la energía cinética está dada por
+
+\begin{equation}
+    T = \frac{1}{2} \sum_{\alpha = 0}^{n}m_\alpha \mathbf{v}_\alpha
+\end{equation}
+
+Tomando $\mathbf{v_\alpha} = \mathbf{v_0} + \bm{\omega} \times \mathbf{r}$,
+con $\mathbf{v_0} = \v{V}$ es la velocidad del centro de masas, se deduce que la
+energía cinética es
+\begin{equation}
+    T = \frac{1}{2}MV^2 + \frac{1}{2}\bm{\omega}\mathbb{I}\bm{\omega}
+\end{equation}
+
+donde $\mathbb{I}$ es el tensor de inercia de cuyas componentes
+están dadas por
+
+\begin{equation}\label{eq:tensor_inercia}
+    I = \begin{bmatrix}
+        \sum m_\a(y^2 + z^2) && -\sum m_\a xy && -\sum m_\a xz \\
+        -\sum m_\a xy && \sum m_\a (x^2 + z^2) && -\sum m_\a yz \\
+        -\sum m_a xz && -\sum m_\a yz && \sum m_\a (x^2 + y^2) \\
+    \end{bmatrix} 
+\end{equation}
+
+Las componentes $I_{ii}$ son los momentos de inercia con respecto a los
+ejes, como es un tensor en $\mathbb{R}$ y simétrico, entonce siempre
+existe una base donde es diagonal.
+
+\begin{equation*}
+    I^0 = \begin{bmatrix}
+        I_x & 0 & 0\\
+        0 & I_y & 0\\
+        0 & 0 & I_z \\
+    \end{bmatrix}
+\end{equation*}
+
+\begin{itemize}
+    \item si $I_x \neq I_y \neq I_z$ se le llama peonza o trompo asimétrico.
+    \item Si $I_x = I_y \neq I_z$ se llama peonza o trompo simétrico.
+    \item Si $I_x = I_y = I_z$ se le llama peonza o trompo esférico.
+\end{itemize}
+
+% Momento angular
+\subsection{Momento Angular}
+El momento lineal de un sistema de partículas se define como
+\begin{equation}
+    \v{P} = \sum_{\a}\v{p} = \sum_{\a}m_a\v{v}_\a = \v{P_{cm}}
+\end{equation}
+
+Si derivamos con respecto al tiempo obtenemos
+\begin{equation}
+    \frac{d\v{P}}{dt} = M\frac{d\v{V}}{dt}
+\end{equation}
+
+Y el momento angular en un sistema de partículas es
+
+\begin{equation}
+    \v{L_o} = \sum_{\a}\v{r_\a}\times \v{p_\a}
+\end{equation}
+
+De esta ultima ecuación se deduces que
+\begin{equation}
+    \frac{d\v{L}}{dt} = \sum_{\a}\v{r}_\a \times \v{F}^{(ext)} = \v{N}^{(ext)}
+\end{equation}
+
+haciendo
+\begin{gather*}
+    \v{r_\a = R + r'_\a}\\
+    \v{v_\a = v_0 + \bm{\omega}\times r'_\a}
+\end{gather*}
+
+Y remplazando en (5) se deduce que
+\begin{equation}
+    \v{L_0 = R\times P} + \sum_\a m_\a \v{r'_\a \times (\bm{\o} \times r'_\a)}
+    = v{L_{cm} + L_{spin}}
+\end{equation}
+
+Simplificando esta ultima ecuación para $\v{L_{spin}}$ se tiene
+\begin{equation}
+    \v{L_{spin} = \mathbb{I}_{cm}\bm{\o}}
+\end{equation}
+
+Donde $\mathbb{I}$ es el tensor de inercias ya encontrado. Como
+$I_{cm}$ es diagonal entonces el momento angular está dado por
+\begin{equation}
+    \v{L} = (I_x\o_x, I_y\o_y, I_z\o_z)
+\end{equation}
+
+% Ecuaciones de Euler
+\subsection{Ecuaciones de Euler}
+Sea $d\v{A}/dt$ la velocidad de variación de un vector $\v{A}$ con
+respecto al sistema fijo. Si el vector $\v{A}$ no cambia en un sistema que gira, su
+velocidad de variación relativa al sistema fijo será debida únicamente a
+la rotación, y se tendrá entonces,
+\begin{equation}
+    \frac{d\v{A}}{dt} = \bm{\o}\times \v{A}
+\end{equation}
+
+En el caso general, debe agregarse al segundo miembro de esta igualdad
+la velocidad de variación del vector $\v{A}$ con respecto al sistema
+móvil, designando esta velocidad por $d'\v{a}/dt$ se obtiene:
+\begin{equation*}
+    \frac{d\v{A}}{dt} = \frac{d'\v{A}}{dt} + \bm\o \times \v{A}
+\end{equation*}
+
+Usando esta forma general tanto para $P$ como para $L$ se obtiene
+\begin{equation*}
+    \frac{d'\v{P}}{dt} + \bm{\o} \times \v{P} = \v{F},
+    \frac{d'\v{L}}{dt} + \bm{\o} \times \v{L} = \v{N}
+\end{equation*}
+
+Estas ultimas ecuaciones en componentes será
+\begin{align}
+    M(\frac{dV_1}{dt}+\o_2V_3 - \o_3V2) = F_1\\
+    M(\frac{dV_2}{dt}+\o_3V_1 - \o_1V3) = F_2\\
+    M(\frac{dV_3}{dt}+\o_1V_2 - \o_2V3) = F_3\\
+\end{align}
+
+Si los ejes, coinciden con los ejes principales de inercia, se puede poner
+$N_i = I_i\o_i$ remplazando en la segunda ecuación
+
+\begin{align}
+    I_1 \frac{d\o_1}{dt} + (I_3 - I_2)\o_2\o_3 = N1\\
+    I_2 \frac{d\o_3}{dt} + (I_1 - I_3)\o_3\o_1 = N2\\
+    I_3 \frac{d\o_3}{dt} + (I_2 - I_1)\o_1\o_2 = N3\\
+\end{align}
+
+Si se tiene una rotación Libre $\v{N} = 0$ por lo que se tiene
+
+\begin{align}
+    I_1 \frac{d\o_1}{dt} + (I_3 - I_2)\o_2\o_3 = 0\\
+    I_2 \frac{d\o_3}{dt} + (I_1 - I_3)\o_3\o_1 = 0\\
+    I_3 \frac{d\o_3}{dt} + (I_2 - I_1)\o_1\o_2 = 0\\
+\end{align}
+

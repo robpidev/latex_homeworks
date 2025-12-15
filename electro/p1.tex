@@ -1,0 +1,75 @@
+\section{Introducción}
+En este trabajo se deducirá la ley de Ampere tanto de forma
+integral como diferencial, el cual se hará haciendo un breve repaso de
+la fuerza electrostática y la fuerza magnética.
+
+\section{Fuerza y campos electromagnéticos de partículas cargadas}
+\subsection{Fuerza eléctrica}
+De los datos experimentales se deduce que la fuerza eléctrica entre dos
+partículas que se encuentran en reposo con cargas $q$ y $q_1$
+sobre un mismo sistema de referencia es directamente proporcional a la
+multiplicación de sus cargas e inversamente proporcional a su distancia
+de separación elevada al cuadrado, utilizando un vector unitario
+para la dirección esto se escribe:
+
+\begin{equation}
+    \label{fuerza:electrica}
+    \mathbf{F}_e = \frac{1}{4\pi\epsilon_0}\frac{qq_1}{r^2}\frac{\mathbf{r}}{r}
+\end{equation}
+
+Donde $\epsilon_0$ es la constante eléctrica de permitividad en el vacío.
+
+\subsection{Campo eléctrico}
+Si se toma a $q$ como una carga de prueba, y se divide
+a~\ref{fuerza:electrica} por esta carga da como resultado lo que se denomina
+campo eléctrico de la carga $q$,
+
+\begin{equation}
+    \label{camp:electrico}
+    \mathbf{E} = \frac{1}{4\pi\epsilon_0}\frac{q_1}{r^2}\frac{\mathbf{r}}{r}
+\end{equation}
+
+por lo que la fuerza ahora se puede escribir como
+\begin{equation}
+    \label{fuerza:campo:electrico}
+    \mathbf{F_e} = q_1\mathbf{E}
+\end{equation}
+
+\subsection{Campo de inducción magnética}
+Si la carga $q_1$ se encuentra en movimiento con respecto al sistema de
+referencia entonces además de generar un campo eléctrico, esta genera un
+campo magnético también llamado campo de inducción magnética.
+
+De los experimentos realizados se observó lo siguiente:
+(1) el campo magnético es directamente proporcional a la carga $q_1$, (2)
+es perpendicular a la su velocidad $\mathbf{v_1}$ y su posición $\mathbf{r}$
+e (3) inversamente proporcional a la distancia de la carga a donde se este
+midiendo el campo, esto se puede escribir como sigue
+
+\begin{equation}
+    \label{campo:magnetico}
+    \mathbf{B} =  \frac{\mu_0}{4\pi}\frac{q_1}{r^2}\mathbf{v_1}\times\frac{\mathbf{r}}{r}
+\end{equation}
+
+Donde $\mu_0$ es la constante de permitividad magnética en el vacío.
+
+\subsection{Fuerza magnética}
+De los datos experimentales la fuerza magnética sobre una partícula de 
+carga $q$ que también se encuentra en movimiento con una velocidad
+$\mathbf{v}_1$ es directamente proporcional a su carga y perpendicular
+a su velocidad y el campo
+
+\begin{equation}
+    \label{fuerza:magnetica}
+    \mathbf{F}_m = q\mathbf{v}\times\mathbf{B}
+\end{equation}
+
+
+
+\subsection{Fuerza de Lorentz}
+Si se encuentra presente el campo eléctrico y el campo magnético
+entonces la fuerza total será la denominada fuerza de Lorentz
+\begin{equation}
+    \label{fuerza:lorentz}
+    \mathbf{F} = q(\mathbf{E} + \mathbf{v}\times\mathbf{B})
+\end{equation}

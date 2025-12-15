@@ -1,0 +1,32 @@
+Calcula la energía de ionización del átomo
+de hidrógeno de Joules (J) y en electronvoltios (eV).
+La energía de ionización es la energía mínima
+necesario para arrancar un electron del átomo,
+llevándolo del estado fundamental ($n = 1$) al infinito
+($n = \infty$).
+
+\vspace{12pt}
+\textit{SOLUCIÓN.} Utilizando la eq~\ref{eq:balmer}
+y remplazando con $n_i = 1$ y $n_f = \infty$
+
+\begin{equation*}
+    \frac{1}{\lambda} = R\left(
+        1 - \lim_{n_f\to\infty} \frac{1}{n_f^2} 
+    \right) = R
+\end{equation*}
+
+remplazando en $E = hc/\lambda$ tenemos
+\begin{equation*}
+    E = 6.626\times10^{-34}\;\mathrm{Js}
+    \cdot 3\times10^8\;\mathrm{m/s}
+    \cdot 1.097\times10^7\;\mathrm{m^{-1}}
+    \implies E = 2.18\times10^{-18}\;\mathrm{J}
+\end{equation*}
+
+Convirtiendo a eV
+
+\begin{equation*}
+    E = 2.18\times10^{-18}\;\mathrm{J}
+    \cdot \frac{1\;\mathrm{eV}}{1.602\times10^{-6}\;\mathrm{J}}
+    = 13.63\;\mathrm{eV}
+\end{equation*}

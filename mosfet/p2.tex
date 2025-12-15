@@ -1,0 +1,121 @@
+\section{Modulación de la carga del canal y la tensión umbral}
+Antes de discutir las propiedades de los MOSFET, es necesario evaluar
+la relación entre la carga en la capa de inversión, el
+canal de los MOSFET y el voltaje aplicado al MOS ($V_G$).
+La discusión considera un MOS hecho de semiconductor de tipo ap sesgado
+en una inversión fuerte. En esta condición, la capa de
+agotamiento alcanza su máxima extensión:
+
+\begin{equation}\label{eq:depletion:length}
+    x_{d \max} = \sqrt{
+        \frac{2\e_s (2||\phi_p||)}{qN_A}
+    }
+\end{equation}
+
+En cuanto a la carga almacenada en la capa de agotamiento, es
+
+\begin{equation}\label{eq:depletion:charge}
+    Q_d = - \sqrt{2\e_s q N_a (2 ||\phi_p||)}
+\end{equation}
+
+Para escribir la relación entre ($V_G$) y la carga total
+en el semiconductor, consideremos el perfil potencial entre la puerta y
+la mayor parte del semiconductor (Figura 1).
+
+El voltaje de banda plana ($V_G = V_{fb}$) corresponde a
+una caída de potencial nula a través del semiconductor. Vfb es
+negativo y corresponde a la diferencia entre las funciones de trabajo de
+la puerta metálica y el semiconductor. Para calcular la carga en
+el semiconductor, consideremos primero el campo eléctrico en el óxido:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{img/f1.png}
+    \caption{Distribution of the potential in the MOS structure in strong inversion mode}
+\end{figure}
+
+\begin{gather}
+    \Eox = \f{\ox{V}}{\ox{x}} = \frac{V_G - V_B - V_{fb} - V_{si}}{\ox{x}}
+\end{gather}
+
+En la interfaz óxido-semiconductor, la continuidad del desplazamiento eléctrico
+requiere que: $\e_{ox}\Eox = \e_{si}\E_{si0}$ donde $\E_{si0}$ es el campo
+eléctrico en la interfaz en el lado del silicio. Reemplazando Eox
+con Eq. (9.3), el campo eléctrico en
+la superficie de silicio es:
+
+\begin{equation}
+    \e_{si}\E_{si0}
+    = \f{e_{ox}}{x_{ox}}
+    (V_G - V_B - V_{fb}- V_{si})
+    = C_{ox}(V_G - V_B - V_{fb} - V_{si})
+\end{equation}
+
+Gracias al teorema de Gauss, el campo eléctrico en el semiconductor
+depende de las cargas totales en el semiconductor:
+
+\begin{equation}
+    \E_{sib} - \E_{si0}
+    = \f{Q_n + Q_d}{\e_s}
+\end{equation}
+
+donde $\E_{sib}$ es el campo eléctrico a granel, $Q_n$ son los
+electrones móviles y $Q_d$ son los aceptores fijos. Dado que el
+campo eléctrico del cuerpo es nulo, el campo en la interfaz
+es $-\E_{si0} = (Q_n + Q_d)/\e_s$, a partir del
+cual se calcula la carga móvil:
+
+\begin{equation}
+    Q_n = -\e_s\E_{si0} - Q_d
+\end{equation}
+
+Reemplazando el campo eléctrico en la interface en (4) y $Q_d$
+con la ecuación 2 obtenemos
+
+\begin{equation}
+    Q_n = - C_{ox}\left[
+        V_G - V_B - V_{fb} - 2||\phi_p||
+    \right]
+    + \sqrt{2\e_s q N_A (2||\phi_p||)}
+\end{equation}
+
+La carga móvil en la interfaz está hecha de electrones, entonces
+la carga existe cuando $Q_n$ es negativo. Esta condición ocurre si
+el primer término de la Ec. 7
+es mayor que el segundo. La condición $Q_n = 0$ es
+particularmente importante porque define el inicio de la formación de la capa
+de inversión. El voltaje $V_G$ al que se cumple esta condición
+es el voltaje umbral ($V_T$). Ajuste $Q_n = 0$ en Eq. 7 conduce a:
+
+\newcommand{\pp}{2||\phi_p||}
+
+\begin{equation}
+    V_T = V_{fb} + 2||\phi_p|| + \frac{1}{C_{ox}}
+    \sqrt{2\e_s q N_A (2||\phi_p||)}
+\end{equation}
+
+considerando que $(V_G - V_B) - V_{fb} = V_{ox} + V_{si}$ en la
+inversion fuere $\pp$. Esto es $V_G = V_T$ es equivalente a
+
+\begin{equation}
+    V_T = V_{fb} + \pp + V_{ox}
+\end{equation}
+
+Comparando la Ec. 8 con la Ec
+9, encontramos que el voltaje aplicado al óxido también
+es responsable de la carga de la capa de agotamiento
+($V_{ox}= Q_d / C_{ox}$).
+Dada la definición de $V_T$, se obtiene
+una expresión concisa para la carga en la capa de inversión:
+
+\begin{equation}\label{eq:charge:inersion-layer}
+    Q_n = - C_{ox}(V_G - V_T)
+\end{equation}
+
+Esta relación fundamental establece que la carga, y por lo tanto
+la conductividad, del canal está controlada por el voltaje aplicado al
+MOS\@. Vale la pena señalar que todas las características de MOS
+contribuyen al voltaje umbral, que depende de la diferencia entre las
+funciones de trabajo del metal y el semiconductor ($V_{fb}$), de
+la concentración de dopaje ($\phi_p$) y del espesor del óxido
+($C_{ox}$).

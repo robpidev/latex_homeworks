@@ -1,0 +1,222 @@
+\section{Gas de fotones}
+
+\subsection{Cuerpo Negro}
+En física, la expresión ``cuerpo negro'' se refiere a un objeto que absorbe
+toda la radiación que incide sobre él y no refleja nada. Es, por supuesto,
+una idealización, pero una que se puede aproximar muy bien en el laboratorio.
+
+Un cuerpo negro no es realmente negro. Aunque no refleja la luz, puede
+irradiar luz derivada de su energía térmica. Esto es, por supuesto,
+necesario si el cuerpo negro ha de estar alguna vez en equilibrio térmico
+con otro objeto.
+
+Planck investigó las consecuencias de la suposición de que la luz sólo podía
+aparecer en cantidades discretas dadas por la cantidad
+
+\begin{equation}
+    \label{eq:wave:energy}
+    \Delta \epsilon_\omega = h\nu = \hbar\omega
+\end{equation}
+
+Dónde $\nu$ es la frecuencia, $\omega = 2\pi\nu$, $h$ constante de Planck
+y $\hbar = h/2\pi$
+
+\subsection{Modelo de solución}
+Consideraremos una cavidad cúbica con dimensiones $L\times L\times L$.
+Los lados están hechos de metal y contiene radiación electromagnética,
+pero no importa. La radiación solo puede entrar y salir de la cavidad a
+través de un orificio muy pequeño en un lado. Dado que la radiación debe
+ser reflejada por las paredes muchas veces antes de regresar al agujero,
+podemos suponer que ha sido absorbida en el camino, haciendo de este
+objeto, o al menos del agujero, un cuerpo negro. Lo único que hay dentro
+de la cavidad es radiación electromagnética a temperatura T.
+
+Deseamos encontrar el espectro de frecuencia de la energía almacenada
+en esa radiación, que también nos dará el espectro de frecuencia de la luz
+emitida por el agujero.
+
+\subsection{Dos tipos de cuantización}
+Al analizar el modelo simple descrito en la sección anterior,
+debemos ser conscientes de los dos tipos de cuantificación que
+entran en el problema. Como resultado de las condiciones de contorno
+debidas a las paredes metálicas del contenedor, se cuantifican las
+frecuencias de las ondas estacionarias permitidas. Se trata de un efecto
+totalmente clásico, similar a la cuantización de la frecuencia en las
+vibraciones de una cuerda de guitarra.
+
+La segunda forma de cuantización se debe a la mecánica cuántica,
+que especifica que la energíaalmacenada en una onda electromagnética
+con frecuencia angular $\omega$ viene en múltiplos de $\hbar \omega$
+(generalmente llamados
+fotones). La teoría de la electrodinámica nos da la ecuación de onda
+para el campo eléctrico $\vec{E}(\vec{r})$ esta dado por
+
+\begin{equation}
+    \nabla^2 \vec E (\vec{r}, t)
+    = \frac{1}{c^2} \partial_{t}^2 \vec{E}(\vec{r}, t)
+\end{equation}
+
+donde $c$ es la velocidad de la luz y $\partial_q^n = \partial^n/\partial_{q^n}$
+
+Tomando en cuanta que
+
+\begin{equation}
+    \vec \nabla \equiv
+    \left(\partial_x, \partial_y, \partial_z \right)
+\end{equation}
+
+Entonces
+
+\begin{equation}
+    \nabla^2 = \vec\nabla\cdot \vec\nabla
+    = \partial_x^2 + \partial_y^2 + \partial_z^2
+\end{equation}
+
+Usando la simetría del modelo podemos encontrar la sigueinte solución
+
+\begin{gather}
+    \label{eq:electric:field:solution}
+    E_x(\vec{r}, t) = E_{x,0}\sin(\omega t) \cos(k_x x) \sin(k_y y) \sin(k_z z)\\
+    E_y(\vec{r}, t) = E_{y,0}\sin(\omega t) \sin(k_x x) \cos(k_y y) \sin(k_z z)\\
+    E_z(\vec{r}, t) = E_{z,0}\sin(\omega t) \sin(k_x x) \cos(k_y y) \cos(k_z z)
+\end{gather}
+
+Dónde $E_{x_i, 0}$, son las aplitudes del campo electromagnético en la cavidad
+correspondiente.
+
+Por las condiciones de contotorno las ecuaciones anteriores las ecuaciones
+~\ref{eq:electric:field:solution} a 11 se tiene que
+
+\begin{gather}
+    k_x L = n_x\pi\\
+    k_y L = n_y\pi\\
+    k_z L = n_z\pi
+\end{gather}
+
+Donde $n_x, n_y, n_z \in \mathbf{Z}^+$, ya que para los negativos tienen la
+misma solución.
+
+Utilizando la relación entre la frecuencia y número de onda
+\begin{equation}
+    k_x^2 + k_y^2 + k_z^2 = \frac{\omega^2}{c^2}
+\end{equation}
+
+Y remplazando las ecuaciones de 12 a 14
+
+\begin{equation}
+   {\left(\frac{n_x \pi}{L}\right)}^2
+   + {\left(\frac{n_y \pi}{L}\right)}^2
+   + {\left(\frac{n_z \pi}{L}\right)}^2
+   = \frac{\omega^2}{c^2}
+\end{equation}
+
+tomando en centa la $\vec{n}$-dependencia para $\omega$ podemos escribir
+
+\begin{equation}
+    \omega_{\vec{n}}
+    = (n_x^2 + n_y^2 + n_z^2){\left(\frac{\pi c}{L}\right)}^2
+\end{equation}
+
+Por lo que obtiene
+
+\begin{equation}
+    \omega_{\vec{n}}
+    = \frac{\pi c}{L} \sqrt{n_x^2 + n_y^2 + n_z^2}
+    = \frac{n \pi c}{L} = \omega_n
+\end{equation}
+
+Donde $n = |{\vec{n}}|$
+
+\subsection{Espectro de energía del cuerpo negro}
+El primer paso para calcular el espectro de energía del cuerpo negro es
+encontrar la densidad de estados. A partir de las soluciones a la ecuación
+de onda en la Sección anterior, expresamos los modos individuales en términos
+de los vectores $\vec{n}$. Nótese que la densidad de puntos en el espacio 
+$\vec{n}$ es uno, ya que los componentes de $\vec{n}$ son todos enteros.
+
+\begin{equation}
+    P_{\vec{n}}(\vec{n}) = 1
+\end{equation}
+
+Par encontrar la dencidad de estados $P_\omega(\omega)$,
+solo se necesita integrar la ecuación anterior en el $\vec{n}$-espacio
+
+\begin{equation}
+    P_\omega(\omega) = 1 \frac{1}{8}
+    \int_{0}^{\infty} 4\pi n^2 dn \delta(\omega - nc\pi / L) 
+    = \pi {\left(\frac{L}{c\pi}\right)}^3 \omega^2
+\end{equation}
+
+El factor de 2 es para las dos polarizaciones de la radiación electromagnética,
+y el factor de 1/8 corrige para contar los valores positivos y negativos
+de los componentes de n. Dado que cada fotón con frecuencia $\omega$ tiene
+energía $\hbar\omega$, la energía promedio se puede encontrar sumando todos los
+números de fotones ponderados por el factor de Boltzmann $\exp(-\beta \omega \hbar)$.
+Dado que esta suma es formalmente idéntica a la del oscilador armónico simple, podemos
+escribir la respuesta.
+
+\begin{equation}
+    \langle \epsilon_\omega \rangle
+    = \frac{\hbar\omega}{\exp(\beta\hbar\omega) - 1}
+\end{equation}
+
+Asi con las ecuaciones anteriores se tiene la dencidad de energía
+
+\begin{equation}
+    u_\omega = \frac{1}{V} \pi {\frac{L}{c\pi}}^3
+    \omega^2 \frac{\hbar\omega}{\exp(\beta\hbar\omega) - 1}
+    = \frac{\hbar}{\pi^2c^3}\omega^3(\exp(\beta\hbar\omega) - 1)^{-1}
+\end{equation}
+
+\subsection{Energía Total}
+La energía mecánica cuántica total en la radiación de la cavidad a la temperatura $T$ se da sumando la energía media en cada modo.
+
+\begin{equation}
+    U = 2 \sum_{\vec{n}} \langle \epsilon_{\vec{n}} \rangle
+    = 2 \sum_{\vec{n}} \hbar\omega_{\vec{n}}
+    \frac{1}{\exp(\beta\hbar\omega) - 1}
+\end{equation}
+
+Esta ecuación se restringe al espacio octantante positivo para evitar
+la doble contabilidad, y el factor de dos explicaciones para la doble
+polarización asociada con todos los modos espaciales.
+Volvemos a utilizar el hecho de que el espectro de frecuencias es
+continuo para escribir la suma en una integral, que podemos evaluar
+explícitamente utilizando la densidad de estados, $P_\omega(\omega)$, Encontrada
+
+\begin{align}
+    U &= \int_{0}^{\infty}\langle \epsilon\omega \rangle  P_\omega(\omega) d\omega\\
+    &= \pi {\left(\frac{L}{c\pi}\right)}^3
+    \int_{0}^{\infty}\langle \epsilon_\omega \rangle \omega^3 d\omega\\
+    &=\pi {\left(\frac{L}{c\pi}\right)}^3
+    \int_{0}^{\infty} \frac{\hbar\omega}{exp(\beta\hbar\omega - 1)} \omega^2 d\omega
+\end{align}
+
+Tomando $x = \beta \hbar \omega$
+
+\begin{equation}
+    U = \pi \beta^{-1}{\left(\frac{L}{\beta\hbar\pi c}\right)}
+    \int_{0}^{\infty}dx \frac{x^3}{e^x - 1}
+\end{equation}
+
+Esta ultima integral es conocida y es $\pi^4/15$
+
+Por lo tanto la energía está dada por
+
+\begin{equation}
+    U = u {\left(\frac{\pi^2}{15\hbar^3c^3}\right)}V^3{\left(k_B T\right)}^4
+\end{equation}
+
+\section{Conclusiones}
+Quizás la ocurrencia más famosa de radiación de cuerpo negro es en la
+radiación de fondo del universo, que fue descubierta en 1964 por Arno
+Penzias (físico alemán que se convirtió en ciudadano estadounidense, 1933-,
+Premio Nobel 1978) y Robert Wilson (astrónomo estadounidense, 1936-, Premio
+Nobel 1978). Poco después del Big Bang, el universo contenía radiación
+electromagnética a una temperatura muy alta. Con la expansión del universo,
+el gas de los fotones se enfrió, de la misma manera que un gas de partículas
+se enfriaría a medida que aumentara el tamaño del recipiente. Las mediciones
+actuales muestran que la radiación de fondo del universo se describe a una temperatura de 2.725K.
+
+Con esta ultima ecuación se puede calcular el resto de los potenciales termodinámicos
+segun sea requerido.

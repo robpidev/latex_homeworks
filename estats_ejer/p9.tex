@@ -1,0 +1,130 @@
+La radiación electromagnética dentro de una cavidad cerrada y en equilibrio a una
+puede estudiarse considerando que los modos permitidos
+de las ondas resonantes dentro de la cavidad tienen energías
+$\e_n = nh\nu (n = 0, 1, 2,\ldots)$, es decir,
+que el campo de radiación constituye un conjunto
+de cuantos de energía $h\nu$, o ``O gas de fotones''.
+En el lengjuaje cuántico, los fotones son bosones cuyo n'umero no tiene por
+qu'e conservarse.
+$(a)$ Calcular la función de partición del sistema. (Recordar
+que las ondas electromagnéticas tienes dos direcciones
+de polarización transversales para cada frecuencia).
+$(b)$ Hallar la energía total $U$ (ley de Stefan-Boltzmann)
+y la presión de radiación en una cavidad de volumen $V$.
+$(c)$ Determinar la ley de Planck para la densidad espectral de
+radiación del cuerpo negro $\rho(\nu)$. Es decir, la energía
+por unidad de volumen de radiación electromagnética entre
+$\nu$ y $\nu + d\nu$
+
+\sol\ $(a)$ Para un gas de partículas en cierto volumen, en equilibrio a temperatura T, la hipótesis de 
+interacción es despreciablemente pequeña. Podemos escribir la energía total del gas 
+cuando esta en cierto estado R de la siguiente manera. 
+
+\begin{equation}
+    \e_r = \sum_r n_r\e_r
+\end{equation}
+
+Si se conoce el numero total de partículas entonces lo que se debe cumplir es lo 
+siguiente: 
+
+\begin{equation*}
+    \sum_r n_r = N
+\end{equation*}
+
+Por lo que
+
+\begin{equation*}
+    \sum_r e^{-\beta e_r}
+\end{equation*}
+
+En este caso $\e_r = \e_n$ asi se tiene
+
+\begin{equation*}
+    Z = \sum_r e^{-\beta \e_n} = \sum_{n = 0}^{\infty} e^{-\beta nh\nu}
+    = \frac{1}{1 - e^{-\beta h\nu}}
+\end{equation*}
+
+Puesto que, hay un total de N posibilidades de valores para las distintas frecuencias 
+podemos expresarlos en función de cada una de estas es decir 
+
+\begin{equation*}
+    Z = \prod_N \frac{1}{1 - e^{-\beta h\nu}}
+\end{equation*}
+
+$(b)$ Ahora encontramos la energía total
+
+\newcommand{\p}[1]{\frac{\partial}{\partial\beta}#1}
+
+\begin{equation*}
+    U = - \p \ln Z = - \p \ln \prod \frac{1}{1 - e^{-\beta h\nu}}
+    = - \p \sum_N \ln \frac{1}{1 - e^{-\beta h\nu}}
+\end{equation*}
+
+haciendo $x = \beta h\nu \implies dx = \beta h\ d\nu$ y cambiando
+la sumatoria por una integral tenemos
+
+\begin{equation*}
+    U = \frac{8\pi}{c^3h^3\beta^4}\int_{0}^{\infty}
+    \left(
+        \frac{x^3}{e^x - 1}dx
+    \right)
+\end{equation*}
+
+El resultado de esta integral es $\pi^4/15$ por lo que obtenemos
+
+\begin{equation*}
+    U = \frac{8\pi}{c^3h^3\beta^4}\int_{0}^{\infty}
+    \left(
+        \frac{\pi^4}{15}
+    \right)
+\end{equation*}
+
+Remplazando $\beta$ y dentro de un volumen $V$ la energía se tiene
+
+\begin{equation*}
+  U = \sigma T^4 V  
+\end{equation*}
+
+donde $\sigma$ es conocida como la constante de Stefan-Boltzman
+y es
+
+\begin{equation*}
+    \sigma = \frac{8\pi^5k^4}{15c^3h^3}
+\end{equation*}
+
+La relación entre la presión y la energía total para un gas de fotones en equilibrio térmico 
+está dada por: 
+
+\begin{equation*}
+    P = \frac{1}{3}{U}{V} = \frac{1}{3}\frac{\sigma T^4 V}{V}
+    = \frac{\sigma T^4}{3} = \frac{\sigma T^4}{3}
+\end{equation*}
+
+$(c)$
+\begin{equation*}
+    U_\omega(\omega + d\omega) - \omega U_\omega = U\omega d\omega
+    = \frac{h\omega^{-\beta h\omega}}{1 - e^{-\beta h \omega}}D(\omega)d\omega
+\end{equation*}
+
+donde $D(\omega)$ es la densidad de modos por $V/\pi^2c^3$ reemplazando
+nos queda
+
+\begin{equation*}
+    U\omega d\omega
+    = \frac{h\omega^{-\beta h\omega}}{1 - e^{-\beta h \omega}}
+    \left(
+        \frac{V}{\pi^2c^3}
+    \right)
+    d\omega
+\end{equation*}
+
+usando la relación $\nu = \frac{\omega}{2\pi}$ y simplificando
+la expresión final sería
+
+\begin{equation*}
+    \frac{\hbar \omega^3}{pi^2c^3} \frac{1}{e^{\beta \hbar \omega} - 1}d\omega
+\end{equation*}
+
+La cual vendría a ser la Ley de Radiación de Planck.
+
+\solend\

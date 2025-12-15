@@ -1,0 +1,90 @@
+\section{Ley de circuitos de Ampére}
+Los campos deducidos anteriormente satisfacen la siguiente ecuación
+\begin{equation}
+    \label{corriente:densidad:eq}
+    \mathbf{\nabla} \cdot \mathbf{J} = 0
+\end{equation}
+
+Por lo que se puede se puede deducir una ecuación importante para el rotacional
+de la ecuación~\ref{campo:magnetico:densidad}
+
+\begin{gather*}
+    \mathbf{\nabla_2\times B(r_2)}
+    =\frac{\mu_0}{4\pi}
+    \int_V\frac{\mathbf{J(r_1)\times\nabla_2(r_2 - r_1)}}{\mathbf{|r_2 - r_1|}^\text{3}}
+    dv_1
+\end{gather*}
+
+Ahora utilizando
+$\mathbf{A\times\nabla\times B = \nabla_B(A\cdot B) - (A\cdot\nabla)\times B}$,
+y como $\nabla_2$ solo afecta a $\mathbf{r_2}$
+
+\begin{gather*}
+    \mathbf{\nabla_2\times B(r_2)}
+    =  \frac{\mu_0}{4\pi}\int_V\left[
+        \mathbf{
+            J(r_1)\left(
+                \nabla_2\cdot\frac{r_2 - r_1}{|r_2-r_1|^\text{3}}
+            \right)
+            -
+            J(r_1)\cdot\nabla_2\frac{r_2-r_1}{|r_2-r_1|^\text{3}}
+        }
+    \right]dv_1
+\end{gather*}
+
+El primer término se puede expresar en función de la delta de Dirac,
+el segundo término intercambiando los vectores y por simetría obtenemos
+
+\begin{gather*}
+    \mathbf{\nabla_2\times B(r_2)}
+    =  \frac{\mu_0}{4\pi}\int_V\left[
+        \mathbf{J(r_1)}4\pi\delta(\mathbf{r_2 - r_1})
+        -
+        \mathbf{J(r_1)\cdot\nabla_1\frac{\mathbf{r_1 - r_2}}{\mathbf{|r_1-r_2|^3}}}
+    \right]
+    dv_1
+\end{gather*}
+
+Al integrar el primer término obtenemos $\mu_0\mathbf{J(r_2)}$,
+para el segundo término podemos usar el hecho que
+
+\begin{gather*}
+    \nabla_1\cdot\left(
+        \mathbf{J(r_1)}\frac{x_1 - x_2}{|\mathbf{r_1 - r_2}|^3}
+    \right)
+    = \frac{x_1-x_2}{\mathbf{|r_1 - r_2|}^3}\nabla_1\cdot\mathbf{J}
+    +\mathbf{J}\cdot\nabla_1\frac{x_1-x_2}{|\mathbf{r_1 - r_2}|^3}
+\end{gather*}
+
+de la misma forma par $y$ y $z$, al sumar estos términos se anula, esta es la
+forma diferencial de la ley de Ampére.
+
+\begin{equation}
+    \label{ley:apere:diferencial}
+    \mathbf{\nabla_1\times B(r_2)} = \mu_0\mathbf{J(r_2)}
+\end{equation}
+
+Integrando sobre una superficie $S$ tenemos
+
+\begin{gather*}
+    \int_S\mathbf{\nabla_1\times B(r_2)}\cdot d\mathbf{S} = \int_S\mu_0\mathbf{J(r_2)}\cdot d\mathbf{S}
+\end{gather*}
+
+Utilizando el teorema de Stokes tenemos
+\begin{equation}
+    \label{ley:apere:integral}
+    \oint_c \mathbf{B}\cdot d\mathbf{l} = \mu_0 \int_S \mathbf{J}\cdot d\mathbf{S}
+\end{equation}
+
+esta es la ley de Ampére la cual es análoga a la ley de Gauss, no tiene significado
+físico como tal, pero no ayuda a calcular los campos magnéticos.
+
+
+\section{Referencias}
+
+Reitsz, J., Milford, F. y Chisty, R. (Sin fecha). "Fundamentos de la teoría electromagnética", 4ta ed. Addison-Wesley Iberoamericana.
+
+Young, H. y Freedman, A. (2013). Física universitaria con física moderna(13ava Ed, Vol. 2). México: PEARSON.
+
+Wangsness, R. (2001). "Campos electromagnéticos". México: Limusa.
+

@@ -1,0 +1,104 @@
+\section{Fuerza sobre conductores por los que circula corriente}
+En está sección se analiza la ecuación de la fuerza para conductores por
+los que circula corriente.
+
+\subsection{Corriente y densidad de corriente}
+La corriente se define como variación de carga por unidad de tiempo
+
+\begin{equation}
+    \label{corriente}
+    I = \frac{dq}{dt}
+\end{equation}
+
+tomando $N$ partículas por unidad de volumen con carga $q$ las cuales se encuentra moviendo en  un conductor de
+sección transversal $A$ y longitud $dl$ con una velocidad promedio
+(velocidad de deriva) $\mathbf{v}$ cuyo módulo es $v$, $dl$ en función de $\mathbf{v}$ es
+$dl = \mathbf{v}dt$ dado que es la distancia que recorrerá la
+partícula carga en $dt$ y por tanto estará dentro de la sección,
+entonces el diferencial de carga será
+
+\begin{equation}
+    \label{diferencial:carga}
+    dq = qNA\mathbf{v}dt
+\end{equation}
+
+por lo que la corriente estará dada por
+
+\begin{equation}
+    \label{corriente:Ncargas}
+    I = qNAv
+\end{equation}
+
+Si dividimos a I entre la sección transversal $A$ y multiplicando por la dirección
+de $\mathbf{v}$ entonces obtendremos lo que se denomina densidad de corriente
+
+\begin{equation}
+    \label{corriente:densidad}
+    \mathbf{J} = \frac{I}{A} = qN\mathbf{v} 
+\end{equation}
+
+\subsection{Campo magnético de un conductor}
+Como se menciono en la sección anterior en un conductor de longitud
+$dl$ se tiene $N$ partículas cada una con carga $q$ y velocidad
+$\mathbf{v}$ utilizando al ecuación~\ref{diferencial:carga} y~\ref{campo:magnetico},
+podemos escribir el diferencial de campo magnético
+
+\begin{equation*}
+    d\mathbf{B}=\frac{\mu_0}{4\pi}qNAdl
+    \frac{\mathbf{v}}{r^2}\times\frac{\mathbf{r}}{r}
+\end{equation*}
+
+como $\mathbf{v}$ y $dl$ tienen la misma dirección, podemos intercambiar
+sus vectores unitarios
+\begin{equation*}
+d\mathbf{B}=\frac{\mu_0}{4\pi} qNAv \frac{d\mathbf{l}\times{r}}{r^3}
+\end{equation*}
+
+Pero utilizando la ecuación~\ref{corriente:Ncargas}, se tiene
+\begin{equation}
+    \label{campo:magnetico:diferencial}
+    d\mathbf{B}=\frac{\mu_0}{4\pi}\frac{Id\mathbf{l}\times\mathbf{r}}{r^3}
+\end{equation}
+
+Integrando esto obtenemos
+\begin{equation}
+    \label{campo:magnetico:conductor}
+    \mathbf{B}=\frac{\mu_0}{4\pi}\int_{c}\frac{Id\mathbf{l}\times\mathbf{r}}{r^3}
+\end{equation}
+
+Esta es la forma generalizada de la \textit{Ley de Biot y Savart}
+
+\subsection{Fuerza entre dos conductores}
+Supongamos que se tiene un conductor de intensidad de corriente $I_1$
+el cual genera un campo $\mathbf{B_1}$,y otro conductor de corriente $I_2$,
+ahora se quiere calcular la fuerza del primer conductor que hace sobre el
+segundo conductor, 
+utilizando~\ref{diferencial:carga} y como se hizo anteriormente $q_2N_2A_2dl_2 \mathbf{v_2} = I_2d\mathbf{l}_2$,
+pero ahora el vector diferencia es $\mathbf{r=r_2-r_1}$, remplazando en~\ref{campo:magnetico:conductor}
+
+\begin{equation*}
+    d\mathbf{F}_2 =
+    \frac{\mu_0}{4\pi}I_2d\mathbf{l_2}\int_{c}\frac{I_1d\mathbf{l}_1\times\mathbf{(r_2 - r_1)}}{\mathbf{|r_2-r_1|}^3}
+\end{equation*}
+
+Integrando sobre todo el conductor y suponiendo que las corrientes son constantes
+de posición
+tenemos la Fuerza total
+
+\begin{equation}
+    \label{fuerza:magnetica:conductores}
+    d\mathbf{F}_2 =
+    \frac{\mu_0}{4\pi}I_1I_2\int_{c_1}
+    \int_{c_2}
+    \frac{d\mathbf{l_2}\times d\mathbf{l}_1\times\mathbf{(r_2 - r_1)}}{\mathbf{|r_2-r_1|}^3}
+\end{equation}
+
+\subsection{Campo magnético en función de la densidad de corriente}
+Si se tiene densidad de corriente $\mathbf{J(r_1)}$ entonces $I_1d\mathbf{l_1}$
+se puede escribir como esta densidad, tomando $\mathbf{r = r_2 - r1}$ y sobre
+un circuito cerrado la ecuación~\ref{campo:magnetico:diferencial} se puede escribir como
+
+\begin{equation}
+    \label{campo:magnetico:densidad}
+    \mathbf{B(r_2)} = \frac{\mu_0}{4\pi}\int_V \frac{\mathbf{J(r_1)\times(r_2 - r_1)}}{\mathbf{|r_2 - r_1|}^2}dv_1
+\end{equation}

@@ -1,0 +1,141 @@
+
+\subsection{Eliminación de la discontinuidad de carga
+en el borde de la capa de agotamiento}
+
+Bajo la hipótesis de agotamiento profundo, la concentración de cargas
+mayoritarias se vuelve abruptamente despreciable en los bordes de la
+capa de agotamiento. La relación entre la densidad de carga y el
+potencial es una función exponencial drulado, de modo que incluso
+un pequeño aumento en ($E_C - E_F$) puede resultar en un gran
+cambio en la concentración de electrones
+(y, análogamente, en el hueco). Esto hace que la hipótesis del
+agotamiento profundo dentro de la capa de agotamiento sea plausible.
+Sin embargo, alrededor del borde de la capa de agotamiento debe
+existir una transición suave. La figura~\ref{fig:movil} muestra un comportamiento
+cualitativamente más realista de la carga total del móvil.
+
+\begin{figure}\label{fig:movil}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/f4.png}
+    \caption{Comportamiento cualitativo de la carga móvil
+    (electrones y huecos) y la carga total realizada por
+    las cargas móviles más aceptores y donantes}
+\end{figure}
+
+La carga total en el material de tipo N es aportada tanto por los donantes como por los eléctricos. A diferencia de la concentración del donante, que es constante por hipótesis, la concentración de electrones varía con el potencial a través de la ecuación de Poisson. Este último se puede escribir como:
+
+\begin{equation}
+    \diff{2}\phi = - \frac{q}{\e_s}{N_D - n}
+     = - \frac{q}{\e_s}\left[
+        N_d - n_i \exp\left(
+            \frac{q\phi}{kT}
+        \right)
+     \right]
+\end{equation}
+
+En el borde de la capa de agotamiento, el potencial real es
+menor que $\phi_n$ por lo se puede escribir como $\phi = \phi_n - \phi$.
+La hipótesis del agotamiento profundo da como resultado
+$\phi = \phi_n$ en $x = x_n$.
+La transición suave de la densidad de electrones de 0 a $N_D$
+está representada por el potencial $\phi'$. Remplazando
+$\phi = \phi_n - \phi'$ en la ecuación de Poisson, obtenemos:
+
+\begin{equation}
+\frac{d^2 (\phi_n - \phi')}{dx^2}
+= - \frac{q}{\e_s}
+\left[
+    N_d - n_i \exp\left(
+        \frac{q \phi_n}{k T}
+    \right)
+    \exp \left(
+        - \frac{q\phi'}{kT}
+    \right)
+\right]
+\end{equation}
+
+considerando que $\phi_n$ is una constante y el primer
+exponencial define la concentración de electrones en la zona
+neutral, es decir concentración del donante, obtenemos
+
+\begin{equation}
+    \diff{2}\phi' = - \frac{qN_D}{\e_s}
+    \left[
+        1 - \exp\left(
+            - \frac{q\phi'}{kT}
+        \right)
+    \right]
+\end{equation}
+
+Al rededor de $x_n, \phi'$ es un pequeña perturbación,
+de modo que el exponencial puede ser remplazado con
+su aproximación de primer orden ($e^{-x} = 1 - x$):
+
+\begin{equation}
+    - \diff{2}\phi' = - \frac{qN_D}{\e_s}
+    \left(1 - 1 + \frac{q\phi'}{kT}\right)
+    = - \frac{q^2 N_D}{\e_s k T}\phi'
+\end{equation}
+
+La ecuación previa contiene la longitud de
+Deybe, definida como $L_D = \sqrt{\frac{e_s k T}{q^2 N_D}}$.
+La longitud de Debye es la escala de longitud del decaimiento exponencial. En la práctica, el campo eléctrico se vuelve despreciable más allá de aproximadamente cuatro longitudes de Debye desde el borde de la capa de agotamiento calculada bajo la hipótesis de aproximación de agotamiento profundo.
+
+Entonces la ecuación de Poisson se escribe como
+
+\begin{equation}
+    \frac{d^2\phi}{dx^2} = \frac{\phi'}{L_D^2}
+\end{equation}
+
+Cuya solución general es
+
+\begin{equation}
+    \phi' = A \exp(\frac{x}{L_D}) + B \exp(- \frac{x}{L_D})
+\end{equation}
+
+Donde las constantes A y B dependen de las condiciones de contorno.
+
+La primera condición de contorno es $\phi'(0) = \phi_0'$ 
+que es la desviación con respecto a $\phi_n$ en $x = x_n$. 
+Para simplificar el origin de coordinadas $x$es trasladado a
+$x = x_n$. Como la segunda condición, asumamos que
+la longitud de bulk es mucho mas grande que la longitud de
+Debye, asi las condiciones de contorno resulta en
+$A = 0$ y $B = \phi_0'$. Eventualmente, el potencial en exceso
+debido al comportamiento suave de la carga total es
+$\phi' = \phi_0' \exp(- \frac{x}{L_D})$
+
+El termino aditivo de del campo eléctrico es:
+
+\begin{equation}
+    \E' = - \dif \phi' = \frac{\phi_0'}{L_D}\exp(- \frac{x}{L_D})
+\end{equation}
+
+Por ejemplo para un diodo simétrico se tiene $(N_D = N_A)$,
+donde el potencial en el origen es nulo, de modo que
+
+\begin{equation}
+    \phi_0 = \phi_n - \frac{qN_D}{2\e_s}x_n^2 = 0
+\end{equation}
+
+Remplazando la expresión por $\phi_n$ obtenemos
+
+\begin{equation}
+    x_n^2 = 2 \frac{\e_s k T}{q^2 N_D} \ln \left(
+        \frac{N_D}{n_i}
+    \right)
+    = 2 L_D^2 \ln \left(\frac{N_D}{n_i}\right)
+\end{equation}
+
+Esto es, el tamaño de la capa de agotamiento y la longitud
+de Deybe is:
+
+\begin{equation}
+    \frac{x_n}{L_D} =
+    \sqrt{2 \ln \left(
+        \frac{N_D}{n_i}
+    \right)}
+\end{equation}
+
+La relación entre el tamaño de la capa de agotamiento y la longitud
+de Debye es bastante independiente de las concentraciones de dopaje.

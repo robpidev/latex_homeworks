@@ -1,0 +1,246 @@
+\section{Unión $PN$ en el equilibrio}
+
+La formación de la unión ideal puede considerarse como la unión
+instantánea de dos materiales separados que se mantienen en
+equilibrio a la misma temperatura. Después de unirse,
+la combinación de materiales alcanza una nueva condición de equilibrio,
+considerando tanto los electrones como los huecos.
+Aquí, los electrones migran del material con la función
+de trabajo más pequeña, hacia el material con la función de
+trabajo más grande, y viceversa para el movimiento de
+los agujeros, es decir los electrones parten del material
+de tipo $N$ al de tipo $P$, mientras que los huecos
+se transfieren del material del tipo $P$ al tipo $N$.
+La trasferencia de cargas se vuelve uniforme 
+en todo el dispositivo.
+
+Inicialmente, las cargas inyectadas de un material en el otro
+son cargas mayoritarias. Pero de lo contrario, se convierten
+en cargas minoritarias a medida que llegan a las regiones de
+destino, donde se recombinan rápidamente con las cargas
+mayoritarias. El resultado de estos procesos es el agotamiento
+de las cargas mayoritarias en ambos lados de los cruces.
+Esto deja una densidad de cargas fijadas formados por átomos
+dopantes ionizados en las proximidades de la unión, está 
+densidad dá como consecuencia la formación de un campo eléctrico 
+qué impiden que se transfieran más cargas, de modo
+que se estable un equilibrio del sistema, donde este equilibrio
+significa un equilibrio entre corrientes opuestas.
+
+En el equilibrio todo el sistema está formado por dos regiones
+de masa no perturbadas conectadas por una región de carga espacial
+(particularmente una capa de agotamiento). La densidad
+de carga total $Q$ en cualquier volumen es la suma de las
+concentraciones de los 4 tipos de cargas disponibles:
+$Q = q(p - n + N_D - N_A)$
+
+Las densidades de carga de cada zona se enumeran en la siguiente table:
+
+\vspace{12pt}
+\begin{figure}[h]
+    \includegraphics[width=\textwidth]{img/f1.png}
+    \caption{Condición de carga en las 3 regiones
+del semiconductor.
+}
+\end{figure}
+
+Tanto el campo eléctrico como el potencial se calcula a partir
+de la ecuación de Poisson resuelta en la región
+espacial donde la carga total es distinta de 0:
+
+\let\e\epsilon{}
+\newcommand{\dif}{\frac{d}{dx}}
+\newcommand{\diff}[1]{\frac{d^#1}{dx^#1}}
+\newcommand{\E}{\mathcal{E}}
+
+
+\begin{equation}
+    \nabla^2 \phi = -\frac{\rho}{\e_s}
+\end{equation}
+
+Pero como se trabajará en una sola dimensión se tiene
+
+\begin{equation}
+    \diff{2}\phi = - \frac{\rho}{\e_s}
+\end{equation}
+
+Las características electrostáticas de la unión se calculan
+mediante la hipótesis de agotamiento profundo, asumiendo
+que la carga total en la capa de agotamiento solo es
+aportada por los átomos donantes y aceptores
+
+\begin{equation}
+    \diff{2}\phi = - \frac{q}{\e_s}(N_D - N_A)
+\end{equation}
+
+La distribución de la densidad de carga bajo la hipótesis de
+agotamiento profundo se muestra en la figura~\ref{fig:dis-carga}.
+
+\begin{figure}[h]\label{fig:dis-carga}
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/f2.png}
+    \caption{distribución total de la carga bajo la aproximación
+    de agotamiento profundo}
+\end{figure}
+
+De aquí se puede observar que $+Q$ y $-Q$ está dado por
+
+\begin{equation}
+    +Q = qN_D x_n \wedge -Q = q N_A x_p
+\end{equation}
+
+Dado que la carga total debe ser nula, se mantiene la siguiente
+relación
+
+\begin{equation}
+    \label{eq:charge:neut}
+    N_D x_n = N_A x_p
+\end{equation}
+
+La distribución de carga es la entrada utilizada para calcular
+tanto el campo eléctrico como el potencial. El campo eléctrico
+viene dad por
+
+\begin{equation}
+    \dif \E = - \frac{\rho}{\e_s}
+\end{equation}
+
+En el lado de tipo N de la capa de agotamiento $(0 < x < x_n)$,
+según la hipótesis del dopaje constante, el campo eléctrico es:
+
+\begin{equation}
+    \int_{\E(x)}^{\E(x_n)} d \E = \int_{x}^{x_n} \frac{qN_D}{\e_s} dx
+    \implies \E(x_n) - \E(x) = \frac{qN_D}{\e_s} (x_n - x)
+\end{equation}
+
+Las condiciones de contorno es $\E(x_n) = 0$, 
+de modo que el campo eléctrico en la capa de agotamiento en lado
+de tipo $N$ de la capa de agotamiento es
+
+\begin{equation}
+   \E_n(x) = q \frac{N_D}{\e_s} (x - x_n) 
+\end{equation}
+
+Similarmente, en la parte de tipo $P$ de la región de carga espacial, 
+obtenemos
+
+\begin{equation}
+    \E_n(x) = - q \frac{N_A}{\e_s} (x + x_p)
+\end{equation}
+
+Dado que el material es homogéneo, la permitividad eléctrica
+es constante y el campo eléctrico es continuo en la interface
+$(\E_n(0) = \E_p(0))$ donde su valor absoluto es máximo
+
+\begin{equation}
+    \E_{\max} = \frac{-qN_A}{\e_s}x_p
+    = \frac{-qN_D}{\e_s}x_n
+\end{equation}
+
+El potencial se calcula a partir del campo eléctrico
+$d\phi = \E dx$ en los dos lados de la capa de agotamiento.
+
+Las condiciones de contorno para el cálculo del potencial son: 
+$\phi(x \geq x_n) =  \phi_n$ y 
+$\phi (x \leq - x_p) = \phi_p$ donde $\phi_n$ $\phi_p$ son
+los potenciales en la zona neutral y donde $\phi = E_F -E_i$:
+
+\begin{gather}
+   x < 0 \implies
+   \phi(x) = -\phi_p + \frac{qN_a}{2\e_s}{(x - x_p)}^2 \\
+   x>0 \implies
+   \phi(x) =  \phi_n - \frac{qN_D}{2\e_s}{(x - x_n)}^2
+\end{gather}
+
+Nótese que el potencial en $x = 0$ es nulo solo si las concentraciones
+de aceptores y donantes permanecen iguales $N_A = N_D$.
+El potencial nulo se produce cuando el semiconductor se vuelve
+intrínseco ($p = n = n_i$). Cabe destacar que
+en el caso del dopaje simétrico el potencial se anula
+dentro de la capa de agotamiento del semiconductor menos
+dopado. Por lo tanto en este lado de la capa de agotamiento
+la región situada entre la que obedece la condiciones $phi = 0$
+y la interface se puebla con un mayor número de cargar minoritarias
+que las cargas mayoritarias. Esta situación se conoce como
+inversion y es primordial en las uniones metal-oxido-semiconductores.
+La caída neta del potencial en toda la unión es el potencial 
+incorporado. Se puede calcular a partir delos potenciales en las
+zonas neutras no perturbadas, $\phi_i = \phi_n - \phi_p$, que
+dependen de la concentración de las cargas mayoritarias
+en las regiones respectivas: 
+
+\begin{equation}
+    \phi_n = \frac{kT}{q}\ln\left(\frac{N_D}{N_i}\right) \wedge
+    \phi_p = -\frac{kT}{q} \ln \left(
+        \frac{N_A}{n_i}
+    \right)
+\end{equation}
+
+De los cuales  
+
+\begin{equation}
+    \phi_i = \frac{kT}{q}\left[
+        \ln \left(\frac{N_D}{ni} \right)
+        +
+        \ln \left(\frac{N_A}{ni} \right)
+    \right]
+    =
+    \frac{k T }{q}
+        \ln \left(\frac{
+            N_A N_D 
+        }{n_i^2}
+    \right)
+\end{equation}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/f3.png}
+    \caption{Campo eléctrico y potencial en equilibrio}
+\end{figure}
+
+El tamaño total de la capa de agotamiento es una consecuencia
+de la condición de la continuidad potencial en $x = 0$:
+
+\begin{equation}
+    \phi_n - q \frac{N_D}{2\e_s}x_n^2
+    = \phi_p + q \frac{N_A}{2\e_s}x_p^2
+\end{equation}
+
+Introducción el potencial incorporado obtenemos
+
+\begin{equation}
+    \phi_i = \phi_n - \phi_p
+     = \frac{q}{2\e_s} \left(
+        N_D x^2_n + N_A x_p^2
+     \right)
+\end{equation}
+
+Remplazando $x_n$ con la expresión de la ecuación~\ref{eq:charge:neut}
+se obtiene
+
+\begin{equation}
+    x_p = \sqrt{
+        \frac{2\phi_i \e_s}{q}
+    }
+    \frac{N_D}{\sqrt{N_D N_A^2 + N_A N_D^2}}
+\end{equation}
+
+De la misma forma
+
+
+\begin{equation}
+    x_n = \sqrt{
+        \frac{2\phi_i \e_s}{q}
+    }
+    \frac{N_A}{\sqrt{N_D N_A^2 + N_A N_D^2}}
+\end{equation}
+
+Por lo que la región de agotamiento será
+
+\begin{equation}
+    x_d = x_p + x_n =
+    \sqrt{\frac{2\phi_i \e_s}{q}
+    \left(\frac{1}{N_A} + \frac{1}{N_D}\right)
+    }
+\end{equation}
+

@@ -1,0 +1,47 @@
+Verifique que para un gas de fermiones libres con impulso
+de fermi $p_F$ se cumple 
+\begin{equation*}
+    \sum_{|P| < p_F} \frac{p^2}{2m} = \frac{3}{5} \bk{N}\e_F
+\end{equation*}
+
+\sol La densidad de estados en el espacio de momentos
+está dado por
+
+\begin{equation*}
+    g(p) dp = \frac{V}{{(2\pi \hbar)}^3} 4\pi p^2dp
+\end{equation*}
+
+Entonces los estados ocupados con el nivel de fermi está
+dado por
+
+\begin{equation*}
+    \bk{N} = \int_{0}^{p_F} g(p) dp
+    = \int_{0}^{p_F} \frac{V}{{(2\pi \hbar)}^3} 4\pi p^2 dp
+    = \frac{Vp_F^3}{6\pi^2\hbar^3}
+\end{equation*}
+
+Y la energía total del gas está dado (Como se trata
+de un gas y esto es un gran número de partículas entonces
+cambiamos la suma por la integral) 
+
+\begin{equation*}
+    E = \int_{0}^{p_F}\e g(p) dp
+    = \int_{0}^{p_F} \frac{p^2}{2m} g(p) dp
+    = \int_{0}^{p_F}\frac{p^2}{2m}\frac{V}{{(2\pi \hbar)}^3} 4\pi p^2 dp
+    = \frac{Vp_F^2}{20m\pi^5\hbar^3} 
+\end{equation*}
+
+Esta ultima expresión podemos escribir como
+
+\begin{equation*}
+    \frac{Vp_F^2}{20m\pi^2\hbar^3}
+    =\frac{3}{5}\frac{Vp_F^3}{6\pi^2\hbar^3}\frac{p^2_F}{2 m}
+    = \frac{3}{5} \bk{N} \e_F
+\end{equation*}
+
+\begin{equation*}
+    \therefore
+    \sum_{|P| < p_F} \frac{p^2}{2m} = \frac{3}{5} \bk{N}\e_F
+\end{equation*}
+
+\solend

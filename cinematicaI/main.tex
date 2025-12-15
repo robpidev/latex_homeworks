@@ -1,0 +1,154 @@
+\documentclass[twocolumn, 12pt, a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}    % Soporte para caracteres especiales
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{float}
+\usepackage[right=1.5cm, left=1.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+%\usepackage{hyperref}          % Enlaces y referencias
+%\usepackage[style=apa]{biblatex}
+%\usepackage{csquotes}          % Manejo de citas (opcional, útil para biblatex)
+%\addbibresource{references.bib}
+%\usepackage[spanish]{babel}
+
+\newcommand\BackgroundPic{
+    \put(0,0){%
+        \parbox[b][\paperheight]{\paperwidth}{%
+            \includegraphics[width=\paperwidth,height=\paperheight]{img/back.pdf}%
+        }%
+    }
+}
+
+\newcommand*{\exer}[8]{
+    \item #1
+    \begin{center}
+        \includegraphics[width=0.3\textwidth]{img/#2.png}
+    \end{center}
+    \begin{tabular*}{0.4\textwidth}{@{\extracolsep{\fill}}lll}    % 3 columnas sin líneas
+                (A) $#3$ #8 & (B) $#4$ #8 & (C) $#5$ #8\\
+                (D) $#6$ #8 &  & (E) $#7$ #8
+    \end{tabular*}
+}
+
+\newcommand*{\ex}[7]{
+    \item #1.
+        
+    \vspace{12pt}
+    \begin{tabular*}{0.4\textwidth}{@{\extracolsep{\fill}}lll}    % 3 columnas sin líneas
+                (A) $#2$ #7 & (B) $#3$ #7 & (C) $#4$ #7\\
+                (D) $#5$ #7 &  & (E) $#6$ #7
+    \end{tabular*}
+}
+
+\begin{document}
+\AddToShipoutPicture*{\BackgroundPic}
+
+    Cinemática: MCL
+    \begin{enumerate}
+       
+        \AddToShipoutPicture*{\BackgroundPic}
+        \ex{Un cuerpo es lanzado verticalmente hacia arriba con
+        una rapidez de 50 m/s. ¿Después de qué tiempo del
+        lanzamiento se encuentra a una altura de 105 m?}{2;6}{1;5}{3;7}{2;5}{4;7}{s}
+    
+        \ex{Una piedra es lanzada verticalmente hacia arriba con
+        una velocidad inicial de 10 m/s desde la superficie lunar.
+        La piedra permanece en movimiento durante 12 s hasta
+        regresar a su nivel de lanzamiento. Halle la altura máxima
+        alcanzada}{30}{40}{180}{60}{31.5}{m}
+        
+        \ex{ Un cohete parte del reposo y sus propulsores le
+        imprimen una aceleración neta de 5$\text{m/s}^2$ durante 8s. Si
+        en ese instante se acaba el combustible, halle hasta
+        qué altura se elevó el cohete}{240}{120}{80}{160}{300}{m}
+        
+        \exer{La ecuación de movimiento de un proyectil lanzado
+        verticalmente desde el punto "A" cercano a tierra es:
+        $y(t) = -10 + 40t - 5t^2$ ¿Cuál es la altura alcanzada con
+        respecto al nivel de referencia?}{12}{70}{90}{60}{80}{50}{m}
+        
+        \exer{ Se realiza un experimento en un lugar donde la
+        dirección vertical de la aceleración de la gravedad,
+        (g=10 m/s2) cambia cada 5 s. Con la gravedad,
+        orientada hacia abajo, se suelta una esferita desde
+        y=8 m. ¿Cuál es la posición y (en m) de la esferita 9 s
+        después de iniciado su movimiento?}{13}{-125}{-117}{-167}{-317}{-237}{m}
+        
+        \exer{Un globo aerostático se encuentra ascendiendo con
+        velocidad constante de 6 m/s. Cuando el globo se
+        encuentra a 40 m sobre el suelo, se suelta de él un
+        objeto. Asumiendo que sólo actúa la gravedad, ¿Cuál
+        de las siguientes ecuaciones representa el movimiento
+        del objeto, respecto a  un observador de tierra, a partir
+        del momento en que fue soltado?}{14}{ }{ }{ }{ }{ }{ }
+
+        \ex{ Considerando las unidades del sistema internacional,
+        la ecuación de posición de una partícula en caída libre
+        es: $y(t)=5t^2-8t+7$. Expresar la ecuación de su aceleración}{10t}{10t-8}{-10 + t}{-10}{10}{ }
+        
+        \ex{Se lanza un objeto verticalmente hacia arriba del borde
+        de un precipicio con una velocidad de 20 m/s. ¿Después
+        de cuánto tiempo su rapidez será de 50 m/s?}{3}{4}{5}{6}{7}{s}
+        
+        \newpage
+        \AddToShipoutPicture*{\BackgroundPic}
+
+        
+        \exer{ Un ascensor sube verticalmente con una velocidad de
+        72 km/h. Si del techo se desprende un foco. ¿Qué tiempo
+        tarda en llegar al suelo, si la altura del ascensor es de
+        2 m?}{15}{2/5\sqrt{10}}{2\sqrt{5}}{\sqrt{10}}{5/9\sqrt{10}}{\sqrt{10}/5}{ s }
+        
+        \ex{En el planeta MK-54 de la constelación de la Osa Menor
+        se deja caer una piedra desde cierta altura y se observa
+        que en un segundo determinado recorre 26 m y en el
+        siguiente segundo 32 m. Halle el valor de la aceleración
+        de la gravedad en dicho planeta en $\text{m/s}^2$}{6}{12}{10}{8}{4}{ }
+        
+        \ex{Un globo aerostático asciende verticalmente con una
+        velocidad de 22 m/s y cuando se encuentra a una altura
+        de 1120 m, se lanza del globo una piedra verticalmente
+        hacia abajo con una velocidad de 12 m/s. ¿Qué tiempo
+        tarda la piedra en llegar al suelo?}{30}{24}{20}{18}{16}{s}
+        
+        \ex{Una maceta se deja caer desde la azotea de un edificio
+        de 45 m de altura. Halle la altura recorrida por la maceta
+        en el último segundo de su caída}{5}{25}{35}{22.5}{20}{m}
+        
+        \ex{una altura igual a la mitad de la altura inicial. Si su
+        velocidad, justo antes del choque, es de 20 m/s. Halle
+        su velocidad después del impacto}{20}{10}{14.1}{28.2}{40}{m/s}
+        
+        \ex{ Una pelota cae verticalmente desde una altura de 80 m
+        y, al chocar con el piso, se eleva con una velocidad que
+        es 3/4 de la velocidad anterior al impacto. Halle la altura
+        alcanzada después del choque. }{45}{48}{60}{46}{52}{m}
+       
+        \item  Un globo aerostático se encuentra descendiendo con
+        una velocidad constante de 4m/s. Un paracaidista
+        ubicado en el globo lanza una piedra verticalmente
+        hacia abajo con una velocidad de 16 m/s, tardando 6 s
+        en llegar a tierra.
+        ¿Cuál de las siguientes ecuaciones representa el movi
+       miento de la piedra, respecto a un observador de tie
+       rra, a partir del momento en que fue lanzado?
+
+       \begin{enumerate}
+        \item $y=16t-5t^2$
+        \item $y=20-5t^2$
+        \item $y=60-16t+5t^2$
+        \item $y=300-16t^2+5t^2$
+        \item $y=300-20t-5t^2$
+       \end{enumerate}
+
+       \ex{Del problema anterior; determine, aproximadamente,
+       la altura desde la cual fue lanzada la piedra.}{20}{60}{300}{240}{120}{m}
+       
+       \ex{Un proyectil es arrojado verticalmente para arriba con
+       una rapidez de 40 m/s. ¿A qué altura del nivel de
+       lanzamiento se encontrará después de 6 s de la partida?.}{100}{80}{60}{55}{45}{m}
+        
+    \end{enumerate}
+\end{document}

@@ -1,0 +1,65 @@
+\section{Nutación de la Tierra}
+Dado que la tierra es una peonza simétrica
+entonces se tiene que $I_x = I_y$, esta
+está rotando alrededor de los ejes $x, y$ y $z$
+y sus respectivas velocidades angulares
+$X(t) = \o_x(t), Y(t)=\o_y(t), \o_z = const$.
+Las Ecuaciones de Euler del movimiento de $X$ y
+$Y$ se reducen a
+
+\begin{equation}
+    \dot X = -aY, \dot Y = aX
+\end{equation}
+
+donde $a = [(I_z - I_x)/I_z]\o_z$, Los valores
+iniciales $X$ y $Y$ ambos no son 0, por lo que el
+eje de simetría no está alineado, para la tierra
+solo es alrededor de 15 metros, medidos dese los
+ángulos polares. Ahora se resolverá las ecuaciones
+diferenciales acopladas, usando las transformadas de Laplace
+se tiene
+
+
+\begin{equation*}
+    \mathcal{L}(\dot X = -aY), \mathcal{L}(\dot Y = aX)
+\end{equation*}
+
+Lo que nos da
+\begin{equation*}
+    sX(s) - X(0) = -ay(s), sY(s) - Y(0) = aX(s)
+\end{equation*}
+
+Eliminando $Y(s)$, tenemos
+\begin{gather*}
+    s^2X(s) - sX(0) + aY(0) = -a^2 X(s)\\
+    \Rightarrow X(s) = X(0) \frac{s}{s^2 + a^2} - Y(0)\frac{a}{s^2+a^2}
+\end{gather*}
+
+Tomando la transformada inversa tenemos la solución
+\begin{equation}
+    X(t) = X(0)\cos(at) - Y(0)\sin(at)
+\end{equation}
+
+De manera similar, se obtiene la solución par $Y(t)$
+\begin{equation}
+    Y(t) = X(0)\sin(at) + Y(0)\cos(at)
+\end{equation}
+
+Tomando $Y(0)$ las ecuaciones quedarán
+\begin{equation}
+    X(t) = X(0)\cos(at), Y(t) = X(0)\sin(at)
+\end{equation}
+
+Las cuales serán ecuaciones paramétricas de rotación
+de (X, Y) en una orbita particular de radio $X(0)$, 
+Con algunas velocidades angulares $a$ en el sentido
+contrario de las agujas del reloj.
+
+Si se toma otros valores iniciales de $X(0), Y(0)$, 
+El eje de rotación tenderá a moverse de forma oscilante
+sobre el eje de precesión como se muestra en la figura siguiente.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.5]{img/2.png}
+\end{figure}

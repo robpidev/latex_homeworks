@@ -1,0 +1,255 @@
+\subsection{Corriente ideal}
+El modelo de corriente ideal es una consecuencia del cambio en la
+concentración de carga minoritaria en los límites de las zonas
+neutras debido al voltaje aplicado. El cálculo se lleva a cabo
+utilizando los supuestos principales de cuasiequilibrio y límite
+de inyección bajo. De acuerdo con la aproximación de cuasi-equilibrio,
+incluso bajo polarización, tanto las concentraciones de electrones
+como las de huecos se pueden calcular a través de las ecuaciones
+de equilibrio estadístico. Por otro lado, en cuanto a la hipótesis
+del límite de inyección bajo, la concentración excesiva de carga
+minoritaria en una región es mucho menor que la concentración de
+carga mayoritaria correspondiente. En equilibrio, la densidad de
+las cargas minoritarias es aproximadamente 11 órdenes de magnitud
+menor que la densidad de las cargas mayoritarias. Por lo tanto,
+la condición de baja inyección no se cumple hasta después de que
+la carga excesiva alcance este nivel. Esta condición permite
+considerar la versión simplificada de la función de recombinación
+de generación
+
+En el equilibrio ($V_A = 0$), el número de cargas mayoritarias
+en las coordenadas $x_n$ y $-x_p$ es:
+
+\begin{equation}
+    n_{n0}(x_n) = N_D; \qquad p_{p0}(-x_p) = N_A
+\end{equation}
+
+Mientras que el número de cargas minoritarias es:
+
+\newcommand{\ffd}{\exp\left(-\frac{q\phi_i}{kT}\right)}
+
+\begin{equation}
+    n_{p0}(-x_p) = n_{n0}(x_n)\ffd
+    = N_D \ffd = \frac{n_i^2}{N_A}
+\end{equation}
+
+y
+
+\begin{equation}
+    p_{n0}(-x_p)\ffd = N_A \ffd = \frac{n_i^2}{N_D}
+\end{equation}
+
+El subíndice $p$ indica los lados de la unión,
+mientras que el subíndice $0$ representa el equilibrio.
+
+Con un sesgo insuficiente ($V_A=0$), la concentración de las tasas
+minoritarias en la frontera de la zona neutra se transforma en:
+
+\begin{equation}
+    n_p(-x_p) = N_D \exp\left(
+        - \frac{q(\phi_i - V_A)}{kT}
+    \right)
+    > \frac{n_i^2}{N_A}
+\end{equation}
+
+Junto a
+
+\begin{equation}
+    p_n(x_n) = N_A \exp\left(
+        - \frac{q(\phi_i - V_A)}{kT}
+    \right)
+    > \frac{n_i^2}{N_A}
+\end{equation}
+
+
+La creación de este exceso de tasas minoritarias en la frontera con las
+zonas neutras es, en realidad, el principal efecto de la tensión aplicada,
+que mantiene constante su concentración.
+Por lo tanto, a pesar de que estas cargas se eliminan por recombinación,
+su concentración en $x_n$ y $x_p$ permanece constante.
+Los gastos de concentración excesiva pueden escribirse como:
+
+\begin{align*}
+    n'_p &= n_p - n_{p0} = N_D \exp\left(
+        - \frac{q(\phi_i - V_A)}{kT}
+    \right)
+    - N_d \ffd\\
+    &= N_D \ffd \left[
+        \exp\left(
+            \frac{qV_A}{kT} - 1
+        \right)
+    \right]
+\end{align*}
+
+y
+
+\begin{align*}
+    p'_n &= n_p - n_{p0} = N_D \exp\left(
+        - \frac{q(\phi_i - V_A)}{kT}
+    \right)
+    - N_A \ffd\\
+    &= N_A \ffd \left[
+        \exp\left(
+            \frac{qV_A}{kT} - 1
+        \right)
+    \right]
+\end{align*}
+
+
+El exceso de carga minoritaria (electrones en la región de tipo P y huecos
+en la de tipo N) que se crea en el borde de las zonas neutras,
+el campo eléctrico en la zona neutra es nulo. En consecuencia,
+la corriente recogida en el electrodo es corriente de difusión.
+Esto significa que para que se pueda medir una corriente constante,
+se debe establecer un gradiente constante de cargas minoritarias en
+las zonas neutras. El gradiente de las cargas minoritarias es una
+consecuencia tanto de la recombinación como de la difusión.
+El exceso de cargas minoritarias activa los procesos de recombinación,
+que tienden a restablecer el equilibrio. Bajo la hipótesis del límite
+de inyección bajo, la función de recombinación de generación se puede
+escribir de forma simplificada, de modo que la función U en los dos
+lados de la unión es:
+
+\begin{equation}
+    U_n = {(R - G)}_n = \frac{n_p'}{\tau_n}; \qquad
+    U_p = {(R - G)}_p = \frac{p'_n}{\tau_p}
+\end{equation}
+
+Calculemos ahora la corriente debida a los orificios inyectados en el lado de tipo N de la unión. Los cálculos son simétricos para los electrones en el otro lado del dispositivo. Para calcular el efecto de la recombinación, partamos de la ecuación de continuidad de los agujeros:
+
+\newcommand{\pd}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\pdd}[3]{\frac{\partial^#1#3}{\partial#2^#1}}
+
+
+\begin{equation}
+    \pd{p_n}{t} = - \frac{1}{q}\pd{J_p}{x} - U  
+\end{equation}
+
+La concentración total de agujeros es $p_n = p'_n + p_{n0}$.
+Dado que el campo eléctrico es nulo, la corriente es una corriente de
+difusión: $J_p = - q D_p \pd{p_n}{x}$. Además, al ser uniforme en el
+dopaje, los derivados de pn0 con respecto al tiempo y el espacio son
+nulos. Reemplazando la función de combinación, la corriente de difusión
+y la concentración total de agujeros en la ecuación de continuidad,
+obtenemos:
+
+\begin{equation}
+    \pd{p'_n}{t} = D_p \pdd{2}{x}{p'_n} - \frac{p'_n}{\tau_p}
+\end{equation}
+
+Restrinjamos el análisis al caso del estado estacionario, es decir,
+a la corriente continua. Al final de este capítulo se darán algunas
+consideraciones sobre los fenómenos transitorios.
+El estado estacionario significa que $\pd{p'_n}{t}$,
+por lo que la ecuación de continuidad para los agujeros inyectados
+en la región de tipo N se reduce a:
+
+\begin{equation}
+    \pdd{2}{x}{p_n'} = \frac{p_n'}{L_p^2}
+\end{equation}
+
+La cantidad $L_p = \sqrt{D_p\tau_p}$ se conoce como longitud de
+recombinación. Es una medida de la profundidad de penetración del agujero
+en el interior del semiconductor de tipo N. La solución de la ecuación
+de continuidad es una combinación lineal de dos funciones exponenciales:
+
+\begin{equation}
+    p'_n(x) = A \exp\left(
+        \frac{x - x_n}{\sqrt{D_t\tau_p}}
+    \right)
+    + B \exp\left(
+        - \frac{x - x_n}{\sqrt{D_p\tau_p}}
+    \right)
+\end{equation}
+
+Que también se puede escribir en funciones hiperbólicas
+
+\begin{equation}
+    p'_n(x) = A^* \sinh(\frac{x - x_n}{L_p})
+    + B^* \cosh(\frac{x - x_n}{L_p})
+\end{equation}
+
+Donde  $A^* = (A - B)/2$ y $B^* = (A + B)/2$.
+La corriente se calcula directamente a partir de la definición de
+corriente de difusión. Es proporcional a la derivada del perfil
+de concentración de exceso de pozo, que se calcula imponiendo
+condiciones de contorno a la Ecuación anterior. La primera restricción
+se refiere a la concentración excesiva del orificio en $x_n$,
+mientras que la segunda está fijada por la posición del electrodo.
+En el electrodo, se eliminan todas las cargas excesivas, de modo que
+$p'_n(WB) = 0$. Esto significa que:
+
+\begin{gather}
+   p'_n(x = x_n) \to B^* = p'_n(x_n)\\ 
+   p'_n(W_B) = 0 \to A^* = - \frac{p'_n(x_n)}{\tanh(\frac{W_B}{L_p})}
+\end{gather}
+
+Finalmente, la distribución de exceso de huecos esta dado por:
+
+\begin{equation}
+    p'_n(x) = p'_n(x_n)
+    \left[
+        \cosh(\frac{x - x_n}{L_p})
+        - \frac{\sinh\left(\frac{x-x_n}{L_p}\right)}{
+            \tanh\left(
+                \frac{W_B}{L_p}
+            \right)
+        }
+    \right]
+\end{equation}
+
+El comportamiento analítico de las cargas excesivas depende de la
+distancia entre el electrodo y la capa de agotamiento con respecto a
+la longitud de recombinación. La función aproxima una exponencial como
+$W_B \gg  Lp$ y una función lineal como $W_B \ll L_p$.
+
+\subsubsection{Diodo de Base larga}
+La condición del diodo de base larga se cumple cuando la distancia entre
+el electrodo y la capa de agotamiento es mucho mayor que la longitud de
+difusión. De acuerdo con los símbolos de la Fig. 6, el diodo de base larga
+corresponde a las siguientes condiciones: material de tipo N $W_B-x_n \gg L_p$
+y en el material de tipo P  $-W_E+x_p \gg L_n$.
+Las dos zonas son independientes, por lo que es posible hacer un diodo
+donde las bases son largas y cortas respectivamente.
+el total de corriente es la suma de corrientes $J_N$ y $J_P$ y
+está dada por la ecuación
+
+\begin{equation}
+    J_{tot} = J_N + J_P 
+    = qn_i^2 \left(
+        \frac{D_n}{N_A L_n} + \frac{D_p}{N_D L_p}
+    \right)
+    \left[
+        \exp(\frac{qV_A}{kT}) - 1
+    \right]
+\end{equation}
+
+\subsubsection{Diodo de Base corta}
+
+El otro límite geométrico se produce cuando la distancia entre el electrodo
+y la capa de agotamiento es mucho menor que la longitud de difusión.
+A saber: $W_B - x_n \ll L_p$ en el material de tipo N y $-W_E + x_p \ ll L_n$
+en el material de tipo P. La solución se puede derivar directamente
+de la Ec. (42), considerando que la condición de diodo base corta,
+corresponde a un pequeño argumento de la función exponencial.
+Por lo tanto, la solución de la ecuación de continuidad se puede
+linealizar como: $p_n' = A + Bx$. Aplicando las condiciones de contorno:
+$p'(x_n) = p'_{n0}$ y $p'_n(W_B) = 0$.
+
+Con esto se tiene una solución similar a la subsection anterior
+
+\begin{equation}
+    J_{tot} = J_N + J_P 
+    = qn_i^2 \left(
+        \frac{D_n}{N_A W'_E} + \frac{D_p}{N_D W'_E}
+    \right)
+    \left[
+        \exp(\frac{qV_A}{kT}) - 1
+    \right]
+\end{equation}
+
+\section{Referencias}
+\begin{itemize}
+    \item Di Natale, C. (2023). Introduction to Electronic Devices. Springer.
+    \item Veritasium en español. (2025, febrero 7). Por qué es casi imposible hacer luz LED azul [Video]. YouTube. https://youtu.be/KzTm5UmF0Xk
+\end{itemize}

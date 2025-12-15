@@ -1,0 +1,75 @@
+\section{Beneficios de la resonancia magnética}
+
+La resonancia magnética (RM) representa uno de los mayores avances tecnológicos en el diagnóstico médico moderno. Su principio no invasivo y su capacidad para diferenciar tejidos blandos con una resolución espacial excepcional la convierten en una herramienta de gran valor tanto en la práctica clínica como en la investigación científica.  
+En términos físicos, la RM aprovecha las diferencias en los tiempos de relajación \(T_1\) y \(T_2\) de los protones para generar contrastes entre tejidos, lo cual proporciona información morfológica y funcional sin necesidad de procedimientos invasivos ni radiación ionizante.
+
+\subsection{Diagnóstico preciso y no invasivo}
+
+Uno de los principales beneficios de la resonancia magnética es su capacidad para obtener imágenes con alta resolución espacial y excelente contraste de tejidos blandos. Esto se debe a la sensibilidad del método frente a los parámetros de relajación nuclear, definidos por las ecuaciones:
+
+\[
+M_z(t) = M_0\left(1 - e^{-t/T_1}\right), \qquad M_{xy}(t) = M_0 e^{-t/T_2}
+\]
+
+Estas expresiones describen cómo el vector de magnetización longitudinal (\(M_z\)) y transversal (\(M_{xy}\)) se recuperan o decaen tras la excitación de los espines nucleares.  
+Las diferencias en \(T_1\) y \(T_2\) entre tejidos permiten obtener contrastes precisos entre estructuras como cerebro, médula espinal, músculos, hígado o articulaciones.
+
+A diferencia de los métodos basados en radiación ionizante —como los rayos X o la tomografía computarizada— la RM utiliza ondas de radio, cuya energía es del orden de los megahercios, lo que evita efectos de ionización y daño celular. Por ello, puede repetirse de forma segura en estudios de seguimiento o en pacientes pediátricos.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{img/cerebro_rm.png}
+    \caption{Imagen por resonancia magnética del cerebro humano, donde se observa la diferenciación entre sustancia gris y blanca.}
+    \label{fig:cerebro_rm}
+\end{figure}
+
+\subsection{Aplicaciones médicas}
+
+La versatilidad de la resonancia magnética ha permitido su aplicación en múltiples campos de la medicina moderna:
+
+\begin{itemize}
+    \item \textbf{Neurología:} la RM es fundamental en la detección de tumores cerebrales, esclerosis múltiple y accidentes cerebrovasculares. Su alta resolución permite observar la morfología cortical y el flujo sanguíneo cerebral.
+    \item \textbf{Cardiología:} mediante secuencias de sincronización con el ciclo cardíaco, es posible estudiar la función ventricular, el flujo en arterias coronarias y la perfusión miocárdica.
+    \item \textbf{Oncología:} la RM es una herramienta clave para la localización y caracterización de tumores en tejidos blandos, especialmente en cerebro, mama y próstata, permitiendo evaluar su extensión sin biopsias invasivas.
+    \item \textbf{Ortopedia:} las imágenes por RM muestran con precisión lesiones musculares, ligamentarias y cartilaginosas, siendo esenciales en el diagnóstico deportivo y traumatológico.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{img/rodilla_rm.png}
+    \caption{Imagen de resonancia magnética de rodilla. Se distingue claramente el cartílago articular, los ligamentos y los meniscos.}
+    \label{fig:rodilla_rm}
+\end{figure}
+
+\subsection{Avances recientes}
+
+En las últimas décadas, la resonancia magnética ha evolucionado hacia técnicas especializadas que amplían sus capacidades diagnósticas y experimentales:
+
+\begin{itemize}
+    \item \textbf{Resonancia magnética funcional (RMf):} permite mapear la actividad cerebral midiendo variaciones en la oxigenación sanguínea (\textit{efecto BOLD, Blood Oxygen Level Dependent}). Este fenómeno se basa en la diferente susceptibilidad magnética de la oxihemoglobina y la desoxihemoglobina, que produce un contraste dinámico dependiente del flujo cerebral.
+    
+    \[
+    S(t) \propto e^{-t/T_2^*}
+    \]
+    
+    donde \(T_2^*\) incluye efectos de inhomogeneidad de campo y variaciones locales en la susceptibilidad magnética.
+    
+    \item \textbf{Resonancia magnética de difusión (DWI):} mide el movimiento browniano de las moléculas de agua en los tejidos. Su señal depende del coeficiente aparente de difusión \(D\):
+    
+    \[
+    S(b) = S_0 e^{-bD}
+    \]
+    
+    donde \(b\) es el factor de difusión, determinado por la intensidad y duración de los gradientes aplicados. Es particularmente útil en la detección precoz de infartos cerebrales.
+    
+    \item \textbf{Resonancia magnética espectroscópica (ERM):} combina la imagen con la espectroscopía nuclear, permitiendo analizar la concentración de metabolitos (como N-acetil aspartato, colina o lactato) en regiones específicas del cerebro o de otros órganos. Este enfoque convierte a la RM en una herramienta cuantitativa de análisis bioquímico \textit{in vivo}.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/fmri_actividad.png}
+    \caption{Mapa de activación cerebral obtenido por resonancia magnética funcional (RMf) durante una tarea cognitiva.}
+    \label{fig:fmri}
+\end{figure}
+
+En conjunto, estos avances posicionan a la resonancia magnética como una técnica integral, capaz de ofrecer información anatómica, funcional y metabólica del organismo con precisión milimétrica y sin riesgos significativos para el paciente.

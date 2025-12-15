@@ -1,0 +1,115 @@
+Muestre que para un gas ideal de Fermi la energía libre de Helmholtz
+por partícula a bajas temperaturas está dada por
+
+\begin{equation*}
+    f = \lim_{N \to \infty} \frac{F}{N}
+    = \frac{3}{5}\e_F
+    \left[
+        1 - \frac{5\pi^2}{12}
+        {\left(
+            \frac{kT}{\e_F}
+        \right)}^2+\cdots
+    \right]
+\end{equation*}
+
+\sol\ Se tiene que $F = U - TS$ y $ F = U_0 + U - T (k \ln Z + U/T)$
+por lo que
+
+\begin{equation*}
+    F = U_0 - kT \ln Z
+\end{equation*}
+
+ahora encontremos $U_0$
+
+\begin{align*}
+    U_0 &= \frac{V}{h^3} 4 \pi \int_{0}^{\e_F}\rho d\rho
+    = \frac{4\pi V}{h^3}\int_{0}^{\e_F} \e (2m) \e{(2m)}^{1/2} \frac{1}{2}
+    \e^{-1/2}d\e \\
+    &= \frac{4\pi V}{h^3}\int_{0}^{\e_F}\e^{3/2}d\e
+    = \frac{5}{2}\left(
+        \frac{2\pi V  {(2m)}^{3/2}}{h^3}
+    \right)\e^{5/2}
+\end{align*}
+
+Ahora encontrando la función de partición
+
+\begin{equation*}
+    \ln Z
+    = \frac{2\pi V {(2m)}^{3/2}}{h^3}
+    \int_{0}^{\infty} \e^{1/2} \ln(1 + e^{-\beta(\e - \mu)})d\e
+\end{equation*}
+
+Integrando por partes
+\begin{equation*}
+    u = \ln \left(
+        1 + e^{-\beta(\e - \mu)}
+    \right)
+    \implies
+    du = \frac{
+        -\beta e^{-\beta(\e - \mu)}
+    }{1 + e^{-\beta(\e - \mu)}}
+    = \frac{-\beta}{e^{\beta(\e - \mu)} + 1} d\e
+\end{equation*}
+
+\begin{equation*}
+    dv = e^{1/2}de \implies v = \frac{2}{3}\e^{3/2}
+\end{equation*}
+
+Entonces la función de partición será
+
+\begin{equation*}
+    \ln Z = \frac{2\pi V}{\hbar^3} {(2m)}^{3/2}
+    \left[
+        \frac{2}{3} \e^{3/2} \ln (1 + e^{-\beta(\e - \mu)})
+        + \frac{2\beta}{3}
+        \int_{0}^{\infty} \frac{e^3/2}{e^{\beta(\e - \mu)} + 1} d\e
+    \right]
+\end{equation*}
+
+aproximando esta ultima integral
+
+\begin{equation*}
+    \ln Z = \frac{2\pi V}{\hbar^3} {(2m)}^{3/2} \frac{2\beta}{3}
+    \left[
+        \int_{0}^{\mu}\e^{3/2}d\e
+        + \frac{\pi^6}{6}
+        {\left(\frac{1}{\beta}\right)}^2
+        \frac{3}{2}\mu^{1/2} + \cdots
+    \right]
+\end{equation*}
+
+\begin{equation*}
+    \ln Z = \frac{2\pi V}{\hbar^3} {(2m)}^{3/2} \frac{2\beta}{3}
+    \left[
+        \frac{2}{5}\e^{5/2} + 
+        \frac{\pi^6}{6}
+        {\left(\frac{1}{\beta}\right)}^2
+        \frac{3}{2}\e_F^{1/2} + \cdots
+    \right]
+\end{equation*}
+
+Calculando $N$
+
+\begin{equation*}
+    N = \frac{V}{h^3}\frac{4\pi}{2}{(2m)}^{3/2} \int_{0}^{\e_F} \e^{1/2}d\e
+    = \frac{V}{h^3}\frac{4\pi}{2}{(2m)}^{3/2} \frac{2}{3}\e_F^{3/2}
+\end{equation*}
+
+Ahora a $F = U_0 - kT\ln Z$ dividiendo por $N$ tenemos
+
+\begin{equation*}
+    \frac{F}{N} = \frac{U_0}{N} - \frac{kT \ln Z}{N}
+\end{equation*}
+
+Reemplazando y simplificando finalmente obtenemos
+
+\begin{equation*}
+    \frac{F}{N} = 3/5
+    \left[
+        1 - \frac{3\pi^2}{12}{\left(
+            \frac{kT}{\e_F}^2 + \cdots
+        \right)}
+    \right]
+\end{equation*}
+
+\solend\

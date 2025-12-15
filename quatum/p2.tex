@@ -1,0 +1,67 @@
+\section{Relación entre estados acoplados}
+De la sección anterior se puede deducir que el estado
+$|j_1j_2, jm_j\rangle$ se puedo construir a partir de los
+valores $m_{j1}$ y $m_{j2}$ tal que $m_{j1} + m_{j2} = m_j$.
+Podemos suponer que el estado acoplado es la suma sobre todos
+los estados desacoplados $|j_1m_1; j_2m_{j2}\rangle$ tal que
+$m_{j} = m_{j1} + m_{j2}$, de aquí podemos deducir
+que podemos escribir
+
+\begin{equation}
+    |j_1 j_2; jm_j\rangle = \sum_{m_{j1},m_{j2}}{C(m_{j1},m_{j2}) |j_1m_{j1};j_2m_{j2}\rangle}
+\end{equation}
+
+Donde el coeficiente $C(m_{j1}, m_{j2})$ es llamado \textbf{
+    coeficiente de acoplamiento vectorial
+}.
+
+También son llamados \textit{Coeficientes de Clebsch-Gordan}, \textit{Coeficientes de Wigner}
+Y en una forma ligeramente modificada los \textit{Símbolos} $3j$.
+
+\section{Estados acoplados Singlete y triplete}
+Se ilustrará el uso de los coeficientes de acoplamiento vectorial
+considerando los estados singlete y triplete de dos partículas
+de espín $-1/2$. Los valores se representan en la tabla 1.
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        $m_{s1}$ & $m_{s2}$ & $|\textbf{1}, +\textbf{1} \langle$
+        & $|\textbf{1, 0} \rangle $ & $|\textbf{1, -1}\rangle$ 
+        & $|0, 0 \rangle$
+        \\
+        \hline
+        $+1/2$ & $+1/2$ & 1 & 0 & 0 & 0\\
+        $+1/2$ & $-1/2$ & 0 & $1/2^{1/2}$ & $1/2^{1/2}$ & 0 \\
+        $-1/2$ & $+1/2$ & 0 & $1/2^{1/2}$ & $-1/2^{1/2}$ & 0 \\
+        $-1/2$ & $-1/2$ & 0 & 0 &  & 0 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{align*}
+    |\textbf{1, +1} \rangle &= \alpha_1 \alpha_2\\
+    |\textbf{1, 0} \rangle &= \frac{1}{2^{1/2}}\alpha_1 \beta_1 + \frac{1/}{2^{1/2}}\beta_1\alpha_2\\
+    |\textbf{1, -1} \rangle &= \beta_1\beta_2\\
+    |\textbf{0, 0} \rangle &= \frac{1}{2^{1/2}}\alpha_1 \beta_1 - \frac{1/}{2^{1/2}}\beta_1\alpha_2
+\end{align*}
+
+Para encontrar los coeficientes multiplicamos el lado izquierdo
+de la ecuación (1) por $\langle 1_1m'_{j1};j_2m'_{j2}|$,
+por ortogonalidad el único término que sobrevive por la derecha es cuando
+$m_{j1} = m'_{j1} \wedge m_{j2}=m'_{j2}$ por lo tanto
+
+\begin{equation}
+\langle 1_1m'_{j1};j_2m'_{j2}|j_1 j_2; jm_j \rangle = C(m'_{j1}, m'_{j2})
+\end{equation}
+
+El coeficiente $C(m_{j1}, m_{j2})$ puede interpretarse como la medida
+en que el estado acoplado $|j_1 j_2; jm_j\rangle$ se asemeja al estado
+desacoplado
+$|1_1m_{j1};j_2m_{j2} \rangle$
+
+Alternativamente  $C(m_{j1}, m_{j2})$ puede interpretarse como la probabilidad
+de que se encuentre los valores $m_{j1}$ y $m_{j2}$ si el estado
+$|1_1m_{j1};j_2m_{j2} \rangle$ se inspecciona para determinar
+sus valores individuales (en lugar de su suma).

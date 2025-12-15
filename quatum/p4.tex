@@ -1,0 +1,52 @@
+\section{Estados de configuración $d^2$}
+Consideremos los electrones $d$. La serie de Clebsch-Gordan de el
+momento angular orbital total, $L$, con $L = 0, 1, 2, 3, 4$,
+
+Con estos valores se asocian 25 estados, por lo que el problema
+es algo mayor que antes. El estado con $L = 4$ debe tener $M_L = +4$
+como uno de sus componentes, y este estado se puede obtener
+de una sola manera, cuando $m_{l1} = +2$ y $m_{l2} = +2$, entonces
+se tiene
+
+\begin{gather*}
+    \ket{4, + 4} = \ket{+2, +2}
+\end{gather*}
+
+Donde la notación de la izquierda es $\ket{L, M_L}$ y
+el de la derecha $\ket{m_{l1}, m_{l2}}$, Pra simplificar el simbolismo en
+tanto confuso vamos a denotar $L = 0, 1, 2, 3, 4$ con las letras
+$S, P, D, F, G$, entonces la ecuación anterior podemos escribir como
+
+\begin{gather*}
+    \ket{G, +4} = \ket{+2, + 2}
+\end{gather*}
+
+Ahora encontremos los 8 estados restantes
+para $L = 4$, aplicando el operador $L_{-1} = l_{1-} + l_{2-}$,
+aplicando a la izquierda de la ultima ecuación tenemos
+
+\begin{gather*}
+    L_{-} ket{G, + 4} = 8^{1/2}\hbar\ket{G, + 3}
+\end{gather*}
+
+y aplicando $l_{1-} + l_{2-}$ al lado derecho
+
+\begin{gather*}
+    (l_{1-} + l_{2-})\ket{+2, +2} = 4^{1/2}\hbar(\ket{+1, +2} + \ket{+2, +1})
+\end{gather*}
+
+de donde se deduce que
+\begin{gather*}
+    \ket{G, + 3} = \frac{1}{2^{1/2}}(\ket{+1, +2} + \ket{+2, + 1})
+\end{gather*}
+
+Los estados restantes se generan de la misma forma.
+Como el estado $\ket{F, + 3}$ también surge de los estados $\ket{+1, +2}$
+y $\ket{+2, + 1}$ y deb ser ortogonal a $\ket{G, + 3}$. Por lo tanto,
+podemos escribir inmediatamente (dentro de un factor de $\pm 1$)
+
+\begin{gather*}
+    \ket{F, +3} = \frac{1}{2^{1/2}}(\ket{+1, +2}-\ket{+2, +1})
+\end{gather*}
+
+De la misma forma para D, P y S.

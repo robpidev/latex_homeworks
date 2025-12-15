@@ -1,0 +1,52 @@
+\section{Riesgos y limitaciones de la resonancia magnética}
+
+Aunque la resonancia magnética (RM) es una técnica no invasiva y segura en la mayoría de los casos, el uso de campos magnéticos intensos y ondas de radio implica una serie de precauciones y limitaciones. El conocimiento de estos factores es fundamental tanto para el personal médico como para los pacientes, a fin de evitar accidentes y optimizar la calidad del diagnóstico.
+
+\subsection{Riesgos físicos y de seguridad}
+
+El principal riesgo físico asociado a la RM proviene del campo magnético estático \(\vec{B}_0\), cuya intensidad puede alcanzar varios teslas (\(1~\text{T} = 10^4~\text{G}\)). Este campo ejerce fuerzas significativas sobre materiales ferromagnéticos, generando el denominado \textit{efecto proyectil}, capaz de atraer bruscamente objetos metálicos hacia el interior del imán. Por ello, está estrictamente prohibido el ingreso con elementos como herramientas, cilindros de oxígeno o sillas metálicas.
+
+Asimismo, los pacientes con dispositivos implantables (marcapasos, prótesis metálicas o clips vasculares) deben ser cuidadosamente evaluados antes del examen, ya que el campo magnético puede inducir corrientes eléctricas que alteren su funcionamiento.  
+La fuerza de Lorentz inducida sobre un objeto conductor se expresa como:
+
+\[
+\vec{F} = q\,\vec{v} \times \vec{B}_0
+\]
+
+lo que explica los desplazamientos mecánicos y el calentamiento por corrientes inducidas en materiales metálicos.
+
+Otro factor relevante es la \textbf{claustrofobia}, causada por el confinamiento en el túnel del imán y el ruido intenso generado por las bobinas de gradiente, cuyo accionamiento produce vibraciones mecánicas en torno a 100 dB. Para mitigar estos efectos se utilizan protectores auditivos o imanes de tipo \textit{abierto}.
+
+El calentamiento de los tejidos también es una preocupación de seguridad. Las ondas de radiofrecuencia utilizadas para excitar los núcleos depositan energía en el cuerpo, generando un aumento de temperatura proporcional al \textbf{tasa de absorción específica} (\textit{Specific Absorption Rate, SAR}), definida como:
+
+\[
+\text{SAR} = \frac{\sigma |E|^2}{\rho}
+\]
+
+donde \(\sigma\) es la conductividad eléctrica del tejido, \(|E|\) la magnitud del campo eléctrico inducido y \(\rho\) la densidad del tejido. Los límites internacionales recomiendan que la SAR promedio no supere \(2~\text{W/kg}\) para exposiciones de cuerpo entero.
+
+\subsection{Reacciones adversas al contraste (gadolinio)}
+
+En algunos estudios, se utilizan agentes de contraste basados en \textbf{gadolinio (Gd\(^{3+}\))}, un ion paramagnético que acorta los tiempos de relajación \(T_1\) de los tejidos donde se acumula, mejorando el contraste de las imágenes. Sin embargo, su uso implica ciertos riesgos.
+
+Aunque la mayoría de los pacientes tolera bien el gadolinio, se han reportado reacciones leves como náuseas, cefalea o urticaria. En casos raros, pueden presentarse reacciones alérgicas severas.  
+El riesgo más relevante ocurre en pacientes con insuficiencia renal grave, donde la eliminación del agente se ve comprometida, pudiendo causar una enfermedad denominada \textit{fibrosis sistémica nefrogénica} (FSN). Por esta razón, se recomienda evaluar la función renal antes de la administración del contraste y utilizar agentes de gadolinio de tipo macro­cíclico, más estables químicamente.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/gandolinio_rm.jpg}
+    \caption{Visualización de realce por gadolinio en resonancia magnética cerebral, mostrando mayor contraste en regiones patológicas.}
+    \label{fig:gadolinio}
+\end{figure}
+
+\subsection{Limitaciones técnicas y económicas}
+
+A pesar de sus ventajas diagnósticas, la resonancia magnética presenta limitaciones técnicas y logísticas que restringen su aplicación universal:
+
+\begin{itemize}
+    \item \textbf{Alto costo de adquisición y mantenimiento:} los equipos requieren imanes superconductores refrigerados con helio líquido, lo que implica costos operativos elevados y personal técnico especializado.
+    \item \textbf{Tiempo de exploración prolongado:} las secuencias de adquisición pueden durar varios minutos, haciendo difícil el estudio de pacientes que no puedan permanecer inmóviles.
+    \item \textbf{Limitaciones en ciertos pacientes:} no es adecuada para individuos con implantes metálicos no compatibles o con marcapasos antiguos. Tampoco es ideal para personas con claustrofobia severa o para emergencias que requieren resultados inmediatos.
+\end{itemize}
+
+En síntesis, aunque los riesgos físicos y biológicos de la resonancia magnética son mínimos comparados con otras modalidades de imagen, es esencial mantener protocolos de seguridad rigurosos. La evaluación médica previa y la selección adecuada de parámetros garantizan un examen seguro y eficaz, preservando la integridad del paciente y la calidad de las imágenes obtenidas.

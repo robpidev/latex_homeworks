@@ -1,0 +1,40 @@
+\section{Construcción de estados acoplados}
+El estado $|1, +1\rangle$ debe estar compuesto por $\alpha_1\alpha_2$
+por que solo este estado corresponde a $M_S = +1$. De esto se deduce
+
+\begin{equation}
+    |1, +1\rangle = \alpha_1 \alpha_2
+\end{equation}
+
+Utilizando el operador de descenso $S_{-}$ que ahora se escribe como
+\begin{equation}
+    S_{-}|S, M_s\rangle =
+    {S(S + 1) - M_S(M_S - 1)}^{1/2}\hbar|S, M_S - 1\rangle
+    \implies S_{-} |1, +1\rangle = 2^{1/2}\hbar|1, 0\rangle
+\end{equation}
+
+Sin embargo, como $S_{-} = s_{1-} + s_{2-}$ también se puede escribir
+como
+\begin{equation}
+    S_{-}|S, M_s\rangle = (S_{-} = s_{1-} + s_{2-})\alpha_1\alpha_2
+    = \hbar(\alpha_1\beta_2 + \beta_1\alpha_2)
+\end{equation}
+
+La comparación te estos dos resultados resulta en
+
+\begin{equation}
+    |1, 0\rangle = \frac{1}{2^{1/2}}(\alpha_1\beta_2 + \beta_1\alpha_2)
+\end{equation}
+
+Como se encuentra en la tabla 1. El terser estado de el triple
+se obtiene repitiendo el procedimiento
+\begin{gather}
+    S_{-}|1, 0\rangle = 2^{1/2}\hbar|1, -1\rangle = (s_{1-} + s_{2-})
+    \frac{1}{2^{1/2}}(\alpha_1\beta_2 + \beta_1\alpha_2)=2^{1/2}\hbar\beta_1\beta_2\\
+    \implies  |1, 0\rangle = \beta_1,\beta_2
+\end{gather}
+
+Es fácil de verificar que
+\begin{equation}
+    \ket{0, 0} = \frac{1}{2^{1/2}}(\alpha_1\beta_2-\beta_1\alpha_2)
+\end{equation}

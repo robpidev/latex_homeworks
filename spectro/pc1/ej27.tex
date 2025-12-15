@@ -1,0 +1,61 @@
+Demostrar que la energía cinética del electrón en la
+órbita $n$ del átomo de hidrógeno es
+
+\begin{equation*}
+    E_n = \frac{13.6}{n^2}\;\mathrm{eV}
+\end{equation*}
+
+Y verificar para $n=3$.
+
+\vspace{12pt}
+\textit{SOLUCIÓN.} Se tiene las siguientes ecuaciones
+de energía cinética, velocidad con respecto al radio
+y radio respectivamente:
+
+\begin{equation*}
+    T = \frac{1}{2}mv^2,\quad
+    v^2 = \frac{e^2}{4\pi\epsilon_0 m r},\quad
+    r = \frac{n^2 h^2 \epsilon_0}{\pi m e^2}
+\end{equation*}
+
+Remplazando la rapidez y y el radio en la energía cinética
+
+\begin{equation*}
+    T = \frac{1}{2}m
+    \frac{e^2}{4\pi\epsilon_0 m r}
+    \frac{\pi m e^2}{n^2 h^2 \epsilon_0}
+    = \frac{1}{n^2} \frac{me^4}{8h^2\epsilon_0}
+\end{equation*}
+
+Calculando el último valor de la fracción de la derecha
+tenemos 
+
+\begin{equation*}
+    T = \frac{1}{n^2}
+    \left(
+        \frac{
+            9.1\times10^{-31}\;\mathrm{kg}
+            {\left(\cdot 1.602\times10^{-19}\;\mathrm{C}\right)}^4
+        }{
+            8\times{(6.626\times10^{-34}\;\mathrm{Js})}^2
+            {\left(\cdot 8.854\times10^{-12}\;\mathrm{F/m}\right)}^2
+        }
+    \right)
+    = \frac{2.16\times10^{-18}}{n^2}\;\mathrm{J}
+\end{equation*}
+
+Convirtiendo a eV finalmente
+
+\begin{equation*}
+    T = \frac{2.16\times10^{-18}}{n^2}\;\mathrm{J}
+    \cdot \frac{1\;\mathrm{eV}}{1.602\times10^{-6}\;\mathrm{J}}
+    = \frac{13.6}{n^2}\;\mathrm{eV}
+\end{equation*}
+
+Ahora calculemos para $n=3$
+
+\begin{equation*}
+    T = \frac{13.6}{3^2}\;\mathrm{eV}
+    = 1.51\;\mathrm{eV}
+\end{equation*}
+\hfill $\blacksquare$

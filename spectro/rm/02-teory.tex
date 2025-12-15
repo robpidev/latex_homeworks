@@ -1,0 +1,82 @@
+\section{Marco teórico}
+
+\subsection{Definición y principios físicos de la resonancia magnética}
+
+La resonancia magnética (RM) es una técnica espectroscópica basada en la interacción de los momentos magnéticos nucleares con un campo magnético externo intenso. En medicina, esta técnica se adapta para generar imágenes tridimensionales del cuerpo humano sin recurrir a radiación ionizante. Su principio fundamental es la \textbf{resonancia magnética nuclear (RMN)}, fenómeno físico que describe cómo los núcleos con momento magnético intrínseco absorben y reemiten energía en forma de ondas de radio cuando se encuentran en un campo magnético estático.
+
+\subsubsection*{Fundamento físico}
+
+El momento magnético nuclear \(\vec{\mu}\) está relacionado con el momento angular nuclear \(\vec{I}\) mediante:
+
+\[
+\vec{\mu} = \gamma \vec{I}
+\]
+
+donde \(\gamma\) es la \textit{razón giromagnética} característica de cada tipo de núcleo.  
+En presencia de un campo magnético externo uniforme \(\vec{B}_0\), el momento magnético experimenta una interacción descrita por la energía potencial:
+
+\[
+E = - \vec{\mu} \cdot \vec{B}_0 = - \gamma \hbar m_I B_0
+\]
+
+donde \(m_I\) representa el número cuántico magnético.  
+La separación energética entre los dos estados de espín (para núcleos con \(I = \tfrac{1}{2}\), como el protón) es:
+
+\[
+\Delta E = \gamma \hbar B_0
+\]
+
+Cuando el sistema se irradia con una onda de radiofrecuencia de frecuencia \(\nu\), se produce absorción resonante si:
+
+\[
+h\nu = \Delta E \Rightarrow \nu = \frac{\gamma B_0}{2\pi}
+\]
+
+Esta ecuación, conocida como \textbf{condición de resonancia de Larmor}, determina la frecuencia a la cual los núcleos entran en resonancia con el campo aplicado.  
+El movimiento de precesión del vector magnetización alrededor de \(\vec{B}_0\) ocurre precisamente a esta frecuencia \(\omega_0 = \gamma B_0\).
+
+\subsubsection*{Componentes básicos del equipo}
+
+Un sistema de resonancia magnética está compuesto por los siguientes elementos principales:
+
+\begin{itemize}
+    \item \textbf{Imán principal:} genera el campo magnético estático \(\vec{B}_0\), típicamente entre 1.5 y 3~T en equipos clínicos.
+    \item \textbf{Bobinas de gradiente:} producen campos magnéticos variables espacialmente, permitiendo codificar la posición de los núcleos en las tres direcciones del espacio.
+    \item \textbf{Bobinas de radiofrecuencia (RF):} emiten los pulsos de excitación y reciben las señales emitidas por los núcleos.
+    \item \textbf{Sistema computacional:} realiza la reconstrucción de imágenes mediante transformadas de Fourier de las señales recibidas, generando cortes anatómicos de alta resolución.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/2.png}
+    \caption{Equipo de resonancia magnética, partes y funcionamiento.}
+\end{figure}
+
+
+\subsubsection*{Diferencias con los rayos X y la tomografía}
+
+A diferencia de los rayos X o la tomografía computarizada (TC), la resonancia magnética no utiliza radiación ionizante, sino ondas de radio de baja energía.  
+Mientras que los rayos X se basan en la absorción diferencial de radiación por los tejidos, la RM depende de las propiedades magnéticas y de relajación de los núcleos, denominadas tiempos de relajación \(T_1\) (longitudinal) y \(T_2\) (transversal), que caracterizan la recuperación de la magnetización tras la excitación:
+
+\[
+M_z(t) = M_0 \left(1 - e^{-t/T_1}\right), \quad M_{xy}(t) = M_0 e^{-t/T_2}
+\]
+
+Estas constantes permiten obtener contrastes entre diferentes tipos de tejidos, lo que convierte a la RM en una herramienta altamente sensible para el diagnóstico médico.
+
+\subsection{Historia y desarrollo tecnológico}
+
+El fenómeno de resonancia magnética fue descubierto en 1946 de forma independiente por Felix Bloch y Edward Purcell, quienes demostraron que los núcleos atómicos absorbían energía en presencia de un campo magnético y una radiación de frecuencia adecuada. Este hallazgo, en el contexto de la espectroscopía nuclear, les valió el Premio Nobel de Física en 1952.
+
+Durante la década de 1970, Raymond Damadian y Paul Lauterbur aplicaron el principio de resonancia magnética a la obtención de imágenes, utilizando gradientes de campo para localizar señales en el espacio. Posteriormente, Peter Mansfield desarrolló técnicas de adquisición rápida y reconstrucción por transformada de Fourier, lo que permitió la formación eficiente de imágenes tridimensionales. Por estos avances, Lauterbur y Mansfield recibieron el Premio Nobel de Fisiología o Medicina en 2003.
+
+En la actualidad, las mejoras en la tecnología de imanes superconductores, la electrónica de radiofrecuencia y los algoritmos de reconstrucción han permitido el desarrollo de variantes avanzadas como:
+
+\begin{itemize}
+    \item \textbf{Resonancia magnética funcional (RMf):} mide cambios en la oxigenación sanguínea para mapear la actividad cerebral.
+    \item \textbf{Espectroscopía por resonancia magnética (ERM):} permite analizar metabolitos en tejidos y órganos.
+    \item \textbf{Resonancia magnética de difusión:} estudia la movilidad molecular del agua, útil en el diagnóstico de lesiones cerebrales.
+\end{itemize}
+
+Estas variantes extienden el alcance de la RM más allá de la imagen anatómica, hacia el estudio dinámico y funcional del cuerpo humano, conectando directamente con los fundamentos de la espectroscopía nuclear.
+

@@ -1,0 +1,58 @@
+\subsection{Otros parámetros que podrían afectar la calidad de imagen}
+
+La calidad de imagen en tomografía computarizada (TC) es un factor esencial que determina la capacidad diagnóstica del sistema. Una imagen de alta calidad permite distinguir con precisión estructuras anatómicas y detectar alteraciones patológicas con un nivel de confianza adecuado. Los parámetros físicos que definen la calidad de imagen incluyen la \textbf{resolución espacial}, el \textbf{contraste}, el \textbf{ruido}, la \textbf{uniformidad}, la \textbf{nitidez}, la \textbf{geometría del sistema-paciente} y la \textbf{bomosidad} (brillo de imagen). 
+
+Además, el cumplimiento del principio de \textbf{radioprotección ALARA} (As Low As Reasonably Achievable) garantiza que la dosis de radiación empleada para obtener imágenes de buena calidad sea la mínima posible sin comprometer la información diagnóstica.
+
+\subsubsection{Resolución espacial y capacidad de mostrar estructuras pequeñas}
+
+La \textbf{resolución espacial} es la capacidad del sistema de TC para diferenciar dos estructuras adyacentes como entidades separadas. Depende principalmente del tamaño de los detectores, del ancho del haz de rayos X, de la geometría del escáner y de los algoritmos de reconstrucción empleados. Se expresa comúnmente en \textit{líneas por centímetro (lp/cm)}.
+
+Un sistema con alta resolución espacial posee una mayor \textbf{capacidad para mostrar estructuras pequeñas}, lo que resulta crucial para el diagnóstico de lesiones finas o microcalcificaciones. El límite de resolución está determinado por el \textbf{tamaño del vóxel}, el cual depende de la matriz de adquisición y del campo de visión (FOV, \textit{Field of View}):
+
+\[
+\text{Tamaño de vóxel} = \frac{\text{FOV}}{\text{Matriz de reconstrucción}}
+\]
+
+\subsubsection{Nitidez}
+
+La \textbf{nitidez} representa la claridad con la que se definen los bordes de las estructuras dentro de la imagen. Una imagen nítida presenta transiciones abruptas entre áreas de diferente densidad, lo que facilita la interpretación diagnóstica. La nitidez está influenciada por el tamaño del foco del tubo de rayos X, el tipo de detector, el movimiento del paciente y el filtro de reconstrucción aplicado.  
+
+Filtros más duros (por ejemplo, tipo “bone”) mejoran la nitidez y la resolución espacial, mientras que filtros más suaves (tipo “soft tissue”) reducen el ruido, mejorando el contraste en tejidos blandos, aunque con una leve pérdida de detalle.
+
+\subsubsection{Geometría: sistema–paciente}
+
+La \textbf{geometría del sistema-paciente} influye directamente en la calidad y precisión de la imagen reconstruida. Comprende la disposición del tubo de rayos X, los detectores y la posición del paciente dentro del gantry.  
+Un centrado incorrecto del paciente o variaciones en la trayectoria del haz pueden generar artefactos geométricos, distorsiones o pérdida de resolución.  
+
+Los sistemas helicoidales modernos mantienen una geometría estable mediante sincronización precisa del movimiento del tubo y la mesa, permitiendo reconstrucciones volumétricas sin discontinuidades. 
+
+\subsubsection{Tipos de rayos X y filtración (tungsteno – rodio)}
+
+El espectro de rayos X utilizado en TC se genera mediante un tubo con ánodo rotatorio. El material más empleado en el ánodo es el \textbf{tungsteno (W)}, debido a su alto número atómico (\(Z = 74\)) y elevado punto de fusión, lo que permite generar fotones de alta energía y buena eficiencia.
+
+En algunos sistemas especializados se utilizan filtros adicionales de \textbf{rodio (Rh)} o de \textbf{aluminio (Al)} para modificar el espectro y eliminar fotones de baja energía que sólo contribuirían a aumentar la dosis sin mejorar la calidad de imagen. Este proceso se conoce como \textbf{filtración}, y tiene como finalidad endurecer el haz, mejorando la relación contraste-ruido y optimizando la penetración en tejidos más densos.  
+
+La combinación de ánodo de tungsteno con filtro de rodio produce un espectro más homogéneo, lo que mejora la nitidez y la uniformidad de la imagen en regiones con diferentes densidades tisulares.
+
+\subsubsection{Contraste y ruido}
+
+El \textbf{contraste} se refiere a la diferencia de niveles de gris entre dos regiones con coeficientes de atenuación distintos. La capacidad del sistema para distinguir diferencias mínimas de densidad se conoce como \textit{resolución de bajo contraste}.  
+
+El \textbf{ruido}, por otro lado, corresponde a las fluctuaciones aleatorias en los valores de densidad de píxel que no representan variaciones reales del objeto. Un nivel de ruido elevado puede enmascarar estructuras pequeñas o lesiones de bajo contraste.  
+
+El equilibrio entre contraste y ruido se regula ajustando los parámetros de exposición (\textit{mAs, kVp}), el grosor de corte y los algoritmos de reconstrucción iterativa.
+
+\subsubsection{Uniformidad y bomosidad}
+
+La \textbf{uniformidad} evalúa la homogeneidad de la imagen en regiones de densidad constante. Idealmente, un material uniforme (por ejemplo, agua) debería mostrar el mismo valor en unidades Hounsfield (HU) en toda la imagen. Variaciones en uniformidad pueden deberse a descalibraciones, artefactos de haz cónico o errores de reconstrucción.
+
+La \textbf{bomosidad} o \textbf{brillo de imagen} describe la intensidad promedio de la señal o luminancia en la pantalla de visualización. Aunque no afecta directamente la calidad física de la imagen, una bomosidad adecuada es fundamental para la correcta interpretación visual del radiólogo. Los monitores diagnósticos utilizan escalas de luminancia calibradas (p. ej., estándar DICOM GSDF) para mantener la consistencia visual en el diagnóstico.
+
+\subsubsection{Principio ALARA}
+
+El principio \textbf{ALARA} (\textit{As Low As Reasonably Achievable}) constituye una norma fundamental en la protección radiológica. Su propósito es minimizar la exposición a la radiación ionizante sin sacrificar la calidad diagnóstica necesaria para una evaluación clínica precisa.  
+
+Esto implica optimizar todos los parámetros del sistema —tensión (kVp), corriente del tubo (mA), tiempo de exposición, grosor de corte y protocolos automáticos de modulación de dosis— de manera que la radiación sea la más baja posible dentro de los límites razonables para obtener una imagen útil.
+
+En resumen, la calidad de imagen en TC es el resultado de un delicado equilibrio entre parámetros físicos, electrónicos y geométricos. Una correcta calibración del sistema, junto con la aplicación del principio ALARA, garantiza imágenes de alta fidelidad diagnóstica con el menor riesgo radiológico para el paciente.

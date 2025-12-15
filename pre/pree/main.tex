@@ -1,0 +1,140 @@
+\documentclass[twocolumn, 12pt, a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}    % Soporte para caracteres especiales
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{float}
+\usepackage[right=3cm, left=2.5cm, top=3cm, bottom=3.5cm]{geometry}
+%\usepackage{hyperref}          % Enlaces y referencias
+%\usepackage[style=apa]{biblatex}
+%\usepackage{csquotes}          % Manejo de citas (opcional, útil para biblatex)
+%\addbibresource{references.bib}
+%\usepackage[spanish]{babel}
+
+\newcommand\BackgroundPic{
+    \put(0,0){%
+        \parbox[b][\paperheight]{\paperwidth}{%
+            \includegraphics[width=\paperwidth,height=\paperheight]{img/back.pdf}%
+        }%
+    }
+}
+
+\newcommand*{\exer}[8]{
+    \item #1
+    \begin{center}
+        \includegraphics[width=0.3\textwidth]{img/f#2.png}
+    \end{center}
+    \begin{tabular*}{0.4\textwidth}{@{\extracolsep{\fill}}lll}    % 3 columnas sin líneas
+                (A) $#3$ #8 & (B) $#4$ #8 & (C) $#5$ #8\\
+                (D) $#6$ #8 &  & (E) $#7$ #8
+    \end{tabular*}
+}
+
+\newcommand{\T}[1]{°#1}
+
+\newcommand*{\ex}[7]{
+    \item #1.
+        
+    \vspace{12pt}
+    \begin{tabular*}{0.4\textwidth}{@{\extracolsep{\fill}}lll}    % 3 columnas sin líneas
+                (A) $#2$ #7 & (B) $#3$ #7 & (C) $#4$ #7\\
+                (D) $#5$ #7 &  & (E) $#6$ #7
+    \end{tabular*}
+}
+
+\begin{document}
+\AddToShipoutPicture*{\BackgroundPic}
+    \begin{enumerate}
+        \ex{Se tiene 2 litros de agua a 10 °C en un recipiente de capacidad calorífica despreciable. Determine qué cantidad de agua a 100 °C se debe de agregar al recipiente para que la temperatura final de equilibrio sea de 20 °C}{1}{2}{0.25}{1.5}{2.5}{L}
+        \exer{El calor que recibe 10 g de un líquido hace que su
+        temperatura cambie del modo que se indica en el gráfico
+        Q versus T. Se pide encontrar el valor de su calor
+        específico en cal/g°C.}{1}{0.2}{0.25}{0.3}{0.4}{0.7}{ }
+        \ex{ En un recipiente de capacidad calorífica despreciable,
+        se mezclan 20; 30 y 50g de agua a 80°C, 50°C y 10°C
+        respectivamente. Hallar la temperatura de equilibrio}{31}{21}{30}{36}{69}{°C}
+        \exer{Una muestra de mineral de 10 g de masa recibe calor
+        de modo que su temperatura tiene un comportamiento
+        como el mostrado en la figura. Determinar los calores
+        latentes específicos de fusión y vaporización en cal/g}{2}{3;8}{10;15}{8;15}{6;15}{7;10}{ }
+        \ex{Se tiene 5 g de hielo a -10°C, hallar el calor total
+        suministrado para que se convierta en vapor de agua a
+        100°C}{3 625}{7 200}{4 000}{5 250}{5 800}{cal}
+        \ex{ Tenemos 2 g de agua a 0°C. ¿Qué cantidad de calor se
+        le debe extraer para convertirlo en hielo a 0°C}{80}{160}{200}{250}{300}{cal}
+        \ex{ Se dispara una bala de 5g contra un bloque de hielo,
+        donde inicia su penetración con una velocidad de
+        300m/s, se introduce una distancia de 10cm,
+        fundiéndose parte del hielo. ¿Qué cantidad de hielo se
+        convierte en agua; en gramos? (el hielo debe estar a
+        0°C)}{0.535}{0.672}{0.763}{0.824}{0.763}{ }
+        \ex{ Hallar el calor que libera 2g de vapor de agua que se
+        encuentra a 120°C de manera que se logre obtener
+        agua a 90°C.}{800}{880}{1100}{1120}{1200}{cal}
+        \ex{En un vaso lleno de agua a 0°C se deposita un cubo de
+        hielo de 40 g a -24°C, si no hay pérdida de calor al
+        ambiente. ¿Qué cantidad de agua se solidificará en
+        gramos?}{3}{6}{12}{15}{0}{ }
+        \ex{Dos varillas de igual lon gitud y de coeficientes $\alpha_1 = 18\mu$°C${}^{-1}$ y $\alpha_2 = 15\mu$°C${}^{-1}$ se someten a un calentamiendo de manera que experimentan la misma dilataci'on. Si el primero se calento en 80 °C, en cuanto debe aumentar su temperatura el segundo en °C}{94}{95}{96}{97}{98}{ }
+        \ex{Determine la longitud en cm de una barilla de $\alpha_1 = 8\times 10^{-5} \T{C}^{-1}$ para que al ser calentada lo mismo que otra varilla de $\alpha_2 = 32\times 10^{-6} \T{C}^{-1}$ y de 125 cm se dilaten exactamente lo mismo}{10}{20}{30}{40}{50}{ }
+        \ex{En cuantos $cm^2$ se dilata una lámina metálica que se caliente en 240 \T{C} si se sabe que el calentarse en 300 \T{C} la dilatación aumentaría en 8 $cm^2$}{32}{33}{34}{35}{36}{ }
+        \ex{Determine en $cm^3$ el cambio en volumen de un bloque metálico de 5 cm, 15 cm y 10 cm cuando la temperatura cambia de 10\T{C} a 80 \T{C} $\gamma = 400\mu\T{C}^{-1}$}{12}{15}{16}{18}{20}{ }
+        \ex{Para calentar cierta cantidad de gas de 20°C hasta 100°C
+        se requieren 400 cal siempre que su volumen
+        permanezca constante. ¿Cuánto aumentará su energía
+        interna en el proceso?}{200}{400}{500}{350}{250}{cal}
+        \ex{En un proceso isobárico, 2 moles de un gas
+        monoatómico reciben 831 J de calor. Determinar el
+        incremento de la temperatura del sistema.}{10}{20}{30}{40}{50}{K}
+        \exer{Sabiendo que el trabajo realizado por un gas en el
+        proceso ABC es 500 J, hallar $P_1$.}{3}{13}{12.5}{18}{16.5}{6}{Pa}
+        \exer{Isobáricamente a la presión de 400 Pa, el volumen de
+        un gas ideal se extiende hasta triplicarse, si en este
+        proceso el gas desarrolla un trabajo de 80 J, encuentre
+        el volumen inicial que ocupa el gas.}{4}{0.05}{0.2}{0.1}{0.5}{5}{$\text{m}^3$}
+        \exer{Un gas ideal posee una energía interna de  450 J en el
+        estado 1. Si dicho gas efectúa una expansión isobárica
+        del estado 1 al estado 2. ¿Cuál será la energía interna
+        que tendrá el gas al final del proceso si en total ganó
+        500 J de calor?}{5}{520}{530}{540}{550}{560}{J}
+        \exer{Un gas realiza un proceso tal como se indica en la
+        figura. ¿Qué trabajo realizó el gas al pasar del estado 1
+        al estado 2?}{6}{5.5}{4.5}{3.5}{2.5}{1.5}{kJ}
+        \exer{El gráfico representa el volumen de un gas ideal en
+        función de su temperatura a presión constante de 3N/
+        m2. Si durante la transformación de A hacia B el gas
+        absorbió 5 calorías. ¿Cuál fue la variación de su energía
+        interna?}{7}{2}{2}{17.93}{17.93}{4}{J}
+        \exer{Dos líquidos no miscibles están en el tubo "U" que se
+        muestra. Determinar la relación entre las presiones
+        hidrostáticas en los puntos A y B.}{8}{1/3}{2/3}{1}{4/3}{3/2}{ }
+        \exer{Determine la lectura del manómetro M, si se está
+        ejerciendo una fuerza F=210N sobre el émbolo
+        ingrávido el cual permanece en reposo. }{9}{11}{10}{1}{2}{9}{kPa}
+        \exer{ Un cubo de 2m de arista cuyo peso es 90kN flota tal
+        como se muestra en la figura. La esfera tiene la mitad
+        de su volumen en el agua y su peso es 30 kN. ¿Cuál es
+        su volumen? g=10m/s2.}{10}{8}{10}{4}{15}{9}{$\text{m}^3$}
+        \exer{ Una barra uniforme de 20 kg y 10m de longitud, cuya
+        densidad relativa es 0,5 puede girar alrededor de un
+        eje que pasa por uno de sus extremos situado debajo
+        del agua (ver figura). ¿Qué peso N debe colocarse al
+        otro extremo de la barra para que queden sumergidos
+        8m de ésta?}{11}{313.6}{588}{2744}{117.6}{27.44}{N}
+        \exer{ Una barra uniforme de 3,6 m de longitud y de masa
+        12kg está sujeta en el extremo B por una cuerda
+        flexible y lastrada en el extremo A por un masa de
+        6kg. La barra flota como indica la figura con la mitad
+        de su longitud sumergida. Puede despreciarse el
+        empuje sobre el lastre. Hallar la tensión en la cuerda.}{12}{19.6}{29.4}{39.2}{88.2}{59.8}{N}
+        \exer{ Determinar la presión hidrostática en el fondo del
+        recipiente mostrado que contiene agua y que sube
+        con una aceleración de 2m/s2.}{13}{1}{2}{3}{4}{6}{kPa}
+        \exer{ Los radios de los émbolos 1 y 2 de áreas A1 y A2 son
+        de 4cm y 20cm respectivamente. Determine la masa
+        m1 (en kg) que equilibra el sistema. Considere
+        m2= 2000 kg.}{14}{80}{40}{800}{30}{20}{ }
+    \end{enumerate}
+\end{document}

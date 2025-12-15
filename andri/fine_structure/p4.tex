@@ -1,0 +1,45 @@
+\section{Estructura fina para los átomos multielectrónicos}
+
+\subsection{Hamiltoniano no perturbado}
+
+\begin{equation}
+    H_0 = 
+    \sum_{i = 1}^{n} \left(
+        - \frac{\hbar^2}{2m_e}\nabla_i^2 - \frac{Ze^2}{4\pi\epsilon_0r_i}
+    \right)
+     + \sum_{i<j} \frac{e^2}{4\pi\epsilon_0  |\vec{r}_i - \vec{r}_j|}
+\end{equation}
+
+\begin{enumerate}
+    \item Primer término: Energía cinética de los electrones.
+    \item Segundo término: Interacción de los electrones con el núcleo.
+    \item Tercer término: Interacción entre electrones.
+\end{enumerate}
+
+Y los estados base del sistema se obtiene resolviendo
+$H_0\psi = E\psi$, usualmente aproximados utilizando funciones de
+Hartree-Fock o modelos similares
+
+\subsection{perturbaciones}
+De las secciones anteriores las perturbaciones afectan a cada electrón
+por lo el acoplamiento de espín orbita será:
+
+
+\begin{equation}
+    H_{so}^{total} = \sum_i \xi(r_i) \hat{L}_i \cdot \hat{S}_i
+\end{equation}
+
+donde (generalizando el potencial $V = V(r_i)$)
+\begin{equation}
+    \xi(r_i) = \frac{1}{2m_e^2c^2} \frac{1}{r_i}\frac{d}{dr_i}V(r_i)
+\end{equation}
+
+Por lo tanto el hamiltoniano total perturbado será
+
+\begin{equation}
+    H = H_0 + H_{rel} + H_D + H_{so}^{total}
+\end{equation}
+
+\section{Conclusión}
+La estructura fina en los átomos es un fenómeno crucial que refleja las correcciones a los niveles de energía debido a efectos relativistas y de interacción espín-órbita. A través de la teoría de perturbaciones, es posible calcular estas correcciones con un alto grado de precisión, lo que ha permitido validar experimentalmente los fundamentos de la mecánica cuántica y la electrodinámica cuántica. En átomos multielectrónicos, la complejidad aumenta debido a las interacciones adicionales entre los electrones, pero la estructura fina sigue siendo una herramienta indispensable para entender la estructura y dinámica de los sistemas atómicos. Este estudio no solo enriquece nuestra comprensión teórica, sino que también tiene aplicaciones prácticas en espectroscopía y en el desarrollo de tecnologías avanzadas como los relojes atómicos y la comunicación cuántica.
+

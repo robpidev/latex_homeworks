@@ -1,0 +1,448 @@
+\section{Transistor de efecto de campo semiconductor de óxido metálico}
+La ecuación 10 describe el control, a través de
+la tensión aplicada a la puerta, de la concentración de electrón
+en la capa de inversión. Estas cargas forman una fina capa
+de electrones móviles rodeados por un lado por el óxido y por
+el otro por una región de carga espacial. A continuación,
+la capa de carga se limita entre dos regiones aislantes. Las
+cargas pueden mantenerse en movimiento si se proporcionan dos electrodos
+adecuados en los bordes de la capa. Estos electrodos son dos regiones $n^+$
+implantadas en los bordes de la capa de inversión. Eventualmente,
+el dispositivo es una estructura de tres electrodos, donde la capa
+de inversión se convierte en un canal conductor, cuya resistividad está
+controlada por el voltaje aplicado al condensador MOS\@. Los electrodos en
+los bordes del canal se llaman drenaje y fuente, mientras que
+el electrodo aplicado al metal del MOS se llama puerta. El
+electrodo metálico está separado del semiconductor de tipo p por una gruesa
+capa de óxido. De esta manera, la capacitancia asociada es
+tan pequeña que hace que cualquier efecto de campo sea insignificante.
+La configuración contiene un cuarto electrodo aplicado al sustrato, conocido como
+cuerpo. Los electrodos $n^+$ introducen dos uniones PN entre los
+electrodos y la masa. Siendo $V_d, V_s$ $V_b$ los voltajes en la fuente,
+drenaje y  los electrodos del cuerpo. En condiciones normales de funcionamiento,
+$V_D - V_B > 0$ y $V_S 0 V_B > 0$,
+de modo que ambas uniones están polarizadas inversamente y solo una corriente
+insignificante fluye hacia el contacto con el cuerpo. Dicho dispositivo es
+el transistor de efecto de campo semiconductor de óxido metálico (MOS
+FET).
+
+Es interesante observar que un canal conductor puede obtenerse acumulando cargas mayoritarias
+o minoritarias. En ambos casos, la conductividad entre la fuente y
+el drenaje puede ser regulada por el voltaje de la compuerta.
+Sin embargo, el caso de inversión es mucho más interesante,
+porque la corriente en el canal de inversión fluye a través de
+una franja estrecha confinada entre dos aislantes. Como consecuencia, la
+conductividad entre los contactos solo se debe al canal. En caso
+de acumulación, tanto la fuente como el drenaje deben ser contactos
+óhmicos para la mayoría de las cargas. Sin embargo, la
+mayor parte del semiconductor (donde $p = N_A$) también contribuye
+a la conducción entre la fuente y el drenaje. Dado que la
+capa de acumulación y la masa están en paralelo, si el
+semiconductor es mucho más grueso que la capa de acumulación, entonces
+la conductividad siempre está dominada por la masa y el efecto de
+campo no es observable. Esta configuración se está volviendo popular en
+el campo de la electrónica molecular, donde se utilizan capas delgadas
+de semiconductores moleculares. Otra ventaja importante de utilizar el dispositivo en
+modo de inversión radica en el aislamiento intrínseco del resto del sustrato
+que proporciona la capa de agotamiento
+Este es un tema importante para la integración de más dispositivos en
+el mismo sustrato.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{img/f2.png}
+    \caption{Configuración básica de un MOSFET}
+\end{figure}
+
+en un MOSFET, las cargas en los canales se pueden variar
+a alta velocidad. Esta diferencia se debe a los pozos n+,
+que actúan como reservorios de electrones, proporcionando, con gran eficiencia
+todos los electrones necesarios para modular la carga en el canal.
+La Figura 2 ilustra la configuración básica del MOSFET\@.
+La mayoría de las características del dispositivo son el resultado de la
+diferencia entre las funciones de trabajo del metal y del semiconductor 
+($V_{fb}$), el dopaje del semiconductor ($\phi_p$) y el espesor
+del óxido ($C_{ox}$). La combinación de estas tres cantidades define
+dos categorías de dispositivos conocidos como MOSFET de mejora y agotamiento.
+En un MOS-FET de mejora, en $V_G = 0$ no
+se forma el canal. En particular, en un semiconductor de
+tipo p, el canal se forma y luego se modula en
+$V_G > 0$, mientras que el signo de $V_G$ se invierte
+cuando se considera un semiconductor de tipo n. En un MOSFET
+de agotamiento, por el contrario, el canal existe incluso a
+$V_G = 0$, por lo que el voltaje de la puerta
+puede aumentar, disminuir o incluso apagar la capa de inversión.
+
+Cuando $V_G < V_{fb}$, la interfaz está en modo de acumulación
+de modo que el camino desde la fuente hasta el drenaje forma
+una serie de dos uniones PN opuestas (una configuración llamada back
+to-back). En esta condición, el canal es análogo a un BJT en la región de corte,
+de modo que la corriente desde la fuente
+hasta el drenaje es la corriente inversa de las dos uniones PN\@.
+
+A medida
+que VG aumenta, se cumple la condición de que $V_{fb} < V_G < V_T$. En este intervalo
+la región del canal se agota de las cargas móviles. Al aumentar el $V_G$, se
+forma una población débil de electrones. Pero, por lo demás, esto no es la
+capa de inversión. Una pequeña corriente llamada corriente sub-umbral fluye
+entre la fuente y el drenaje. Finalmente, cuando $V_G > V_T$ se cumple la condición
+de inversión fuerte, de modo que el canal de electrones está completamente
+formado. En el modo de inversión fuerte, la capa de agotamiento permanece
+constante y cualquier aumento en $V_G$ da como resultado un aumento en la concentración
+de electrones del canal.
+
+Vamos a derivar ahora la relación entre la corriente
+que fluye a través del canal y el par de voltajes $V_{DS}$ (aplicados al canal)
+y VG (aplicados a la puerta). En principio, $V_G$ establece la concentración
+de electrones y, por lo tanto, la conductividad del canal, mientras que $V_{DS}$
+impulsa la corriente de deriva. En realidad, la situación es un poco más
+complicada porque el $V_{DS}$ se distribuye a lo largo del canal, de modo que
+en cada punto, se encuentra un voltaje adicional $V_C(y)$ (Fig. 3). Este voltaje
+es aditivo a $V_G$, por lo que afecta la densidad de carga en el canal:
+
+\begin{equation}
+    Q_n(y) = - C_{ox}(V_G - V_{fb}-\pp + V_C(y))
+    + \sqrt{2\e_s q N_A (\pp + V_C(y))}
+\end{equation}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{img/f3.png}
+    \caption{
+        Comportamiento del VDS a lo largo del canal. Se
+        establece un sistema de coordenadas $x-y$ para describir el
+        comportamiento de la carga a lo largo del canal y hacia el
+        bulto. Gracias al voltaje agregado al canal, la capa de
+        inversión debajo del óxido no es uniforme, sino que se vuelve
+        más delgada a medida que se acerca al contacto del drenaje. Por
+        esta razón, incluso si las cargas móviles disminuyen, la
+        concentración de carga es prácticamente constante, por lo que se
+        puede despreciar la corriente de difusión. Eventualmente, por
+        encima del umbral, la corriente del MOSFET se puede describir
+        solo en términos de corriente de deriva
+    }
+\end{figure}
+
+Por encima del voltaje umbral, se forma el canal de inversión y la
+unión entre las regiones $n^+$ y el canal es despreciable. Por lo
+tanto, la corriente se presta a la corriente que fluye a través de
+un semiconductor dopado homogéneamente, y está hecha de un
+componente de deriva y difusión. El mecanismo es análogo al del
+transporte BJT de zona activa en la base, donde para disminuir el
+tiempo de tránsito, se crea un campo eléctrico, ya sea debido al
+dopaje graduado o a la banda prohibida graduada. En ambos casos, una
+tensión limitada superior al doble de la tensión térmica (56 mV) es
+suficiente para que la contribución de la corriente de deriva sea
+mayor que la de difusión. Por lo tanto, es sencillo suponer que,
+dado que el $V_{DS}$ es mayor que el voltaje térmico, prevalece el
+componente de corriente de deriva.
+
+Para calcular el efecto de $V_{DS}$ sobre las cargas en el canal,
+supongamos que el potencial a lo largo del canal de coordenadas
+(coordenada y) cambia menos rápidamente que a través del canal
+(dirección de la coordenada-x):
+
+\newcommand{\dip}[2]{\frac{\partial#1}{\partial#2}}
+\let\D\Delta{}
+
+\begin{equation}
+    ||\dip{\phi}{y}|| \ll ||\dip{\phi}{x}||
+\end{equation}
+
+Esta condición es la aproximación de canal graduado. Bajo esta
+aproximación, para cada $\D y$ se tiene $ \D x$ correspondiente es constante. En la
+práctica, el canal se puede cortar en porciones donde la carga es
+constante.
+
+Cabe destacar que esta condición se cumple cuando la longitud del
+canal ($L$) es mucho mayor que la capa de agotamiento. La consecuencia
+principal de la aproximación del canal graduado es que la relación
+$Q_n =-C_{ox}(V_G - V_T)$ es válida en cada intervalo $dy$.
+
+Para calcular la distribución de $V_{DS}$, es necesario calcular el
+perfil de resistencia del canal. La resistencia diferencial ($dR$) de
+una pequeña porción del canal (desde $y$ hasta $dy$) es:
+$d R(y) = \rho (y) dy / A$. La resistividad $\rho$ depende de la
+concentración de electrones en la posición $y$:
+
+\begin{equation}
+    \rho(y) = \frac{1}{\sigma(y)} = \frac{1}{\mu_n Q(y)}
+\end{equation}
+
+donde $\mu_n$ es el canal de movilidad del electrón.
+donde $\mu_n$ es el canal de movilidad electrónica. El canal se encuentra
+en la interfaz entre el semiconductor y el óxido, en una región
+super poblada de defectos con respecto al volumen. Por lo tanto,
+podemos esperar que la movilidad en la interfaz sea menor que la de
+la masa. El valor real de la movilidad, sin embargo, depende de las
+condiciones en las que se cultiva el dispositivo y no se puede
+calcular teóricamente. Pero de lo contrario, se da una estimación
+aproximada como $\mu_n \approx 1/2 \mu_{bulk}$, donde $\mu_n$ es un
+parámetro desconocido del dispositivo.
+
+
+
+La unidad de medida para la concentración de carga en la Ec. 13
+es Ccm-3, mientras que en la Ec. 10 es Ccm-2. Es fácil deducir
+que, dada una porción del canal, su volumen es $Ady$ y el área debajo
+del óxido es $\omega dy$, donde $\omega$ es el dimensión lateral del
+canal y A es el área de la rebanada
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{img/f4.png}
+    \caption{
+        El volumen y las concentraciones de carga superficial
+        se ilustran en un corte del canal
+    }
+\end{figure}
+
+Finalmente, tenemos: $Q(y)A = Q_n(y)\omega$. La relación entre las
+concentraciones volumétricas y superficiales se muestra en la Fig 4
+
+The differential resistance of a slice dy of the channel at a y position is:
+
+\begin{equation}
+    dR = \frac{1}{\mu_n Q(y)}\frac{dy}{A}
+        = \frac{dy}{\mu_n Q_n(y) \omega}
+\end{equation}
+
+La corriente $I_D$ a traves del canal es una corriente de deriva
+
+\newcommand{\dif}[2]{\frac{d#1}{d#2}}
+
+\begin{equation}
+    I_d = \dif{V_c}{R}
+\end{equation}
+que es obviamente constante a lo largo del canal e independiente de $y$.
+
+La concentración de carga en el canal viene dada por la Ec. 11
+como función de $V_C$. Sin embargo, $dR$ es una función de $y$. Dado que
+VC crece monótonamente a lo largo de $y$, las variables $y$ y $V_C$ se
+pueden intercambiar reemplazando y por $V_C(y)$ y $Q_n(y)$ por $Q_n(V_C)$. Por
+lo tanto, la ecuación 9.15 se puede integrar con respecto a y de 0 a
+$L$ y con respecto a VC de VS a $V_D$:
+
+\begin{equation}
+    \omega \int_{V_S}{V_D}Q_n(V_c)d V_c
+    = I_D \int_0^L \frac{dy}{\mu_n}
+\end{equation}
+
+Asumiendo que $\mu_n$ permanece constante a lo largo del canal, obtenemos
+la corriente de drenado
+
+\begin{equation}
+    I_d = \frac{\mu_n \omega}{L} \int_{V_s}^{V_D} Q_n(V_c) d V_c
+\end{equation}
+
+donde
+$Q_n = - C_{ox}[V_G - V_{fb} - 2\pp + V_C - V_B] + \sqrt{2\e_s q N_A (2||\phi_p) + V_c}$
+
+El cálculo de la integral se puede simplificar sin tener en cuenta
+la dependencia de la carga de la capa de agotamiento en $V_C$.
+Obviamente, el tamaño de la capa de agotamiento cambia a lo largo
+del canal. Sin embargo, la incertidumbre sobre el valor real de la
+movilidad en el canal ($\mu_n$) hace que la aproximación sea tolerable. A
+nivel práctico, lo importante aquí es calcular una relación
+funcional plausible entre corrientes y voltajes, dejando la
+evaluación de los parámetros reales del dispositivo a la calibración
+experimental. Teniendo en cuenta la definición de voltaje umbral
+Ec. 10, la carga se puede escribir como:
+
+\begin{equation}
+    Q_n = - C_{ox}(V_G - V_T - V_C)
+\end{equation}
+
+La carga móvil disminuye a medida que el $V_C$ aumenta hacia el
+contacto de drenaje. Como consecuencia, el $V_{DS}$ no se distribuye
+uniformemente a lo largo del canal, sino que es más intenso hacia el
+contacto con el drenaje. La corriente de drenaje se obtiene
+integrando la Ec .17
+
+\begin{equation}
+    I_d = - \mu_n C_{ox} \frac{\omega}{L}
+    \left[
+        (V_G - V_T)V_{DS} - \frac{V^2_{DS}}{2}
+    \right]
+\end{equation}
+
+El signo negativo indica que la corriente fluye desde el desagüe
+hasta la fuente. Esta ecuación se denomina ecuación MOSFET de canal
+largo. Describe una familia de funciones parabólicas $I_d /(V_{DS})$,
+donde $V_G$ es un parámetro. Cabe destacar que la forma parabólica
+implica la existencia de un tracto de resistencia diferencial
+negativo. En realidad, cuando $V_C = VG - VT$, la carga en el canal se
+vuelve nula y el modelo, basado en la continuidad de la carga en el
+canal, ya no es válido. La condición de carga nula implica que la
+resistencia en ese tracto se vuelve infinita. En otras palabras, en
+$V_{DS} = V_G - V_T$ se interrumpe el canal. Esta condición se cumple en la
+parte superior de la función parabólica, cuando la corriente alcanza
+su valor máximo.
+
+\begin{equation}
+    I_{d\max} = - \mu_n C_{ox} \frac{\omega}{L} \frac{{(V_G - V_T)}^2}{2}
+\end{equation}
+
+El voltaje de la fuente de drenaje al que se obtiene la corriente de
+drenaje máxima se denomina voltaje de saturación. Corresponde a la
+condición en la que Qn es nulo en el contacto de drenaje. En VDS >
+$V_{DS sat}$ cualquier aumento adicional en la tensión cae en el borde de
+la región, donde Qn = 0.Entonces, la parte del canal sigue siendo sesgada en
+$V_{DS sat}$, de modo que la corriente en los canales permanece fija en
+$(I_d\max)$. La región agotada de electrones móviles es la región de
+pellizco. El pellizco es muy estrecho y está sesgado en 
+$V_{DS}-V_{DSsat}$. Tal voltaje a través de una pequeña región da lugar a un
+gran campo eléctrico, que puede arrastrar la corriente desde el extremo del canal hacia el
+contacto de drenaje.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/f5.png}
+    \caption{Corriente de drenaje frente a voltaje de drenaje de
+    fuente con voltaje de compuerta como parámetro. El modelo es
+    correcto hasta que se alcanza el valor máximo de la parábola.
+    Después de eso, la conductividad de un tracto de canal cerca del
+    contacto de drenaje se vuelve cero y el modelo ya no es
+    válido}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{img/f6.png}
+    \caption{
+        Izquierda: comportamiento de la carga en el canal en
+        función de la tensión de compensación. Más allá de $V_G - V_T$, el
+        modelo predice una carga positiva imposible en el canal.
+        Derecha: forma del canal para aumentar el VDS y la distribución
+        del VDS a lo largo del canal
+    }
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{img/f7.png}
+    \caption{
+        Izquierda: Características del MOSFET\@. El desglose no es
+        visible en el gráfico. Sin embargo, hay que tener en cuenta
+        que en los $V_{DS}$ grandes la corriente de drenaje sufre un
+        fuerte aumento debido al efecto avalancha. Derecha:
+        dependencia de la corriente de saturación frente a la
+        tensión de la puerta. Tenga en cuenta que el voltaje umbral
+        define el inicio de la corriente
+    }
+\end{figure}
+
+Para obtener la corriente total, la corriente de difusión se añade
+posteriormente a la corriente de deriva:
+
+\begin{equation}
+    I_{tot} = -\mu_n \frac{\omega}{L}C_{ox}
+    \left[
+        \left(
+            V_G - V_T + \frac{kT}{q}
+        \right) + \frac{V^2_{DS}}{2}
+    \right]
+\end{equation}
+
+\subsection{Modulación de longitud de canal}
+Con el régimen de in-saturación de MOSFET, cada aumento adicional en
+VDS cae a través de la región de pellizco. Por lo tanto, el tamaño
+de la región de pellizco aumenta con VDS y, en consecuencia, la
+longitud del canal de electrones disminuye. Dado que la corriente de
+drenaje es inversamente proporcional a la longitud del canal, el
+aumento de VDS eventualmente induce un aumento en la corriente de drenaje.
+
+\subsection{Tiempo de Transito}
+El tiempo de respuesta del MOSFET depende principalmente del tiempo
+que se tarda en cargar la capa de agotamiento y del tiempo de
+tránsito de los electrones en el canal. El tiempo necesario para
+cargar la capa de agotamiento se trató en la sección de unión PN\@. En
+cuanto al tiempo de tránsito, al ser una característica peculiar del
+MOSFET, merece un poco más de atención. La velocidad de los
+electrones es variable a lo largo del canal porque su concentración
+es variable. De hecho, una velocidad variable asegura que la
+corriente de drenaje se mantenga constante a lo largo de todo el
+canal. El tiempo de tránsito se puede calcular de la siguiente
+manera:
+
+\begin{equation}
+    T_{tr} = \int_{0}^{L} \frac{1}{v(y)}dy
+    = - \int_{0}^{L} \frac{1}{\mu_n \E_(y)}dy
+\end{equation}
+
+haciendo los cálculos respectivos llegamos a
+
+\begin{equation}
+    T_{tr} = \frac{4}{3}\frac{L^2}{\mu_n(V_G - V_T)}
+\end{equation}
+
+El tiempo de tránsito depende en gran medida de la longitud del
+canal y de la movilidad. La disminución de la longitud del canal y
+el aumento de la movilidad son las posibles acciones a tomar para
+reducir el tiempo de tránsito y, en consecuencia, el tiempo de
+respuesta del
+dispositivo.
+
+\subsection{MOSFET de canal corto}
+En la sección anterior, se ha derivado el llamado modelo de canal
+largo del MOSFET\@. La condición de longitud de canal largo garantiza
+la aproximación de canal graduado, que es la base para la derivación
+del modelo anterior. Además, la corriente se ha calculado asumiendo
+una movilidad constante en el canal. Pronto veremos que esta es una
+de las condiciones que deben eliminarse cuando se considera un
+MOSFET de canal corto.
+
+La longitud del canal es inversamente
+proporcional a la corriente de la fuente de drenaje y al
+tiempo de tránsito. Por lo tanto, una disminución en la
+longitud del canal es una opción óptima para aumentar el rendimiento
+del dispositivo. La reducción de la longitud del canal, sin embargo,
+tiene una serie de consecuencias adicionales, no siempre positivas,
+que deben ser consideradas. Veremos que para mantener el
+rendimiento, se debe establecer un escalado de la longitud del canal
+en paralelo con un escalado de los otros parámetros del MOSFET\@. A
+continuación se introducen algunas de las consecuencias del escalado
+de la longitud del
+canal.
+
+
+\subsection{Modulación de voltaje de umbral}
+Luego $n^+$ regiones dopadas permiten que el drenaje y los contactos de la
+fuente creen una unión PN con un sustrato de tipo p. Como
+consecuencia, aparecen dos capas de agotamiento adicionales,
+superpuestas a la capa de agotamiento de MOS, en las interfaces
+contacto-sustrato. En condiciones normales, las uniones PN están
+polarizadas inversamente, de modo que las capas de agotamiento
+adicionales tienden a expandirse hacia el sustrato y, también, hacia
+el canal. En un dispositivo de canal largo, el tamaño de estas
+regiones se puede despreciar con respecto al tamaño de la capa de
+agotamiento de MOS\@. Sin embargo, cuando la distancia entre el
+drenaje y la fuente es pequeña, las contribuciones de estas dos
+regiones a la capa de agotamiento total ya no son despreciables.
+En las capas de agotamiento pertinentes a la unión PN, la carga del
+aceptor no está controlada por $V_G$, sino por $V_D$ y $V_S$\@. Como
+consecuencia, la carga de la capa de agotamiento controlada por VG
+disminuye. Esta carga es el último término del umbral de voltaje en (9),
+de modo que si la carga de la capa de agotamiento
+controlada por $V_G$ disminuye, entonces, como se muestra en la
+siguiente ecuación, también el voltaje umbral se vuelve más pequeño
+(con respecto a un dispositivo similar donde solo ha cambiado la
+longitud del canal):
+
+\begin{equation}
+    V_T = V_{fb} - \pp + \frac{Q^*_D}{C_{ox}} 
+\end{equation}
+
+donde $Q^*_d$ es la porción de la carga de la capa de agotamiento
+realmente controlada por $V_{GS}$. Dado que la fuente normalmente está
+conectada a tierra, la modulación de voltaje umbral se produce en el
+contacto de drenaje. $V_T$ tiene un comportamiento exponencial con la
+longitud del canal. La disminución de $Q^*_d$ puede ser compensada, o
+aumentada, por la capacitancia de óxido. Dejando intactos los
+materiales, una reducción en el espesor del óxido puede
+contrarrestar adecuadamente la disminución del voltaje umbral. Como
+se anticipó en la sección anterior, para mantener las propiedades
+del dispositivo, el escalado de la longitud del canal debe
+complementarse con el escalado de otras cantidades. En este caso,
+para mantener el mismo voltaje umbral, también se debe reducir el
+espesor del óxido.

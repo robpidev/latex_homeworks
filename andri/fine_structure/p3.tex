@@ -1,0 +1,202 @@
+\subsection{acoplamiento Spin-Orbita}
+Imagínese qué el electrón se encuentra en orbita alrededor
+del núcleo, desde punto de vista del electrón, el protón
+está rotando al rededor de este (ver figura 1). Esta orbita
+de carga positiva configura un campo magnético $\vec{B}$
+en el marco del electrón, el cual ejerce un torque
+en la rotación del electrón tendiendo a alinear este
+momento magnético $\vec{\mu}$ a lo largo de la dirección del campo.
+El Hamiltoniano es
+
+\begin{gather}
+    \label{eq:hamiltoniano:magnec:moment}
+    H = - \vec{\mu} \cdot \vec{B}
+\end{gather}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{f1.png}
+    \caption{Átomo de hidrógeno desde la perspectiva de un electrón}
+\end{figure}
+
+Para empezar necesitamos trazar el campo magnético del proton
+$\vec{B}$ y el momento dipolar del electrón ($\vec{\mu}$)
+
+El campo magnético del protón pude ser calculado utilizando la ley de Biot-Savart
+
+\begin{equation}
+    B = \frac{\mu_0I}{2r}
+\end{equation}
+
+Con una corriente efectiva $I = e/T$ donde $e$ es la
+carga del electrón y $T$ es el periodo de orbita. Por otro
+lado el momento orbital del electrón es $L = rmv = 2\pi mr^2/T$
+Además, $\vec{B}$ y $\vec{L}$ apunta en la misma dirección
+Así se tiene
+
+\begin{gather}
+    \vec{B} = \frac{1}{4\pi\epsilon_0}
+        = \frac{e}{mc^2r^3} \vec{L}
+\end{gather}
+
+Donde sé a a usado $c = 1/\sqrt{\epsilon_0\mu_0}$
+to eliminate $\mu_0$ en vez de $\epsilon_0$
+
+\textbf{Momento dipolar magnético del electrón}. El momento dipolar magnético de una
+carga rotando ir relacionado con el momento angular (Spin). El factor de proporcionalidad
+es el radio de giro magnético. 
+considere primero una carga una carga $q$ que rota con un periodo $T$ en un anillo
+de radio $r$, así que se tiene.
+
+\begin{equation}
+    \mu = IA = \frac{q\pi r^2}{T}
+\end{equation}
+
+Si la masa del anillo es $m$, su momento angular es el momento de inercia $mr^2$
+en términos de la velocidad angular $2\pi/T$
+
+\begin{equation}
+    S = \frac{2\pi m r^2}{T}
+\end{equation}
+
+Expresando el momento dipolar magnético $\vec{\mu}$ en términos de $\vec{S}$
+dado que tienen la misma dirección, se tiene
+
+\begin{equation}
+    \vec{\mu} = {\left(\frac{q}{2m}\right)} \vec{S}
+\end{equation}
+
+Este fue un cálculo puramente clásico, sin embargo; El momento magnético
+del electron es dos veces el valor clásico
+
+\begin{equation}
+    \vec{\mu}_e = - \frac{e}{m}\vec{S}
+\end{equation}
+
+El valor 2 `Extra'  es explicado por Dirac, in su teoría relativista del
+electrón.
+
+Remplazando en la ecuación~\ref{eq:hamiltoniano:magnec:moment} obtenemos
+entonces
+
+\begin{equation}
+    H = \left(\frac{e^2}{4\pi\epsilon_0}\right)\frac{1}{m^2c^2r^3}\vec{S}\cdot\vec{L}
+\end{equation}
+
+Sin embargo estos cálculos tienen un serio problema dado qué se an analizado
+para un marco de referencia inercial, el cual no lo es ya qué este es
+acelerado a medida que el electrón orbita alrededor del núcleo,
+por lo que sé hace una corrección cinética adecuada, 
+conocida como la precesión de Thomas. En este contexto, arroja un
+factor de $1/2$, así la corrección es:
+
+\begin{equation}
+    H'_{so} = \left(\frac{e^2}{8\pi\epsilon_0}\right)\frac{1}{m^2c^2r^3}
+    \vec{S}\cdot\vec{L}
+\end{equation}
+
+Ahora en mecánica cuántica. En presencia del acoplamiento Spin-orbita,
+el Hamiltoniano ya no conmuta con $\hat{L}$ y $\hat{S}$, así que
+el spin y el momento angular orbital separadamente no se conserva.
+sin embargo $H'_{so}$ lo hace con $L^2, S^2$ y el momento angular total.
+
+\begin{equation}
+    \hat{J}\equiv\hat{L}+\hat{S}
+\end{equation}
+
+Y estas ecuaciones se conservan. Puesto de otra manera los auto-estados
+de $L_z$ y $S_z$ no son `Buenos' estados a usar en la teoría de perturbaciones,
+pero los auto-estados de $L^2, S^2, J^2$ y $J_z$ lo son. vamos calcularlos
+
+\begin{equation*}
+    J^2 = (\hat{L}+\hat{S})\cdot(\hat{L}+\hat{s})
+    = L^2 + S^2 + 2\hat{L}\cdot\hat{S}
+\end{equation*}
+
+Así que
+
+\begin{equation}
+    \hat{L}\cdot\hat{S} = \frac{1}{2}\left(J^2 - L^2 - S^2\right)
+\end{equation}
+
+Como estos valores se conoces, entonces
+
+\begin{equation}
+    \hat{L}\cdot\hat{S}
+    = \frac{\hbar^2}{2}
+    [j(j + 1) - l(l + 1) - s(s + 1)]
+\end{equation}
+
+en este caso tomando $s = 1/2$. Mientras el valor esperado de
+$1/r^3$ es
+
+\begin{equation}
+    \bk{\frac{1}{r^3}}
+    = \frac{1}{l(l + 1/2)(l + 1)n^3a^3}
+\end{equation}
+
+Con lo que se concluye que
+
+\begin{equation}
+    E^1_{so} = \bk{H'_{so}} = \frac{e^2}{8\pi\epsilon_0}\frac{1}{m^2c^2}
+    \frac{\left(\hbar^2/2\right)[j(j+1) - l(l + 1) - 3/4]}{l(l + 1/2)(l + 1)n^3a^3}
+\end{equation}
+
+O expresado en los términos de $E_n$
+
+\begin{equation}
+    E^1_{so} = \frac{{(E_n)}^2}{mc^2}
+        \frac{n[j(j+1) - l(l + 1) - 3/4]}{l(l + 1/2)(l + 1)}
+\end{equation}
+
+Como se puede observar la corrección relativista y el acoplamiento spin-orbita
+son del mismo orden $(E_n^2/mc^2)$. Agregando ambos términos se obtiene
+la formula de la estructura fina
+
+\begin{equation}
+    E^1_{fs} = E^1_r + E^1_{so}
+\end{equation}
+
+Teniendo en cuenta $j = l \pm 1/2$ y haciendo los cálculos por
+separado para cada signo se llega al mismo
+resultado de esta ultima expresión se puede reducir a
+
+\begin{equation}
+    E^1_{fs} = \frac{{(E_n)}^2}{2mc^2}
+    \left(3 - \frac{4n}{j + 1/2}\right)
+\end{equation}
+
+Combinando estos resultados con la formula de Bohr,
+se obtiene el resultado
+
+\begin{equation}
+    E_{nj} = - \frac{13.6eV}{n^2}
+    \left[
+        1 + \frac{\alpha^2}{n^2}
+        \left(
+            \frac{n}{j + 1/2} - 3/4
+        \right)
+    \right]
+\end{equation}
+
+Estos niveles de energía se pueden observar en la figura 2
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{f2.png}
+    \caption{Niveles de energía del átomo de hidrógeno incluyendo la estructura fina (No está en escala)}
+\end{figure}
+
+\subsection{Corrección de Darwin}
+El electrón relativista experimenta pequeñas fluctuaciones en su posición (efecto Zitterbewegung). Estas fluctuaciones generan un efecto adicional de interacción con el núcleo, que se traduce en una corrección a la energía.
+
+a densidad de probabilidad cuántica asociada al electrón incluye un término adicional en la ecuación de Dirac, lo que lleva a un operador de potencial efectivo:
+
+\begin{equation}
+    H_D = \frac{\pi Z e^2 \hbar^2}{2m_e^2 c^2} \delta(\vec{r})
+\end{equation}
+
+Este término solo afecta a electrones con 
+$l = 0$
+(s-orbitales), ya que la densidad de probabilidad en 
+$r = 0$ es máxima solo para estos estados.

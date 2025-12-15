@@ -1,0 +1,103 @@
+\section*{Ejercicio 2}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/3.jpg}
+\end{figure}
+
+\textit{Solución.}
+
+\subsection*{Estructura molecular}
+\[
+\chemfig{HO-CH_2-CH_2-CH_2-CH_3}
+\]
+
+\subsection*{Masa molecular}
+Fórmula: \(\mathrm{C_4H_{10}O}\).
+
+\[
+\begin{aligned}
+\text{C: } & 4\times 12 = 48 \\
+\text{H: } & 10\times 1 = 10 \\
+\text{O: } & 1\times 16 = 16 \\
+\hline
+M &= 48 + 10 + 16 = \mathbf{74\ \text{u}}
+\end{aligned}
+\]
+
+En EI el ion molecular \(\mathrm{M^+}\) (m/z = 74) frecuentemente es débil para alcoholes primarios; aparecen fragmentos más intensos.
+
+
+El espectro de masas del \textbf{1-butanol} presenta los siguientes picos característicos:
+
+\bigskip
+\subsection*{Picos observados (datos provistos)}
+\[
+\begin{array}{c c}
+\text{m/z} & \text{Probabilidad (\%)} \\ \midrule
+26 & 6.0 \\
+27 & 48.2 \\
+28 & 27.1 \\
+31 & 97.3 \\
+33 & 9.8 \\
+39 & 19.1 \\
+41 & 83.1 \\
+43 & 67.2 \\
+45 & 7.3 \\
+55 & 18.4 \\
+56 & 100.0 \\
+57 & 8.9 \\
+\end{array}
+\]
+
+\subsection*{Tabla de fragmentos propuesta con cálculo de masas}
+
+\begin{tabular}{@{}llc@{}}
+\toprule
+m/z & Ion propuesto (fórmula) & Cálculo de masa \\ \midrule
+74 & \(\mathrm{M^+ = C_4H_{10}O}\) (débil) & \(4\times 12 + 10\times 1 + 16 = 48+10+16=74\) \\[6pt]
+56 & \(\mathrm{C_4H_8^+}\) (buteno, \(\mathbf{M-18}\)) & \(4\times 12 + 8\times 1 = 48+8=\mathbf{56}\) \\[6pt]
+31 & \(\mathrm{CH_3O^+ / CH_2OH^+}\) (ion oxigenado) & \(1\times 12 + 3\times1 + 16 = 12+3+16=\mathbf{31}\) \\[6pt]
+41 & \(\mathrm{C_3H_5^+}\) (allyl / deshidrogenado) & \(3\times 12 + 5\times1 = 36+5=\mathbf{41}\) \\[6pt]
+43 & \(\mathrm{C_3H_7^+}\) (propilio) & \(3\times 12 + 7\times1 = 36+7=\mathbf{43}\) \\[6pt]
+45 & \(\mathrm{C_2H_5O^+}\) (etoxi / ion oxigenado) & \(2\times 12 + 5\times1 + 16 = 24+5+16=\mathbf{45}\) \\[6pt]
+57 & \(\mathrm{C_4H_9^+}\) (butilio, menor) & \(4\times 12 + 9\times1 = 48+9=\mathbf{57}\) \\[6pt]
+55 & \(\mathrm{C_4H_7^+}\) (butenil, secundario) & \(4\times 12 + 7\times1 = 48+7=\mathbf{55}\) \\[6pt]
+28 & \(\mathrm{C_2H_4^+}\) (etileno) & \(2\times 12 + 4\times1 = 24+4=\mathbf{28}\) \\[6pt]
+27 & \(\mathrm{C_2H_3^+}\) (vinilo) & \(2\times 12 + 3\times1 = 24+3=\mathbf{27}\) \\[6pt]
+26 & \(\mathrm{C_2H_2^+}\) (acetileno / deshidrogenado) & \(2\times 12 + 2\times1 = 24+2=\mathbf{26}\) \\[6pt]
+33 & \text{Fragmento oxigenado menor (reordenamiento)} & (intensidad baja; rutas secundarias) \\ \bottomrule
+\end{tabular}
+
+\bigskip
+\subsection*{Fragmentaciones Relevantes}
+
+\paragraph{1) Principal}  
+Alcoholes primarios sufren \textbf{pérdida de H$_2$O} (18 u) por reordenamiento intramolecular, generando un ion olefínico estabilizado:
+\[
+\mathrm{[M]^+ (74) \xrightarrow{ - H_2O } C_4H_8^+ \ (m/z = 56)}
+\]
+Cálculo: \(74 - 18 = 56\). Este es el \textbf{pico base} (100\%).
+
+\paragraph{2) \(\alpha\) al oxígeno (formación de ion \(\mathrm{CH_2OH^+}\) / \(\mathrm{CH_3O^+}\))}  
+Ruptura del enlace entre \(C_1\) (portador del –OH) y \(C_2\) produce un ion oxigenado:
+\[
+\mathrm{HO-CH_2-CH_2-CH_2-CH_3 \longrightarrow CH_2OH^+ \ (m/z=31) + \cdot C_3H_7}
+\]
+Cálculo de \(\mathrm{CH_3O^+}\): \(12 + 3 + 16 = 31\).
+
+\paragraph{3) C--C y formación de iones C$_3$ (m/z 43 y 41)}  
+Rupturas interiores y reordenamientos generan los iones propilio y allyl:
+\[
+\mathrm{HO-CH_2-CH_2-CH_2-CH_3 \longrightarrow C_3H_7^+ (m/z=43) + \text{resto neutro}}
+\]
+Deshidrogenaciones sucesivas llevan a \(m/z=41\) (\(\mathrm{C_3H_5^+}\)).
+
+\paragraph{4) Fragmentos C$_2$ y deshidrogenaciones (m/z 28, 27, 26)}  
+Rutas más energéticas producen etileno/vinilo/acetileno cargados:
+\[
+\mathrm{C_2H_4^+ (28),\ C_2H_3^+ (27),\ C_2H_2^+ (26)}
+\]
+
+\paragraph{5) Iones oxigenados secundarios (m/z = 45, 33)}  
+Reordenamientos que conservan O dan \(\mathrm{C_2H_5O^+}\) (m/z 45) y otros iones oxigenados de baja intensidad.
+

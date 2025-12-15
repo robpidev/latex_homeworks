@@ -1,0 +1,167 @@
+\documentclass[twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+
+\geometry{margin=2cm}
+\usepackage{float}
+\setlength{\columnsep}{1cm}
+
+
+\newcommand\BackgroundPic{
+    \put(0,0){%
+        \parbox[b][\paperheight]{\paperwidth}{%
+            \includegraphics[width=\paperwidth,height=\paperheight]{img/back.pdf}%
+        }%
+    }
+}
+
+
+\title{Repaso física}
+\date{}
+
+\begin{document}
+
+
+\newcommand{\opciones}[5]{%
+\begin{tabular}{ll}
+A) & #1 \\
+B) & #2 \\
+C) & #3 \\
+D) & #4 \\
+E) & #5 \\
+\end{tabular}
+}
+
+\begin{enumerate}
+
+\AddToShipoutPicture{\BackgroundPic}
+
+    \item Una piedra soltada desde una cierta altura con respecto a la superficie de la Tierra, experimenta una fuerza \( F = mg - kv \). Donde \( m \) es masa y \( v \) es la rapidez con la que la piedra desciende. Determine la ecuación dimensional de \( k \).
+
+    \opciones{\(MT^{-2}\)}{\(MT^{-1}\)}{\(M^{-1}T^{-2}\)}{\(M^{-2}T^{-2}\)}{\(M^2T^{-1}\)}
+
+    \item Dos personas jalan una caja, donde \( F_A = 4,00\,\mathrm{N} \) y \( F_B = 2,00\,\mathrm{N} \). Si las cuerdas forman 60°, determine el módulo de la fuerza resultante.
+
+    \opciones{\(2\sqrt{7}\,\mathrm{N}\)}{\(6\,\mathrm{N}\)}{\(2\sqrt{5}\,\mathrm{N}\)}{\(7\,\mathrm{N}\)}{\(7\sqrt{2}\,\mathrm{N}\)}
+
+    \item Una espeleóloga recorre 45 m hacia el sur en 30 s y luego 75 m N 53° E en 2 minutos. Determine la rapidez media y el módulo de la velocidad media (en m/s).
+
+    \opciones{0,8 y 0,6}{0,2 y 0,4}{0,6 y 0,8}{0,4 y 0,6}{0,8 y 0,4}
+
+    \item Un automóvil recorre 110 m en 5 s y luego se detiene en otros 5 s. Determine su aceleración durante el frenado.
+
+    \opciones{\(0{,}6\,\mathrm{m/s^2}\)}{\(1{,}5\,\mathrm{m/s^2}\)}{\(2\,\mathrm{m/s^2}\)}{\(3{,}6\,\mathrm{m/s^2}\)}{\(4{,}4\,\mathrm{m/s^2}\)}
+
+    \item Un auto y una moto parten juntos pero la moto está 16 m atrás. El auto acelera a \(1{,}40\,\mathrm{m/s^2}\), la moto a \(1{,}90\,\mathrm{m/s^2}\). ¿Cuánto tarda la moto en alcanzarlo?
+
+    \opciones{8 s}{9 s}{10 s}{11 s}{12 s}
+
+    \item Un globo pasa por una ventana a 21,2 m del suelo y cae en 2 s. ¿Con qué rapidez pasó por la ventana? (\(g=10\,\mathrm{m/s^2}\))
+
+    \opciones{\(0{,}4\,\mathrm{m/s}\)}{\(0{,}5\,\mathrm{m/s}\)}{\(0{,}6\,\mathrm{m/s}\)}{\(0{,}7\,\mathrm{m/s}\)}{\(0{,}8\,\mathrm{m/s}\)}
+
+    \item Una partícula se mueve con rapidez \(v\) en un círculo de radio \(r\), con aceleración \(a = v^m r^n\). Determine \(m\) y \(n\).
+
+    \opciones{–2; 1}{1; 1}{2; 1}{2; –1}{–1; 2}
+
+    \item Si \(\vec{A} = \vec{B} = 10\) u y el ángulo es 74°, determine el módulo del vector resultante.
+    
+    \begin{center}
+    \centering
+    \includegraphics[width=0.25\textwidth]{1.png}
+    \end{center}
+    \opciones{20}{22}{24}{32}{34}
+
+    \item Un atleta se desplaza con \(\vec{r}_1 = (0{,}5,-0{,}7)\,\mathrm{km}\), \(\vec{r}_2 = -1{,}1\,\mathrm{km}\) y \(\vec{r}_3 = (a,b)\,\mathrm{km}\). Si el total es \((2{,}5,1{,}7)\), halle \(ab\).
+
+    \opciones{7{,}0}{4{,}4}{8{,}6}{3{,}0}{6{,}8}
+
+    \item Una manzana se lanza desde 0,90 m sin tocar el techo (2,70 m). ¿Cuál es su rapidez inicial máxima? (\(g = 10\,\mathrm{m/s^2}\))
+
+    \opciones{\(4{,}5\,\mathrm{m/s}\)}{\(5\,\mathrm{m/s}\)}{\(6\,\mathrm{m/s}\)}{\(7\,\mathrm{m/s}\)}{\(8{,}4\,\mathrm{m/s}\)}
+    
+    \item Un futbolista patea un balón comunicándole una rapidez de 15,0 m/s con un ángulo de 37° respecto a la horizontal. Determine el alcance horizontal del balón. (g = 10 m/s\textsuperscript{2})
+\begin{tabular}{ll}
+A) 21,6 m & B) 22,0 m \\
+C) 22,4 m & D) 24,1 m \\
+E) 25,5 m & \\
+\end{tabular}
+
+\item Una partícula desarrolla MCU con un radio de 0,4 m. Si realiza dos revoluciones cada segundo, calcule la aceleración de la partícula en m/s\textsuperscript{2}. (Considere $\pi^2 \approx 10$)
+\begin{tabular}{ll}
+A) 9     & B) 16 \\
+C) 64    & D) 81 \\
+E) 144   & \\
+\end{tabular}
+
+\item El gráfico muestra dos móviles A y B que realizan MCU, con rapidez angular de $\frac{10\pi}{3}$ rad/s y $\frac{20\pi}{3}$ rad/s respectivamente. Determine el tiempo en que se encuentran por primera vez.
+
+\begin{center}
+\includegraphics[width=0.3\textwidth]{2.png}
+\end{center}
+
+\begin{tabular}{ll}
+A) 0,75 s & B) 0,5 s \\
+C) 0,1 s  & D) 1 s   \\
+E) 3 s    &          \\
+\end{tabular}
+
+\item Un polipasto es una máquina compuesta por dos o más poleas y una cuerda. El gráfico muestra una persona manteniendo en equilibrio un peso de 100 N mediante el uso de un polipasto ideal. Determine la fuerza que ejerce la persona sobre la cuerda.
+\begin{center}
+\includegraphics[width=0.3\textwidth]{3.png}
+\end{center}
+
+\begin{tabular}{ll}
+A) 10 N   & B) 25 N \\
+C) 50 N   & D) 75 N \\
+E) 100 N  &         \\
+\end{tabular}
+
+\item El bloque de 60 N que se muestra en la figura desliza en equilibrio cinético sobre un plano inclinado, bajo la acción de la fuerza constante mostrada. Determine el módulo de la fuerza que ejerce el bloque sobre el plano inclinado liso.
+\begin{tabular}{ll}
+A) $10\sqrt{13}$ N & B) $9\sqrt{17}$ N \\
+C) $10\sqrt{17}$ N & D) $30\sqrt{13}$ N \\
+E) $30\sqrt{17}$ N & \\
+\end{tabular}
+
+\item Considere el sistema de la figura mostrada, donde la cuerda y la polea son ideales. Si el bloque de 7,5 kg se encuentra a punto de deslizar, determine el coeficiente de rozamiento entre las superficies en contacto.
+\begin{center}
+\includegraphics[width=0.4\textwidth]{4.png}
+\end{center}
+\begin{tabular}{ll}
+A) 0,1   & B) 0,33 \\
+C) 0,45  & D) 0,22 \\
+E) 0,56  &        \\
+\end{tabular}
+
+\item Una pelota se lanza horizontalmente desde el techo de una vivienda de 3 pisos (altura de cada piso 2,4 m), notándose que cae a 3,6 m de la base de dicha vivienda. ¿Cuál fue la rapidez inicial de la pelota? (g = 10 m/s\textsuperscript{2})
+\begin{tabular}{ll}
+A) 0,5 m/s & B) 1,0 m/s \\
+C) 2,0 m/s & D) 3,0 m/s \\
+E) 4,0 m/s &           \\
+\end{tabular}
+
+\item El bloque sube con una rapidez constante de 1,6 m/s, debido al movimiento de la polea ideal, cuyo radio es de $\frac{8}{\pi}$ m. Determine la frecuencia con la que gira la polea.
+\begin{center}
+\includegraphics[width=0.3\textwidth]{5.png}
+\end{center}
+\begin{tabular}{ll}
+A) 0,25 Hz & B) 0,5 Hz \\
+C) 0,1 Hz  & D) 2,5 Hz \\
+E) 2,75 Hz &          \\
+\end{tabular}
+
+\item Una rueda empieza a girar desde el reposo, de tal manera que su rapidez angular cambia uniformemente. Si luego de 6 s presenta una frecuencia de 180 RPM, determine el número de revoluciones que realizó en dicho tiempo.
+\begin{tabular}{ll}
+A) 3   & B) 6   \\
+C) 9   & D) 12  \\
+E) 15  &       \\
+\end{tabular}
+
+
+\end{enumerate}
+
+\end{document}

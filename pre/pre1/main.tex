@@ -1,0 +1,53 @@
+\documentclass[twocolumn, 12pt, a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}    % Soporte para caracteres especiales
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{float}
+\usepackage[right=3cm, left=2.5cm, top=3cm, bottom=3.5cm]{geometry}
+%\usepackage{hyperref}          % Enlaces y referencias
+%\usepackage[style=apa]{biblatex}
+%\usepackage{csquotes}          % Manejo de citas (opcional, útil para biblatex)
+%\addbibresource{references.bib}
+%\usepackage[spanish]{babel}
+
+\newcommand\BackgroundPic{
+    \put(0,0){%
+        \parbox[b][\paperheight]{\paperwidth}{%
+            \includegraphics[width=\paperwidth,height=\paperheight]{img/back.pdf}%
+        }%
+    }
+}
+
+\newcommand*{\exer}[8]{
+    \item #1
+    \begin{center}
+        \includegraphics[width=0.3\textwidth]{img/f#2.png}
+    \end{center}
+    \begin{tabular*}{0.4\textwidth}{@{\extracolsep{\fill}}lll}    % 3 columnas sin líneas
+                (A) $#3$ #8 & (B) $#4$ #8 & (C) $#5$ #8\\
+                (D) $#6$ #8 &  & (E) $#7$ #8
+    \end{tabular*}
+}
+
+\begin{document}
+\AddToShipoutPicture*{\BackgroundPic}
+    \begin{enumerate}
+        \exer{En el gráfico mostrado, calcular la fuerza resultante sobre la carga $q_3$.}{1}{7.5}{10}{12.5}{15}{17.5}{N}
+        \exer{En la figura, determinar la fuerza eléctrica resultante sobre la carga $Q_3$. $Q_1 = -9\mu C, Q_2 = 32 \mu C, Q_3 = 1 mC$}{2}{9\sqrt{3}}{18}{5\sqrt{2}}{9\sqrt{5}}{21}{N}
+        \exer{El bloque de 5 kg mantiene a la esfera de carga $q$ en la posición mostrada unidos por una cuerda aislante, hallar: $q$}{3}{1}{2}{4}{5}{8}{$\mu$C}
+        \exer{Una esfera cargada de 30 N de peso reposa en el seno de un campo eléctrico uniforme. Halle la tensión $T$}{4}{20}{40}{50}{60}{100}{N}
+        \exer{Sabiendo que el sistema se encuentra en equilibrio. Hallar la deormación del resorte ($K = 15 N/cm$) sabiendo que $m = 4$ kg, $q = + 60$ $\mu$C y $E = 5\times 10 ^5$ N/C}{5}{1}{2}{3}{4}{5}{cm}
+        \exer{un péndulo cónico de longitud 25 cm tiene una masa de 50 g y está electrizada con $-6$ $\mu$C. Hallar la rapidez angular de su movimiento para que la cuerda forme $37$ grados sexagesimales con la vertical. $E = 5\times10^4$ N/C. ($g = 10 m/s^2$)}{6}{\sqrt{5}}{\sqrt{2}}{2\sqrt{2}}{2\sqrt{5}}{1}{rad/s}
+        \exer{Si cada resistencia es de 6 $\omega$ determine la resistencia equivalente entre $A$ y $B$}{7}{18}{2}{6}{12}{14}{$\Omega$}
+        \exer{Si la diferencia de potencial entre $A$ y $B$ es de 6 V, hallar la intensidad de corriente $I$}{8}{3/2}{2/3}{1/6}{6}{3}{A}
+        \exer{Si la resistencia equivalente entre A y B esde $11$ $\Omega$. Encontrar el valor de $R$}{9}{1}{2}{4}{8}{3}{$\Omega$}
+        \exer{Halle la resistencia equivalente entre los puntos a y b.}{10}{3}{2}{1}{0.5}{4}{$\Omega$}
+        \exer{Determine la intensidad de corriente eléctrica que circula por el circuito.}{11}{5}{6}{7}{8}{9}{A}
+        \exer{Dado el circuito, determine la lectura del amperímetro ideal.}{12}{1}{2}{3}{4}{5}{A}
+        \exer{Hallar la intensidad de la corriente que circula por la resistencia $R$}{13}{2}{4}{8}{10}{12}{A}
+        \exer{Hllar el valor de la resitencia R, si la lectura del amperímetro es de 1 A}{14}{10}{30}{20}{15}{5}{$\Omega$}
+    \end{enumerate}
+\end{document}

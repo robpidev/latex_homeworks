@@ -1,0 +1,75 @@
+\section{Interacción de la radiación Ionizante con la materia}
+
+La radiación puede interactuar con la materia de diferentes formas,
+dependiendo del tipo de radiación (partículas, alfa, beta, gamma, neutrones)
+y el material con el que interactúa.
+
+\subsection{Intensidad de Radiación}
+la intensidad puede definirse de varias maneras dependiendo de la situación específica, pero en general, se refiere a la potencia por unidad de área perpendicular a la dirección de propagación del haz.
+
+\begin{enumerate}
+    \item Intensidad radiante (I): Es la cantidad de energía radiante (radiación electromagnética) que atraviesa una unidad de área por unidad de tiempo.
+    \item Flujo de Fotones: Para radiación como los rayos gamma, la intensidad también puede describirse en términos del número de fotones que atraviesan una unidad de área por unidad de tiempo.
+\end{enumerate}
+
+\begin{equation}
+    I = \frac{P}{A}
+\end{equation}
+
+donde $P$ es la potencia y $A$ es el área perpendicular a la dirección del haz
+
+\subsection{Interacción de los Rayos Gamma con la materia.}
+
+Cuando un haz de rayos gamma de intensidad inicial \(I_0\) incide en un material, la intensidad de los rayos gamma disminuye a medida que atraviesan una distancia \(x\) en el material. Podemos modelar esta atenuación como un proceso continuo en el cual la cantidad de rayos gamma disminuye proporcionalmente a la intensidad y a la distancia recorrida.
+
+
+Supongamos que una delgada lámina de espesor \(dx\) reduce la intensidad del haz en \(dI\). Entonces, la reducción en la intensidad puede expresarse como:
+\[
+dI = -\mu I dx
+\]
+donde \(I\) es la intensidad en el espesor \(x\) y \(\mu\) es el coeficiente de atenuación lineal.
+
+separando variables obtenemos
+\[
+\frac{dI}{I} = -\mu dx
+\]
+Integrando ambos lados de la ecuación desde \(I_0\) a \(I(x)\) y desde 0 hasta \(x\):
+\[
+\int_{I_0}^{I(x)} \frac{dI}{I} = -\mu \int_{0}^{x} dx
+\]
+\[
+\ln\left(\frac{I(x)}{I_0}\right) = -\mu x
+\]
+Despejando \(I(x)\):
+\[
+I(x) = I_0 e^{-\mu x}
+\]
+
+\subsection{Interacción de Partículas Alfa y Beta con la Material}
+Las partículas cargadas (alfa y beta) pierden energía a medida que atraviesan un material principalmente debido a la ionización y excitación de los átomos del material.
+
+La pérdida de energía por unidad de longitud (poder de frenado) de una partícula cargada rápida (como una partícula alfa o beta) en un medio material se describe por la fórmula de Bethe-Bloch.
+
+Esta formula describe la tasa de pérdida de energía $-dE / dx$
+de una partícula cargada moviéndose a través de un medio material.
+
+\begin{equation*}
+    -\left\langle \frac{dE}{dx} \right\rangle = \frac{4\pi z^2e^4}{m_e c^2\beta^2}
+    \cdot \frac{Z}{A} \cdot \ln\left({2m_e c^2\beta^2\gamma^2T_{\max}\over I^2}\right)
+    -{\beta^2 \over 2}
+\end{equation*}
+
+donde
+
+\begin{itemize}
+    \item $z$ es la carga de la partícula,
+    \item $e$ es la carga del electrón,
+    \item $m_e$ es la masa del electrón,
+    \item $c$ es la velocidad de la luz,
+    \item $\beta = v/c$, $v$, siendo la velocidad de la partícula
+    \item $Z$ es el nú mero de átomos del material,
+    \item $\gamma = {1 \over \sqrt{1-\beta^2}}$ 
+    \item  $T_{ \max }$ es la máxima energía transferible en una colisión,
+    \item $I$ es el potencial medio de ionización del material
+    \item $A$ es el número de masa del material
+\end{itemize}

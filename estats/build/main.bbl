@@ -16,5 +16,154 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{landau}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=cd545b80546b076f776588900c84fce0}{%
+           family={Landau},
+           familyi={L\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=60ea190c9f67f898219450277c97ae8c}{%
+           family={Lifshitz},
+           familyi={L\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Barcelona}%
+      }
+      \list{publisher}{1}{%
+        {Editorial Reverté, S. A.}%
+      }
+      \strng{namehash}{2806a989af37afde574e011805e4c97e}
+      \strng{fullhash}{2806a989af37afde574e011805e4c97e}
+      \strng{fullhashraw}{2806a989af37afde574e011805e4c97e}
+      \strng{bibnamehash}{2806a989af37afde574e011805e4c97e}
+      \strng{authorbibnamehash}{2806a989af37afde574e011805e4c97e}
+      \strng{authornamehash}{2806a989af37afde574e011805e4c97e}
+      \strng{authorfullhash}{2806a989af37afde574e011805e4c97e}
+      \strng{authorfullhashraw}{2806a989af37afde574e011805e4c97e}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Física Estadística}
+      \field{volume}{5}
+    \endentry
+    \entry{Swendsen2012}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4641de615581046ba7cbb47dae8a41c4}{%
+           family={Swendsen},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Pres Inc.}%
+      }
+      \strng{namehash}{4641de615581046ba7cbb47dae8a41c4}
+      \strng{fullhash}{4641de615581046ba7cbb47dae8a41c4}
+      \strng{fullhashraw}{4641de615581046ba7cbb47dae8a41c4}
+      \strng{bibnamehash}{4641de615581046ba7cbb47dae8a41c4}
+      \strng{authorbibnamehash}{4641de615581046ba7cbb47dae8a41c4}
+      \strng{authornamehash}{4641de615581046ba7cbb47dae8a41c4}
+      \strng{authorfullhash}{4641de615581046ba7cbb47dae8a41c4}
+      \strng{authorfullhashraw}{4641de615581046ba7cbb47dae8a41c4}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{An introduction to Statistical Mechanics and Thermodynamics}
+      \field{year}{2012}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{landau}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=cd545b80546b076f776588900c84fce0}{%
+           family={Landau},
+           familyi={L\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=60ea190c9f67f898219450277c97ae8c}{%
+           family={Lifshitz},
+           familyi={L\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Barcelona}%
+      }
+      \list{publisher}{1}{%
+        {Editorial Reverté, S. A.}%
+      }
+      \strng{namehash}{2806a989af37afde574e011805e4c97e}
+      \strng{fullhash}{2806a989af37afde574e011805e4c97e}
+      \strng{fullhashraw}{2806a989af37afde574e011805e4c97e}
+      \strng{bibnamehash}{2806a989af37afde574e011805e4c97e}
+      \strng{authorbibnamehash}{2806a989af37afde574e011805e4c97e}
+      \strng{authornamehash}{2806a989af37afde574e011805e4c97e}
+      \strng{authorfullhash}{2806a989af37afde574e011805e4c97e}
+      \strng{authorfullhashraw}{2806a989af37afde574e011805e4c97e}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Física Estadística}
+      \field{volume}{5}
+    \endentry
+    \entry{Swendsen2012}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4641de615581046ba7cbb47dae8a41c4}{%
+           family={Swendsen},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Pres Inc.}%
+      }
+      \strng{namehash}{4641de615581046ba7cbb47dae8a41c4}
+      \strng{fullhash}{4641de615581046ba7cbb47dae8a41c4}
+      \strng{fullhashraw}{4641de615581046ba7cbb47dae8a41c4}
+      \strng{bibnamehash}{4641de615581046ba7cbb47dae8a41c4}
+      \strng{authorbibnamehash}{4641de615581046ba7cbb47dae8a41c4}
+      \strng{authornamehash}{4641de615581046ba7cbb47dae8a41c4}
+      \strng{authorfullhash}{4641de615581046ba7cbb47dae8a41c4}
+      \strng{authorfullhashraw}{4641de615581046ba7cbb47dae8a41c4}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{An introduction to Statistical Mechanics and Thermodynamics}
+      \field{year}{2012}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

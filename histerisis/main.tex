@@ -1,0 +1,210 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[right=3cm, left=2.5cm, top=3cm, bottom=3.5cm]{geometry}
+% graphix
+\usepackage{graphicx}
+%\usepackage[style=apa]{biblatex}
+%\addbibresource{references.bib}
+
+\title{Ciclo de histérisis}
+\author{Torres Tarrillo Rober}
+
+\begin{document}
+
+\maketitle
+\section{Relación lineal entre la magnetización $\mathbf{M}$ y el campo
+magnético externo $\mathbf{H}$}
+En una extensa clase de materiales existe una relación
+lineal aproximada entre $\mathbf{M}$ y $\mathbf{H}$:
+
+\begin{equation}
+\mathbf{M} = \chi_m\mathbf{H}
+\end{equation}
+
+donde $\chi_m$ se llama suceptibilidad magnética. En algunos
+materiales también dpende de la masa $\chi_{m,masa}$ o masa molar $\chi_{m,molar}$
+y está relacionado por
+
+\begin{equation}
+    \chi_m = \chi_{m,masa} d
+\end{equation}
+\begin{equation}
+    \chi_m = \chi_{m, molar} \frac{d}{A}
+\end{equation}
+
+Donde $d$es la densidad del material y $A$ masa molar del material.
+
+Una relación lineal entre $\mathbf{M}$ y $\mathbf{H}$ también
+implica una relación lineal entre $\mathbf{B}$ y $\mathbf{H}$:
+
+\begin{equation}
+\mathbf{B} = \mu\mathbf{H}
+\end{equation}
+
+de aquí
+\begin{equation}
+    \mu = \mu_0 (1 + \chi_m)
+\end{equation}
+
+ademas en el vacio $\mu = \mu_0$
+
+\section{Materiales ferromagnéticos}
+Losferromagnéticosforman otra clase de material magnético. Dicho material
+se caracteriza por una posible magnetización permanente y por el
+hecho de que su presencia tiene generlamente un efecto muy significativo
+sobre la inducción magnética.
+
+Los materiales ferromagnéticos no son lineales, por lo que las ecuaciones
+anteriores no son aplicables. Por lo qué de la ecuación (4) podemos
+definir a $\mu = \mu(\mathbf{M})$ y está se calculará a partir de aproximaciones
+dado qué es complicado tener una función analítica, ademas varía
+de cero a infinito.
+
+\subsection{Dominio ferromagnético}
+es una región microscópica dentro de un material ferromagnético en la que los momentos magnéticos de los átomos están alineados en la misma dirección debido a interacciones entre ellos. Esto crea un magnetismo colectivo en esa región.
+En un material ferromagnético sin magnetizar, los dominios magnéticos están orientados de forma aleatoria, cancelándose entre sí y resultando en un magnetismo neto nulo. Sin embargo, cuando se aplica un campo magnético externo, estos dominios tienden a alinearse en la dirección del campo, lo que incrementa el magnetismo del material.
+En la figura 2 se muestra el siclo de histérisis y se da como sigue:
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{f1.png}
+    \caption{Dominio ferromagnético}
+\end{figure}
+
+\section{Siclo de histérisis}
+El ciclo de histéresis describe cómo la magnetización de un material ferromagnético cambia cuando se somete a un campo magnético externo variable.
+
+\begin{enumerate}
+    \item Inicio (Punto O):
+        \begin{itemize}
+            \item El material no está magnetizado.
+            \item No hay campo magnético externo $\mathbf{H = 0}$ y tampoco magnetización $\mathbf{B = 0}$
+        \end{itemize}
+    
+    \item Imposición del campomagnético ($O\to a$):
+    \begin{itemize}
+        \item Un campo magnético externo $\mathbf{H}$ comienza a aplicarse.
+        \item Los dominios magnéticos empiezan a alinearse con el campo, aumentando la magnetización del material ($\mathbf{B}$).
+        \item El material se magnetiza gradualmente hasta alcanzar la magnetización de saturación en el punto $a$, donde prácticamente todos los dominios están alineados.
+    \end{itemize}
+    
+    \item Reducción del campo magnético ($a\to c$):
+    \begin{itemize}
+        \item $\mathbf{H}$ se reduce desde su valor máximo hacia cero.
+        \item Aunque $\mathbf{H = 0}$, algunos dominios permanecen alineados, lo que deja una magnetización remanente ($\mathbf{B}_4$
+        punto $C$).
+        \item Este comportamiento muestra que el material retiene magnetización incluso sin un campo externo.
+    \end{itemize}
+
+    \item Aplicación de un campo en sentido opuesto ($c\to d$):
+    \begin{itemize}
+        \item $\mathbf{H}$ se invierte y aumenta en la dirección opuesta.
+        \item La magnetización disminuye progresivamente hasta llegar a $\mathbf{B = 0}$ en el punto $d$.
+        \item El valor de $\mathbf{H}$ necesario para desmagnetizar el material se llama coercitividad ($\mathbf{H}_c$).
+    \end{itemize}
+
+    \item Saturación inversa ($d \to e$):
+    \begin{itemize}
+        \item Al continuar aumentadon $H$ en la dirección opuesta, los dominios se realinean completamente en esa dirección.
+        \item El material alcanza la saturación inversa $e$.
+    \end{itemize}
+    
+    \item Reducción del campo magnético inverso ($e \to g$):
+    \begin{itemize}
+        \item $\mathbf{H}$ se reduce nuevamente hacia cero y algunos dominios
+        permanecen alineados en la dirección inversa.
+        \item Esto da lugar a una magnetización remantente inversa ($\mathbf{-B}_r$).
+    \end{itemize}
+
+    \item Reaplicación del campo original ($g \to a$):
+    \begin{itemize}
+        \item si $\mathbf{H}$  se invierte otra vez hacia su dirección inicial, la magnetización pasa por un comportamiento simétrico al ciclo anterior, regresando finalmente al punto 
+        $a$
+    \end{itemize}
+
+    \end{enumerate}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.5]{f2.png}
+    \caption{Ciclo de histérisis}
+\end{figure}
+    
+El ancho de la curva de histéresis $-Hc, Hc$ no indica si tiene
+    una magnetización muy grande o pequeña cuando no se esta aplicando un
+    campo externo como se puede ovservar en la figura 3.
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.5]{f3.png}
+    \caption{Curvas de otro material}
+\end{figure}
+
+Para desmagnetizar un material ferromagnético se necesita un campo
+
+\section{Conversión de energía en calor en un sistema que existe histérisis}
+Este calor es adicional al calor producido por la existencia de una conductividad.
+
+Para la variación de la energía magnética se tiene
+\begin{equation}
+    \delta U_m = \sum_{j}i_j\delta\Phi_j = \sum_{j}i_j\oint_{C_j}\delta\vec{A}_j\cdot d \vec{s}_j
+\end{equation}
+
+siendo $\delta \vec{A}_j$ el cambio correspondiente del potencial vectorial en la parte
+$j$ del sistema. Esto se puede escribir como
+
+\begin{equation}
+    \delta U_m = \int_V \vec{J}_f \cdot \delta \vec{A}d\tau = \int_V \nabla\times \vec{H}\cdot \delta \vec{A}d\tau
+\end{equation}
+
+Pero $\nabla \times \vec{A} = \delta \vec{B}$ por lo que
+$\nabla \times (\vec{A} + \delta \vec{A}) = \vec{B} + \delta \vec{B}$
+por lo que $\nabla\times\delta\vec{A} = \delta \vec{B}$. Por otra parte
+\begin{equation}
+    \vec{A}\cdot(\nabla\times\vec{H}) = \vec{H}\cdot\vec{B} - \nabla\cdot(\vec{A}\times \vec{H})
+\end{equation}
+
+por lo que se obtiene
+
+\begin{equation}
+    \delta U_m = \int_V \vec{H}\cdot \delta \vec{B}d\tau
+\end{equation}
+
+para sistemas lineales no hay problema en resolver esta integral, 
+pero para sistemas qué no son lineales, se tiene que hacer mediante métodos
+númericos.
+
+Si $\delta w_m$ es la energía requerida de una fuente externa por unidad de volumen
+de material, se puede expresar el integrando (9) como $\delta w_m d\tau$, con
+lo que se tiene
+
+\begin{equation}
+    \delta w_m = \vec{H} \cdot \delta \vec{B}
+\end{equation}
+
+Esto es el area del recuadro en la figura (4). Integrando se tiene
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.5]{f4.png}
+    \caption{Interpretación de $H\delta B$ como una superficie}
+\end{figure}
+
+\begin{equation}
+    w_m = \oint_{ciclo} \vec{H}\cdot \delta \vec{B} = \oint_{ciclo} H\delta B
+\end{equation}
+
+Esto es númericamente igual al área encerrada por la curva de histéricis
+
+esto viene ha ser el harea sombre de la figura (4)
+
+
+
+\section{Referencias}
+Reitsz, J., Milford, F. y Chisty, R. (Sin fecha). "Fundamentos de la teoría electromagnética", 4ta ed. Addison-Wesley Iberoamericana.
+
+Wangsness, R. (2001). "Campos electromagnéticos". México: Limusa.
+
+\end{document}

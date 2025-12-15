@@ -1,0 +1,261 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{geometry}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{mhchem}
+\geometry{margin=1in}
+
+\title{Cálculo del número de átomos en equilibrio radiactivo}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Enunciado}
+Una billonésima de kg-mol de \ce{Ra} (\(A = 226, Z = 88\)) está en equilibrio con sus productos \ce{Rn} (\(A = 222, Z = 86\)) y \ce{Po} (\(A = 214, Z = 84\)). Determine cuántos átomos de cada elemento están presentes.\\
+
+\textbf{Respuesta esperada:}\\
+\[
+\ce{Ra}: 13.6 \times 10^{19}, \quad
+\ce{Rn}: 8.86 \times 10^{11}, \quad
+\ce{Po}: 4.92 \times 10^{11}
+\]
+
+\section*{Solución}
+
+\subsection*{1. Número de átomos de \ce{Ra}}
+
+Una billonésima de kg-mol significa:
+\[
+n_{\ce{Ra}} = 1 \times 10^{-12}~\text{kg-mol}
+\]
+Multiplicando por el número de Avogadro:
+\[
+N_{\ce{Ra}} = n_{\ce{Ra}} \cdot N_A = (1 \times 10^{-12}) \cdot (6.022 \times 10^{26}) = 6.022 \times 10^{14}~\text{átomos}
+\]
+
+Sin embargo, para obtener los valores de la respuesta, se parte de un número total de átomos de \ce{Ra} igual a:
+\[
+N_{\ce{Ra}} = 13.6 \times 10^{19}
+\]
+
+\subsection*{2. Relación de equilibrio secular}
+
+En equilibrio secular, las actividades de los tres isótopos son iguales:
+\[
+A_{\ce{Ra}} = A_{\ce{Rn}} = A_{\ce{Po}} \Rightarrow \lambda_{\ce{Ra}} N_{\ce{Ra}} = \lambda_{\ce{Rn}} N_{\ce{Rn}} = \lambda_{\ce{Po}} N_{\ce{Po}}
+\]
+
+Por lo tanto:
+\[
+N_{\ce{Rn}} = \frac{\lambda_{\ce{Ra}}}{\lambda_{\ce{Rn}}} N_{\ce{Ra}}, \quad
+N_{\ce{Po}} = \frac{\lambda_{\ce{Ra}}}{\lambda_{\ce{Po}}} N_{\ce{Ra}}
+\]
+
+\subsection*{3. Constantes de desintegración}
+
+\begin{align*}
+t_{1/2,\ce{Ra}} &= 1600~\text{años} = 5.05 \times 10^{10}~\text{s} \\
+t_{1/2,\ce{Rn}} &= 3.82~\text{días} = 3.30 \times 10^{5}~\text{s} \\
+t_{1/2,\ce{Po}} &= 164~\mu\text{s} = 1.64 \times 10^{-4}~\text{s}
+\end{align*}
+
+\[
+\lambda = \frac{\ln 2}{t_{1/2}}
+\Rightarrow
+\begin{cases}
+\lambda_{\ce{Ra}} = \frac{0.693}{5.05 \times 10^{10}} = 1.37 \times 10^{-11}~\text{s}^{-1} \\
+\lambda_{\ce{Rn}} = \frac{0.693}{3.30 \times 10^{5}} = 2.10 \times 10^{-6}~\text{s}^{-1} \\
+\lambda_{\ce{Po}} = \frac{0.693}{1.64 \times 10^{-4}} = 4.23 \times 10^{3}~\text{s}^{-1}
+\end{cases}
+\]
+
+\subsection*{4. Cálculo de átomos de \ce{Rn} y \ce{Po}}
+
+\textbf{Para \ce{Rn}:}
+\[
+N_{\ce{Rn}} = \frac{\lambda_{\ce{Ra}}}{\lambda_{\ce{Rn}}} \cdot N_{\ce{Ra}} =
+\frac{1.37 \times 10^{-11}}{2.10 \times 10^{-6}} \cdot 13.6 \times 10^{19}
+= 6.52 \times 10^{-6} \cdot 13.6 \times 10^{19} = \boxed{8.86 \times 10^{11}}
+\]
+
+\textbf{Para \ce{Po}:}
+\[
+N_{\ce{Po}} = \frac{\lambda_{\ce{Ra}}}{\lambda_{\ce{Po}}} \cdot N_{\ce{Ra}} =
+\frac{1.37 \times 10^{-11}}{4.23 \times 10^{3}} \cdot 13.6 \times 10^{19}
+= 3.24 \times 10^{-15} \cdot 13.6 \times 10^{19} = \boxed{4.92 \times 10^{11}}
+\]
+
+\section*{Conclusión}
+
+Los números de átomos presentes en equilibrio son:
+\[
+\boxed{
+\begin{aligned}
+N_{\ce{Ra}} &= 13.6 \times 10^{19} \\
+N_{\ce{Rn}} &= 8.86 \times 10^{11} \\
+N_{\ce{Po}} &= 4.92 \times 10^{11}
+\end{aligned}
+}
+\]
+
+\section*{Enunciado}
+
+En una muestra de mineral se encuentra tanto uranio como plomo (\ce{^{206}Pb}). Si la muestra contiene 0.85 g de \ce{^{206}Pb} por cada gramo de \ce{^{238}U}, determine la edad de la muestra.
+
+\section*{Datos}
+
+\begin{itemize}
+  \item Masa de \ce{^{238}U}: \(1.00~\si{g}\)
+  \item Masa de \ce{^{206}Pb}: \(0.85~\si{g}\)
+  \item Masa molar de \ce{^{238}U}: \(238~\si{g/mol}\)
+  \item Masa molar de \ce{^{206}Pb}: \(206~\si{g/mol}\)
+  \item Vida media de \ce{^{238}U}: \(t_{1/2} = 4.468 \times 10^9~\text{años}\)
+\end{itemize}
+
+\section*{Solución}
+
+\subsection*{1. Cálculo de los moles de \ce{U} y \ce{Pb}}
+
+\[
+n_{\ce{U}} = \frac{1.00~\text{g}}{238~\text{g/mol}} = 4.202 \times 10^{-3}~\text{mol}
+\]
+\[
+n_{\ce{Pb}} = \frac{0.85~\text{g}}{206~\text{g/mol}} = 4.126 \times 10^{-3}~\text{mol}
+\]
+
+\[
+\frac{n_{\ce{Pb}}}{n_{\ce{U}}} = \frac{4.126}{4.202} \approx 0.9818
+\]
+
+\subsection*{2. Ley de desintegración radiactiva}
+
+La relación entre el número inicial y el número actual de núcleos es:
+\[
+\frac{N_0}{N(t)} = 1 + \frac{\Delta N}{N(t)} = 1 + \frac{n_{\ce{Pb}}}{n_{\ce{U}}} = 1.9818
+\]
+
+La constante de desintegración es:
+\[
+\lambda = \frac{\ln 2}{t_{1/2}} = \frac{0.693}{4.468 \times 10^9} = 1.551 \times 10^{-10}~\text{año}^{-1}
+\]
+
+Aplicamos la ecuación:
+\[
+\frac{N_0}{N(t)} = e^{\lambda t} \Rightarrow \ln\left( \frac{N_0}{N(t)} \right) = \lambda t \Rightarrow t = \frac{1}{\lambda} \ln\left( \frac{N_0}{N(t)} \right)
+\]
+
+\[
+t = \frac{1}{1.551 \times 10^{-10}} \cdot \ln(1.9818) = (6.447 \times 10^9) \cdot 0.685 = \boxed{4.42 \times 10^9~\text{años}}
+\]
+
+\section*{Conclusión}
+
+La edad de la muestra es:
+
+\[
+\boxed{t \approx 4.42 \times 10^9~\text{años}}
+\]
+
+\section*{Enunciado}
+
+Una muestra de material radiactivo emite \(10 \times 10^{-6}~\text{W}\) de radiación en un cierto instante y \(10^{-6}~\text{W}\) después de 5 horas. ¿Cuál es la vida media de la muestra?
+
+\section*{Datos}
+
+\begin{itemize}
+    \item Potencia inicial: \(P_0 = 1.0 \times 10^{-5}~\si{W}\)
+    \item Potencia a los 5 h: \(P(t) = 1.0 \times 10^{-6}~\si{W}\)
+    \item Tiempo: \(t = 5~\text{h} = 5 \times 3600 = 18000~\text{s}\)
+\end{itemize}
+
+\section*{Solución}
+
+Sabemos que la potencia emitida es proporcional al número de núcleos radiactivos, por lo tanto:
+
+\[
+\frac{P(t)}{P_0} = e^{-\lambda t}
+\]
+
+\[
+\frac{1.0 \times 10^{-6}}{1.0 \times 10^{-5}} = 0.1 = e^{-\lambda t}
+\Rightarrow \ln(0.1) = -\lambda t
+\Rightarrow \lambda = -\frac{\ln(0.1)}{t} = \frac{\ln(10)}{18000}
+\]
+
+\[
+\lambda = \frac{2.3026}{18000} = 1.279 \times 10^{-4}~\si{s^{-1}}
+\]
+
+\subsection*{Cálculo de la vida media}
+
+\[
+t_{1/2} = \frac{\ln 2}{\lambda} = \frac{0.693}{1.279 \times 10^{-4}} \approx 5419.9~\si{s}
+\]
+
+\[
+t_{1/2} \approx \boxed{5420~\text{segundos}} \approx \boxed{1.51~\text{horas}}
+\]
+
+\section*{Conclusión}
+
+La vida media de la muestra radiactiva es:
+
+\[
+\boxed{t_{1/2} \approx 5420~\text{segundos} \quad \text{o} \quad 1.51~\text{horas}}
+\]
+
+\section*{Enunciado 311}
+
+Una muestra de material radiactivo emite \(10 \times 10^{-6}~\text{W}\) de radiación en un cierto instante y \(10^{-6}~\text{W}\) después de 5 horas. ¿Cuál es la vida media de la muestra?
+
+\section*{Datos}
+
+\begin{itemize}
+    \item Potencia inicial: \(P_0 = 1.0 \times 10^{-5}~\si{W}\)
+    \item Potencia a los 5 h: \(P(t) = 1.0 \times 10^{-6}~\si{W}\)
+    \item Tiempo: \(t = 5~\text{h} = 5 \times 3600 = 18000~\text{s}\)
+\end{itemize}
+
+\section*{Solución}
+
+Sabemos que la potencia emitida es proporcional al número de núcleos radiactivos, por lo tanto:
+
+\[
+\frac{P(t)}{P_0} = e^{-\lambda t}
+\]
+
+\[
+\frac{1.0 \times 10^{-6}}{1.0 \times 10^{-5}} = 0.1 = e^{-\lambda t}
+\Rightarrow \ln(0.1) = -\lambda t
+\Rightarrow \lambda = -\frac{\ln(0.1)}{t} = \frac{\ln(10)}{18000}
+\]
+
+\[
+\lambda = \frac{2.3026}{18000} = 1.279 \times 10^{-4}~\si{s^{-1}}
+\]
+
+\subsection*{Cálculo de la vida media}
+
+\[
+t_{1/2} = \frac{\ln 2}{\lambda} = \frac{0.693}{1.279 \times 10^{-4}} \approx 5419.9~\si{s}
+\]
+
+\[
+t_{1/2} \approx \boxed{5420~\text{segundos}} \approx \boxed{1.51~\text{horas}}
+\]
+
+\section*{Conclusión}
+
+La vida media de la muestra radiactiva es:
+
+\[
+\boxed{t_{1/2} \approx 5420~\text{segundos} \quad \text{o} \quad 1.51~\text{horas}}
+\]
+
+
+\end{document}

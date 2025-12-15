@@ -1,0 +1,179 @@
+\section{Teoría}
+
+\subsection{Definición}
+La función Zeta $\zeta(z)$ para $z\in\mathbb{C}$ con $\Re(z)>1$ de Riemann se
+define de la siguiente forma
+
+\begin{equation}
+    \zeta(z) = \sum_{n=1}^\infty \frac{1}{n^z} = 1 + \frac{1}{2^z}
+    + \frac{1}{3^z} + \frac{1}{4^z} + \cdots
+\end{equation}
+
+se define para $\Re(z) > 1$ dado que si $Re(z) < 1$, entonces
+\begin{equation*}
+    \zeta(z) = \sum_{n=1}^{\infty} \frac{1}{n^z} = \infty
+\end{equation*}
+
+Es decir la serie diverge, si $z = 1$, se tiene
+\begin{equation*}
+    \zeta(z) = \sum_{n=1}^{\infty} \frac{1}{n}
+    =1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \cdots = \infty
+\end{equation*}
+
+la cual es la serie armonica y es divergente.
+
+\subsection{Producto de Euler}
+Para $\Re(z) > 1$ y $p \in \mathbb{P}$, es decir $p$ pertenece
+al conjunto de los números primos $\mathbb{P}$, se tine que
+$\zeta(z)$ es igual al producto de Euler
+\begin{equation}
+    \zeta(z) = \sum_{n=1}^\infty \frac{1}{n^z} 
+    = \prod_{p\in \mathbb{P}} \frac{1}{1-p^{-s}}
+\end{equation}
+
+\begin{proof}[Demostración]
+    Se tiene que 
+    \begin{align}
+        &\zeta(z) = 1 + \frac{1}{2^s} + \frac{1}{3^s} + \frac{1}{4^s} + \frac{1}{5^s} + \frac{1}{6^s} + \frac{1}{7^s} + \cdots  \\
+        &\frac{1}{2^s}\zeta(z) = \frac{1}{2^s} + \frac{1}{4^s} + \frac{1}{6^s} + \frac{1}{8^s} + \frac{1}{10^s} + \frac{1}{12^s} + \cdots
+    \end{align}
+    
+    Haciendo $(3) - (4)$
+    
+    \begin{gather}
+        \zeta(z) - \frac{1}{2}\zeta(z) =\left(1 - \frac{1}{2^s}\right)\zeta(z)
+        = 1 + \frac{1}{3^s} + \frac{1}{5^s} + \frac{1}{7^s} \cdots
+    \end{gather}
+    
+    se puede observar que se a eliminado eliminado todos los elementos de la suma cuyo denominador es
+    múltiplos de $2$.
+    
+    De la misma forma si hacemos
+    
+    \begin{gather}
+        \frac{1}{3^s}\left(1 - \frac{1}{2^s}\right)\zeta(z) 
+        = \frac{1}{3^s} + \frac{1}{9^s} + \frac{1}{15^s} + \frac{1}{21^s} + \frac{1}{27^s} + \frac{1}{33^s} + \cdots
+    \end{gather}
+    
+    si ahora hacemos $(6) - (y)$ nos queda
+    
+    
+    \begin{gather}
+        \left(1-\frac{1}{3^s}\right)\left(1 - \frac{1}{2^s}\right)\zeta(z)
+        = 1 + \frac{1}{5^s} + \frac{1}{7^s} + \frac{1}{11^s} + \frac{1}{13^s}
+        + \frac{1}{17^s} + \frac{1}{19^s} + \cdots
+    \end{gather}
+    
+    Al seguir, haciendo todo este procedimiento llegamos a
+    \begin{gather}
+        \prod_{p\in\mathbb{P}}\left(1 - \frac{1}{p^-s}\right)\cdot
+        \sum_{n=1}^{\infty} \frac{1}{n^z} = 1
+    \end{gather}
+    
+    De aquí al dividir entre el primer miembro de la multiplicación se
+    tiene
+    \begin{gather}
+        \sum_{n=1}^{\infty} \frac{1}{n^z}
+        = \frac{1}{\prod_{p\in\mathbb{P}}\left(1 - \frac{1}{p^-s}\right)}
+        = \prod_{p\in\mathbb{P}}\frac{1}{1 - p^{-s}}
+    \end{gather}
+\end{proof}
+
+\subsection{Extensión analítica}
+Dado que $\zeta(z)$ esta definido paro para $\Re(z) > 1$, al igual
+que como se con el factorial de un número $n$ denotado $n!$ se puede, se puede
+hacer una extensión analítica utilizando una función donde se extiende
+para todo $z\in\mathbb{C}$ interpolando $n!$ para $n\in\mathbb{N}$ con
+la función $\Gamma(z)$, para la función $\zeta(z)$ también se puede
+hacer lo mismo, una función para su extensión analítica es la siguiente
+para $\Re(z) < 1$
+
+\begin{gather}
+    \zeta(z) = 2^z\pi^{z - 1}\sin\left(\frac{\pi z}{2}\right)\Gamma(1-z)\zeta(1-z)
+\end{gather}
+
+A pesar de eso como se puede observar en la ecuación para $\Re(z) = 1$ $\zeta(z)$
+sigue sin converger dado que
+
+\begin{gather}
+    \zeta(1) = 2^1\pi^{1 - 1}\sin\left(\frac{\pi 1}{2}\right)\Gamma(1-1)\zeta(1-1) = \zeta(0) = 1 + 1 +1 \cdots = \infty
+\end{gather}
+
+por lo que es validad para $z \in \mathbb{C} - \{1\}$
+Uno de los aspectos importantes en este punto es donde se anula
+la función, de manera trivial se puede observar que esta función
+se anula $\pi z/2 = n pi \Rightarrow z = -2, -4, -6$, la cual está
+en $\Re(z) <= 0$, pero para $0 < Re(z) < 1$, ¿donde se anula
+esta función? con algunos cálculos se a llegado en que lo
+hace en $z = 1/2$, pero como $z \in \mathbb{C}$ hay
+más valores donde $\zeta(z)$ se anula en este intervalo, esto
+se verá en la proxima sección.
+
+\section{Aplicaciones}
+\subsection{La hipótesis de Riemann}
+El enunciado de la hipótesis de Riemann es la siguiente
+
+\textit{La parte real de todo cero no trivial de la función
+zeta de Riemann es $1/2$}
+
+Este es uno de los 7 problemas del milenio aun sin resolver, el cual ahora
+se puede entender a la perfección dado que se conoce la función zeta de
+Riemann ademas que un punto no trivial donde se anula esta función esta función
+es en $z = 1/2$ con cálculos computacionales se a encontrado
+otros valores con $z \in \mathbb{C}$ donde se anula está función
+donde $\Re(z) = 1/2$.
+
+En el siguiente gráfico si interpretamos como los cambios de color
+donde convergen en un punto en sentido antihorario la función se anula
+se puede ver que están los ceros triviales y ademas en la recta
+formada por los puntos deo $\Re(z) = 1/2$ en el plano complejo,
+lo que da indicios de que esta hipótesis podría ser cierta
+
+\begin{center}
+    \includegraphics[scale=0.25]{img/f1.png}
+\end{center}
+
+\subsection{Logaritmo integral}
+Sea $\pi(x)$ la función contadora de primos, es decir esta función
+aproxima cuantos primos existen por debajo de $x$, una aproximación
+a esta función es $x/\ln(x)$, a raíz de esta función existen otras
+aproximaciones y una de estas es el logaritmo integral, esta es una función que aproxima cuantos
+números primos existen menores que un $x$ dado y se define
+de la siguiente manera
+\begin{equation*}
+    li(x) = \int_{0}^{x} \frac{1}{\ln(t)}dt
+\end{equation*}
+
+En el siguiente gráfico se puede observar las diversas aproximaciones
+a la función contadora de primos.
+
+
+\begin{center}
+    \includegraphics[scale=0.5]{img/f2.png}
+\end{center}
+
+\subsection{Función de Riemann}
+Es la función que mejor aproxima a la cantidad de
+primos que existe de 0 asta $x$, esta función se define por
+\begin{gather}
+    R(x) = li(x) - \ln(2) - \sum_{\rho} li(x^\rho)
+\end{gather}
+
+donde $\rho$ es los ceros de la función $\zeta(z)$, mientra
+mas valores se encuentre para $\rho$ mejor será la aproximación $R(x)$,
+por lo que la hipótesis de riman es uno de los mas importares problemas matemáticos
+en la actualidad. En la siguiente gráfica se puede observar la aproximación
+de $R(x)$ con $50$ ceros no triviales
+
+\begin{center}
+    \includegraphics[scale=0.4]{img/f3.png}
+\end{center}
+
+\section{Referencias}
+Arfken, G., Weber, H. y Harris, F. (2013). Methods for Physicists (7ma ed.). Oxford: Elsevier.
+
+Mates Mike. (2021, 25 de noviembre). El Patrón de los Números Primos y la Hipótesis de Riemann [Archivo de video]. Recuperado de https://www.youtube.com/@MatesMike
+
+Sáenz, E. [derivado]. (2019, 29 de mayo). La función Zeta de Riemann | La Hipótesis de Riemann - Parte 1. Recuperado de https://www.youtube.com/@Derivando
+
+Sáenz, E. [derivado]. (2019, 5 de junio). La función Zeta de Riemann | La Hipótesis de Riemann - Parte 2. Recuperado de https://www.youtube.com/@Derivando

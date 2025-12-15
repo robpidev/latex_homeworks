@@ -1,0 +1,118 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}    % Soporte para caracteres especiales
+\usepackage{amsfonts}
+\usepackage[right=1cm, left=1cm, top=1cm, bottom=1cm]{geometry}
+\usepackage{paracol}
+\usepackage{lipsum}
+\usepackage{graphicx}
+%\usepackage{hyperref}          % Enlaces y referencias
+%\usepackage[style=apa]{biblatex}
+%\usepackage{csquotes}          % Manejo de citas (opcional, útil para biblatex)
+%\addbibresource{references.bib}
+%\usepackage[spanish]{babel}
+
+\begin{document}
+\begin{paracol}{3}
+    \section{Constants}
+    \begin{align*}
+        &e = 1.602176634\times10^{-19} \text{ C} \\
+        &m_e = 9.10938356\times10^{-31} \text{ kg}\\
+        &h = 6.62607015\times10^{-34} \text{ Js}\\
+        &\epsilon_0 = 8.854187817\times10^{-12}\; \mathrm{ C/Nm^2}\\
+        &\hbar = 1.054571817\times10^{-34} \text{ Js}\\
+        &1 \text{ eV} = 1.602176634\times10^{-19} \text{ J}\\
+        &R = 1.097373\times10^7 \text{ m}^-1
+    \end{align*}
+
+    \section{Generals}
+    \begin{align*}
+        &E = h\nu = h\frac{c}{\lambda}\\
+        &\lambda = \frac{h}{p} = \frac{h}{mv} \text{ (De Broglie)}\\
+    \end{align*}
+
+    \section{Bohr Atom}
+    \begin{align*}
+        &r = \frac{1}{4\pi\epsilon_0}\frac{e^2}{m_e v^2},\;
+        r_n = \frac{n^2\hbar^2\epsilon_0}{\pi m e^2}\\
+        &E_c = \frac{e^2}{8\pi \epsilon_0 r}, \;
+        V = -\frac{1}{4\pi\epsilon_0}\frac{e^2}{r}\\
+        &E = -\frac{e^2}{8\pi \epsilon_0 r}\\
+        &E = -\frac{m_e e^4}{8\epsilon_0^2 n^2 h^2} = h\nu\\
+        &\Delta E = -\frac{m_e e^4}{8\epsilon_0^2 h^2}\left[
+            \frac{1}{n_f^2} - \frac{1}{n_i^2}
+        \right]\\
+        &E = -\frac{13.6}{n^2} \text{ eV}\\
+        &v = \frac{v^2}{2\epsilon_0 n h}\\
+        &L = n\hbar
+    \end{align*}
+
+    \section{Spectrum: $[J/m^4]$}
+    \begin{align*}
+        &\mu_k^\omega = C_1 \lambda^{-5} \frac{1}{e^{\frac{C_2}{\lambda T}}}\\
+        &\mu_k^P = C_1 \lambda^{-5} \frac{1}{e^{\frac{C_2}{\lambda T}} - 1}\\
+        &\frac{1}{\lambda} = R \left(
+            \frac{1}{n_f^2} - \frac{1}{n_i^2}
+        \right)
+    \end{align*}
+
+    \switchcolumn 
+
+    \begin{equation*}
+        \mu_k^{Rj} = \frac{C_1}{C_2} \frac{T}{\lambda^4}
+    \end{equation*}
+
+    \section{Quadratic Min}
+    \begin{gather*}
+        S_x = \sum x_i, \quad
+        S_y = \sum y_i\\
+        S_{xx} = \sum x_i^2, \quad
+        S_{xy} = \sum x_i y_i\\
+        b = \frac{
+            n S_{xy} - S_x S_y
+        }{nS_{xx} - S_x^2}, \quad
+        a = \frac{S_y - bS_x}{n}\\
+        y = a + bx\\
+r=\frac{n S_{xy}-S_x S_y}{\sqrt{\big(n S_{xx}-S_x^2\big)\big(n S_{yy}-S_y^2\big)}}
+    \end{gather*}
+
+    \section{Visible Spect}
+    \begin{equation*}
+        A = \varepsilon b c
+    \end{equation*}
+    \begin{equation*}
+        A = -\log T \iff T = 10^{-A}
+    \end{equation*}
+    \begin{equation*}
+        \% T = T \cdot 100
+    \end{equation*}
+    
+    \begin{enumerate}
+        \item $A$: Absorvansia (L)
+        \item $T$: Transmitancia
+        \item $\varepsilon$: Asortividad (L / mol cm)
+        \item $b$: Marco optico (cm)
+        \item $c$: Concentración (M)
+    \end{enumerate}
+    
+    1 M = mol / L
+    
+    Absorvancia total:
+    \begin{equation*}
+        A = \sum A_i
+    \end{equation*}
+    
+\end{paracol}
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=\textwidth]{uv.png}
+\end{figure*}
+
+\begin{figure*}
+    \includegraphics[width=0.5\textwidth]{s.png}
+\end{figure*}
+
+ 
+\end{document}

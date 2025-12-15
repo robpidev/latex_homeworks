@@ -1,0 +1,60 @@
+Considere un sistema formado por 2 partículas, cada una
+de las cuales puede estar en cualquiera de 3 estados cuánticos
+de energías respectivas $0$, $\varepsilon$, $3\varepsilon$.
+El sistema está en contacto con un foco térmico
+a temperatura $T$. $(a)$ Escriba la función de partición $Z$
+si las partículas obedecen la estadística de Maxwell-Boltzmann
+y son considerados distinguibles. $(b)$ Cuál es la expresión
+de la función de partición $Z$ Si las partículas son bosones.
+$(c)$ Cuál es la función de partición $Z$ si las partículas son
+Fermiones.
+
+\definecolor{solcolor}{HTML}{E91E63} % 
+\newcommand{\e}{\varepsilon}
+
+\sol $(a)$ la función de partición para la estadística de
+Maxwell-Boltzmann está dada por
+\begin{equation*}
+    Z = {\left(
+        \sum_r e^{-\beta \e_r}
+    \right)} ^ N 
+\end{equation*}
+
+Se tiene que el número de partículas es $N = 2$, Como las estadística
+de Maxwell-Boltzmann es para partículas distinguibles entonces
+los estados posibles son las combinaciones de las distintas energías
+incluyendo las que pueden ocupar a la vez, entonces e tiene:
+
+\begin{equation*}
+    Z = {\left(1 + e^{-\beta \e} + e^{-3\beta}\right)}^2  =         1 + 2e^{-\beta \e} + 2e^{-3\beta \e} + e^{-2\beta \e}
+        + 2e^{-4\beta \e} + e^{-6\beta\e}
+\end{equation*}
+
+$(b)$ Para bosones la función de partición está dado por
+\begin{equation*}
+    Z = \sum_r \Omega(\e_r) e^{-\beta \e_r}
+\end{equation*}
+
+las energías son $0,\e, 2\e, 3\e, 4\e, 6\e$, por lo que se
+tendrá que $Z$ es
+
+\begin{equation*}
+    Z = 1 + e^{-\beta \e} + e^{-2\beta \e} + e^{-3\beta \e}
+    + e^{-4\beta\e} + e^{-6\beta\e}
+\end{equation*}
+
+(c) Si fuesen fermiones se tiene que la función de partición es:
+
+\begin{equation*}
+    Z = \sum_r \Omega(\e_r) e^{-\beta \e_r}
+\end{equation*}
+
+Pero 2 partículas no pueden ocupar el mismo estado a la vez, por
+lo qué las energías posibles serán: $1\e, 3\e, 4\e$, entonces la
+la función de partición es
+
+\begin{equation*}
+    Z = e^{-\beta\e} + e^{-3\beta\e} + e^{-4\beta\e}
+\end{equation*}
+
+\solend

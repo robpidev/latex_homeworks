@@ -1,0 +1,193 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}    % Soporte para caracteres especiales
+\usepackage{amsfonts}
+\usepackage[right=3cm, left=2.5cm, top=3cm, bottom=3.5cm]{geometry}
+\usepackage{graphicx}
+%\usepackage{hyperref}          % Enlaces y referencias
+%\usepackage[style=apa]{biblatex}
+%\usepackage{csquotes}          % Manejo de citas (opcional, útil para biblatex)
+%\addbibresource{references.bib}
+%\usepackage[spanish]{babel}
+\title{Ejercicio}
+\author{Torres Tarrillo, María Licela}
+
+\begin{document}
+
+\pagestyle{empty}
+
+Cierta población de pacientes en tratamiento tiene un tamaño
+inicial de 100 personas. Cada persona representa una unidad de atención,
+y el número de pacientes cambia con una tasa de crecimiento natural
+específica de 0.25 (es decir, debido a nuevos ingresos o mejores), en el tiempo medido en años.
+
+Simultáneamente, los pacientes son dados de alta (o egresados del programa) a una tasa constante de $h$
+personas por año.
+
+El número de personas bajo seguimiento $y(t)$ satisface la siguiente ecuación diferencial
+y condiciones iniciales:
+
+\begin{equation}
+    \label{eq:problem}
+    \frac{dy}{dt} = 0.25y - h, \qquad y(0) = 100
+\end{equation}
+
+Determine $y(t)$ la cantidad de pacientes bajo el seguimiento de el tiempo, para los siguientes casos:
+(a) $h = 20$, (b) $h = 25$, (c) $h = 30$.
+
+
+\vspace{12pt}
+\textit{Solución:} Analizando el problema se tiene lo siguiente:
+\begin{itemize}
+    \item $t$ es el tiempo medido en años.
+    \item $y(t)$ es la cantidad de pacientes bajo el seguimiento de el tiempo.
+    \item $h$ cantidad de pacientes dados de alta por año.
+    \item $dy/dt$ es la tasa de crecimiento de pacientes.
+    \item $y(0)$ es la cantidad de pacientes iniciales.
+\end{itemize}
+
+Iniciemos por resolver la ecuación diferencial~\ref{eq:problem}, esta es una ecuación
+diferencial de primer orden que tiene la siguiente forma
+
+\begin{equation}
+    \label{eq:lineal}
+    \frac{dy}{dt} + p(t)y = q(t)
+\end{equation}
+
+tomando la ecuación~\ref{eq:problem} y dando forma tenemos:
+
+\begin{equation}
+    \label{eq:lineal:problem}
+    \frac{dy}{dt} - 0.25y = -h
+\end{equation}
+
+Comparando las ecuaciones~\ref{eq:lineal} y~\ref{eq:lineal:problem} tenemos:
+
+\begin{equation}
+    \label{eq:lineal:coefficients}
+    p(t) = -0.25, \qquad q(t) = -h
+\end{equation}
+
+La solución a la ecuación diferencial~\ref{eq:lineal} es:
+\begin{equation}
+    \label{eq:lineal:solution}
+    y(t) = \frac{1}{I(t)}\left[
+        \int I(t)q(t) dt + c 
+    \right]
+\end{equation}
+
+donde $I(t)$ es el factor integrante y está dado por
+
+\begin{equation}
+    I(t) = e^{\int p(t) dt}
+\end{equation}
+
+por lo que usando~\ref{eq:lineal:coefficients} tenemos: 
+
+\begin{equation}
+    \label{eq:lineal:solution:coefficients}
+    I(t) = e^{\int -0.25 dt} = e^{-0.25t}
+\end{equation}
+
+Remplazando en la ecuación~\ref{eq:lineal:solution} tenemos:
+
+\begin{align*}
+    \label{eq:lineal:solution:final}
+    y(t) = \frac{1}{e^{-0.25t}}\left[
+        \int e^{-0.25t}(-h) dt + c 
+    \right]
+    =e^{0.25t}
+    \left[
+        \frac{-h}{-0.25}e^{-0.25t} + c
+    \right]
+\end{align*}
+
+Expandiendo los términos tenemos
+
+\begin{equation}
+    \label{eq:sol:const}
+    \Rightarrow y(t)=\frac{h}{0.25} + c e^{0.25t}
+\end{equation}
+
+Ahora tenemos que encontrar el valor de la constante, para eso usamos el hecho que
+$y(0)=100$, de aquí tenemos qué
+
+\begin{equation}
+    y(0) = \frac{h}{0.25} + c e^{0.25(0)} = \frac{h}{0.25} + c = 100
+\end{equation}
+
+De la ultima igualdad de la derecha tenemos
+
+\begin{equation}
+    \label{eq:const}
+    c = 100 - \frac{h}{0.25}
+\end{equation}
+
+Remplazando está ultima ecuación en la ecuación~\ref{eq:sol:const} tenemos:
+\begin{equation}
+    \label{eq:sol}
+    y(t) = \frac{h}{0.25} + \left(100 - \frac{h}{0.25}\right) e^{0.25t}
+\end{equation}
+
+Ahora remplacemos para cada uno de los casos: (a) $h = 20$:
+
+\begin{equation*}
+    \label{eq:sol:a}
+    y(t) = \frac{20}{0.25} + \left(100 - \frac{20}{0.25}\right) e^{0.25t}
+\end{equation*}
+
+Simplificando tenemos
+
+\begin{equation}
+    \label{eq:sol:a:final}
+    y(t) = 80 + 20e^{0.25t}
+\end{equation}
+
+(b) $h = 25$:
+
+\begin{equation*}
+    \label{eq:sol:b}
+    y(t) = \frac{25}{0.25} + \left(100 - \frac{25}{0.25}\right) e^{0.25t}
+\end{equation*}
+
+Simplificando tenemos
+
+\begin{equation}
+    \label{eq:sol:b:final}
+    y(t) = 100
+\end{equation}
+
+(c) $h = 30$:
+
+\begin{equation*}
+    \label{eq:sol:c}
+    y(t) = \frac{30}{0.25} + \left(100 - \frac{30}{0.25}\right) e^{0.25t}
+\end{equation*}
+
+Simplificando tenemos
+
+\begin{equation}
+    \label{eq:sol:c:final}
+    y(t) = 120 - 20e^{0.25t}
+\end{equation}
+
+Analizando cada una de las partes tenemos:
+
+\begin{itemize}
+    \item (a) $y(t) = 80 + 20e^{0.25t}$. Esto es cuando se dan de alta 20 pacientes por años
+    la cantidad de pacientes crece dado que el $e^{0.25t}$ es mayor a 1 y su coeficiente es mayor que cero.
+    \item (b) $y(t) = 100$. Esto es cuando se dan de alta 25 pacientes por año entonces la cantidad de pacientes no crece.
+    \item (c) $y(t) = 120 - 20e^{0.25t}$. Esto es cuando se dan de alta 30 pacientes por año entonces la cantidad de pacientes decrece dado que el $e^{0.25t}$ es menor a 1 y su coeficiente es menor que cero.
+\end{itemize}
+
+Usando Geogebra podemos gráficar las tres funciones (ver figura~\ref{fig:graph}):
+
+\begin{figure}[h]
+    \label{fig:graph}
+    \centering
+    \includegraphics[width=0.8\textwidth]{1.jpg}
+    \caption{Graficando las funciones (color verde)~\ref{eq:sol:a:final}, (color azul)~\ref{eq:sol:b:final} y (color rojo)~\ref{eq:sol:c:final}}
+\end{figure}
+
+\end{document}

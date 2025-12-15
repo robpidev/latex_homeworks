@@ -1,0 +1,152 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usepackage[right=3cm, left=2.5cm, top=3cm, bottom=3.5cm]{geometry}
+%\usepackage[style=apa]{biblatex}
+%\addbibresource{references.bib}
+
+\title{Masa Relativista}
+\author{Torres Tarrillo Rober Esbel}
+
+\begin{document}
+
+\maketitle
+\section{ Introducción }
+Hay dos formas de medir la masa de un cuerpo: poniendo el cuerpo en un
+campo gravitatorio y pesarlo, a la cual se denomina masa gravitatoria;
+o aplicando una fuerza sobre un cuerpo y midiendo la aceleración que
+produce, está es la masa inercial y es en la que nos vamos a centrar.
+
+Para medir esta ultima, se debe medir la aceleración, pero para medir
+la aceleración se debe hacer medidas de distancia, velocidades y tiempo,
+pero estas medidas dependen dependen del movimiento relativo del observador
+y la partícula que se debe medir, por lo que podemos suponer que se obtendrá
+una masa inercial diferente para cada sistema de referencia inercial.
+
+Llamaremos \textit{masa propia} o \textit{masa en reposo} a la masa $m_0$
+medida en el sistema de referencia de la partícula.
+
+\section{Momento lineal Relativista}
+El momento lineal se define como $\Vec{p} = m \Vec{v}$, por la ley de
+conservación del momento lineal y el primer postulado de  Einstein, este
+debe permanece invariante ante las transformaciones de Lorentz, pero tal
+como está definido al hacer dichas transformaciones el momento lineal no
+se conserva, por lo que para solucionar este problema podemos redefinir
+el momento lineal como
+\[\Vec{p} =m\Vec{v} = \gamma m_0 \Vec{v}\]
+
+Para encontrar el valor de $\gamma$ supongamos que dos partículas de la
+misma masa en reposo $m'_1 = m'_2$, sufren una colisión elástica en un sistema de
+referencia $S'$ como se muestra en la figura~\ref{fig:1}.
+
+\begin{figure}[ht]\label{fig:1}
+    \centering
+    \includegraphics[scale=0.5]{img/f1.png}
+    \caption{colisión en el sistema $S'$.}	
+\end{figure}
+Del gráfico se tiene que $p'_{0x} = p'_{fx}$ $p'_{0y} = p'_{fy}$,
+las componentes $X'$ de las velocidades son iguales y permanecen inalteradas
+y las componentes $Y'$, también iguales, cambian de sentido en la colisión.
+Para evitar problemas de la medida \textit{simultánea} de los omentos
+lineales, consideramos que todas las magnitudes citadas son medidas durante
+el impacto y que las partículas no interaccionan a distancia.
+
+Ahora tomemos como sistema $S$ uno respecto del cual $S'$ se desplaza
+a velocidad $V=v'_{2x}$, en la dirección común de los ejes $X$ y $X'$,
+como en la figura~\ref{fig:2}
+\begin{figure}[ht]\label{fig:2}
+    \centering
+    \includegraphics[scale=0.5]{img/f2.png}
+    \caption{colisión en el sistema $S$.}	
+\end{figure}
+\begin{equation}
+    v_{1x} = \frac{-v'_{1x} + V}{1 + \frac{V}{c^2} (-v'_x)}
+\end{equation}
+por ser: $V=v'_{2x} = |-v'_{1x}|$; la partícula 1 se mueve perpendicularmente
+al eje $X$. Para la partícula 2, se puede comprobar mediante
+las relaciones de transformación de velocidades que $v_{2y} < v'_{2y}$,
+por tanto, el observador $S$ ve la trayectoria de 2 más achatada hacia el eje
+$X$ de lo que la ve $S'$ respecto de $X'$.
+
+La conservación del momento lineal en el eje $X$ es evidente. En el eje $Y$
+existe las siguientes variaciones de $\Vec{P}$:
+
+\begin{gather*}
+    \delta p_1 = -m_1v_{1y} - (m_1v_{1y}) = -2m_1v_{1y}\\
+    \delta p_2 = m_2v_{2y} - (-m2v_{2y}) = 2m_2v_{2y} 
+\end{gather*}
+
+La conservación de $p_y$ implica: $m_1v_{1y} = m_2v_{2y}$. Como vamos a ver,
+esas dos velocidades son distintas, por lo tanto a las dos partículas se les debe
+medir distinta masa en $S$, a pesar de tener la misma masa en reposo.
+Usando las expresiones para la transformación de velocidades, podemos poner:
+\begin{gather*}
+    v_{1y}=\frac{v'_{1y}}{\sqrt{1-\beta^2}} \quad \text{y} \quad
+    v_{2y}=v'_{2y}\frac{1-\frac{v_{2x}v'{2x}}{c^2}}{\sqrt{1-\beta^2}}
+\end{gather*}
+
+como $v'_{1y} = v'_{2y}$, en valor absoluto, se tiene
+\begin{gather*}
+    \frac{m_2}{m_1} = \frac{1}{1 - \frac{v_{2x}v'_{2x}}{c^2}}
+\end{gather*}
+
+Por otra parte
+\begin{gather*}
+    v'_{2x} = V = \frac{v_{2x} - V}{1 - \frac{V}{c^2}v_{2x}}
+    \Rightarrow V - \frac{V^2v_{2x}}{c^2} = v_{2x} -V
+    \Rightarrow v_{2x} = 2V - V^2 \frac{v_{2x}}{x^2}
+\end{gather*}
+
+Multiplicando ambos miembros por $v_2x$, dividiendo por $c^2$ y restando $1$
+resulta
+\begin{gather*}
+    1-\frac{v_{2x}^2}{c^2} = {\left(1  - \frac{Vv_{2x}^2}{c^2}\right)}^2
+\end{gather*}
+
+como $V = v'_{2x}$, se tiene
+\[1 - \frac{v'_{2x}v_{2x}}{c^2} = \sqrt{1 - \frac{v^2_{2x}}{c^2}}\]
+
+con sto ultimo tenemos
+\[\frac{m_2}{m_1} = \frac{1}{\sqrt{1 - \frac{v^2_{2x}}{c^2}}}\]
+
+ahora si hacemos $v_1y = 0 \Rightarrow v_2y = 0$. Así
+que, en este caso tenemos $m_1 = m_{01} = m_{02} = m_0, v_{2y}=0 \wedge v_2 = v_{2x}$,
+la partícula 2 se mueve paralela al eje $X$ y para ella la expresión anterior es
+$m_2 = \frac{m_{02}}{1 - \frac{v^2_2}{c^2}}$
+
+dejando los subindices tenemos
+\[m = \frac{m_0}{\sqrt{1 - \frac{v^2}{c^2}}} = \gamma m_0\]
+
+En esta ultima expresión $m = m_{rel}$ es la masa relativista, con
+esto el momento lineal $\Vec{p} = \gamma m \Vec{v}$ es invariante
+ante las transformaciones de Lorentz.
+
+\section{Problemas de la masa Relativista}
+Hay muchos detractores al considerar la masa relativista, dado que
+no sería una masa como tal, por ejemplo en la segunda ley de Newton
+se tiene que $\Vec{F} = m\Vec{a}$, tomando la masa relativista
+$\Vec{F} = m_{rel}\Vec{a}$, pero esto no es así, dado que si tomamos
+la fuerza como la variación del momento lineal se tiene
+
+\begin{gather*}
+    \vec{F} = \frac{d}{dt} \Vec{p} = \frac{d}{dt} \gamma m_0\Vec{v}
+    = {\left(\frac{d}{dt}\gamma\right)} m_0\Vec{v} + \gamma m_0\frac{d}{dt}\Vec{v}
+\end{gather*}
+
+Claramente $\Vec{F} \neq m_{rel}\Vec{a}$. Cuando $v \to 0, \gamma \to 1$
+y se cumple que $F = m_0\Vec{a}$, pero cuanto $v$ tiende a ser muy
+grande esto ya no se cumple. Podemos interpretar esto a medida
+que la velocidad se esta haciendo mas grande, la masa inercial aumenta, por
+lo que debemos aplicar una fuerza cada vez mayor para poder tener
+una aceleración constante.
+
+\section*{Referencias}
+Burbano, S., Enrique, B. y Gracia, C. (s.f). Física General. Madrid: Tebar.
+
+Young, H. y Freedman, A. (2013). Física universitaria con física moderna(13ava Ed, Vol. 2). México: PEARSON.
+
+\end{document}
+

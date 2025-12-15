@@ -1,0 +1,157 @@
+\section{Estructura fina de el átomo de hidrógeno}
+El hamiltoniano para el átomo de hidrógeno está dado por
+
+\begin{equation}
+    \label{eq:hamiltoniano}
+    H = - \frac{\hbar^2}{2m}\nabla^2
+    - \frac{e^2}{4\pi \epsilon_0 r}
+\end{equation}
+
+Pero este no es del todo correcto dado que existe
+perturbaciones como la gravedad y además se tiene la
+corrección relativista y el acoplamiento de spin-orbita,
+que se detallará a continuación.
+
+\subsection{Corrección relativista}
+Del primer termino del Hamiltoniano supone que se presenta
+energía cinética:
+
+\begin{equation}
+    \label{eq:kinetic:energy}
+    T = \frac{1}{2}mv^2 = \frac{p^2}{2m}
+\end{equation}
+
+Y utilizando el operador $p \to (\hbar /i) \nabla$ Por lo que
+el operador de energía cinética será
+
+\begin{equation}
+    T = - \frac{\hbar^2}{2m}\nabla^2
+\end{equation}
+
+La ecuación~\ref{eq:kinetic:energy} es la expresión de la energía
+cinética clásica, la relativista está dada por
+
+\begin{equation}
+    \label{eq:kinetic:energy:rel}
+    T = \frac{mc^2}{\sqrt{1 - {(v/c)}^2}} - mc^2
+\end{equation}
+
+Y el momento relativista está dado por
+
+\begin{equation}
+    \label{eq:momentum:rel}
+    p = \frac{mv}{\sqrt{1 - {(v/c)}^2}}
+\end{equation}
+
+Se puede ver que utilizando la ecuación~\ref{eq:momentum:rel} junto
+a~\ref{eq:kinetic:energy:rel} se tiene que
+
+\begin{equation}
+    p^2c^2 + m^2c^4
+    = \frac{m^2v^2c^2 + m^2c^4[1 - {(v/c)}^2]}{1 - {(v/c)}^2}
+    = \frac{m^2c^4}{1 - {(v/c)}^2}
+    = {(T + mc^2)}^2
+\end{equation}
+
+así que
+
+\begin{equation}
+    \label{eq:kinetic:momentum}
+    T = \sqrt{p^2c^2 + m^2c^4} - mc^2
+\end{equation}
+
+Pero dado que para un átomo se tiene $p \ll mc$, 
+por lo que utilizando series de Taylor se tiene la siguiente
+aproximación
+
+\begin{align}
+    T &= mc^2\left[\sqrt{1 + {\left(\frac{p}{mc}\right)}^2}\right]
+    = mc^2\left[
+        1 + \frac{1}{2}{\left(\frac{p}{mc}\right)}^2
+        - \frac{1}{8}{\left(\frac{p}{mc}\right)}^4
+        \cdots - 1
+    \right]\\
+    &=
+    \frac{p^2}{2m} - \frac{p^4}{8m^3c^2} + \cdots
+\end{align}
+
+Por lo que es evidente que la corrección relativista es
+
+\begin{equation}
+    \label{eq:relativistic:correction}
+    H'_r = - \frac{p^4}{8m^3c^2}
+\end{equation}
+
+Para el primer orden de la teoría de perturbación,
+la corrección $E_n$ está dado por el valor esperado del
+estado no perturbado $H'$ está dado por
+
+\begin{equation}
+    E_r^1 = \langle H'_r \rangle
+     = - \frac{1}{8m^3c^2} \langle \psi | p^4 | \psi \rangle
+     = - \frac{1}{8m^3c^2}\langle p^2\psi | p^2 \psi \rangle
+\end{equation}
+
+Así la ecuación de Schrödinger (para los estados no perturbados)
+dice
+
+\begin{equation}
+    p^2\psi = 2m(E - V)\psi
+\end{equation}
+
+y así
+
+\begin{equation}
+    E_r^1 = - \frac{1}{2mc^2}\langle{(E - V)^2} \rangle
+    = - \frac{1}{mc^2}[E^2 - 2E\bk{V} + \bk{V^2}]
+\end{equation}
+
+Pero como para el átomo de hidrógeno $V(r) = -(1/4\pi\epsilon_0)e^2/r$, reemplazando
+en la ecuación anterior
+
+\begin{equation}
+    E_r^1 = - \frac{1}{2mc^2}
+    \left[
+        E_n^2
+        + 2E_n\left(\frac{e^2}{4\pi\epsilon_0}\right)\bk{\frac{1}{r}}
+        + {\left(\frac{e^2}{4\pi\epsilon_0}\right)}^2\bk{\frac{1}{r^2}}
+    \right]
+\end{equation}
+
+Donde $E_n$ es la energía de Bohr del estado en cuestión, los
+resultados para los valores esperados tomando la función
+$\psi_{nlm}$ se tiene
+
+\begin{gather}
+    \bk{\frac{1}{r}} = \frac{1}{n^2a}\\
+    \bk{\frac{1}{r^2}} = \frac{1}{(l + 1/2)n^3a^2}
+\end{gather}
+
+Donde $a$ es el radio de Bohr, remplazando en la ecuación anterior
+a esta se tiene que
+
+\begin{gather}
+    E_r^1 = - \frac{1}{2mc^2}
+    \left[
+        E_n^2 + 2E_n\left(\frac{e^2}{4\pi\epsilon_0}\right)\frac{1}{n^2a}
+        + {\left(\frac{e^2}{4\pi\epsilon_0}\right)}^2
+        \frac{1}{(l + 1/2)n^3a^2}
+    \right]
+\end{gather}
+
+Si usamos el hecho que
+\begin{equation}
+    a \equiv \frac{4\pi\epsilon_0h^2}{me^2}
+\end{equation}
+
+Y remplazando, finalmente tenemos qué
+
+\begin{equation}
+    E_r^1 = - \frac{E_n^2}{2mc^2}
+    \left[
+        \frac{4n}{l + 1/2} - 3
+    \right]
+\end{equation}
+
+Es evidente que la corrección relativista es menor
+qué $E_n$

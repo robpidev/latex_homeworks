@@ -1,0 +1,103 @@
+\section*{Ejercicio 1}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/1.jpg}
+\end{figure}
+
+\textit{Solución.} Como el ejercicio no tiene un compuesto
+para $m/z = 104,\quad \mathrm{M^+}$ menos probable 
+según el gráfico, Voy a proponer el siguiente compuesto
+y así poder hacer la fragmentación
+
+\[
+\chemfig{CH3-CH2-CH2-CH2-CH2-SH}
+\]
+
+Este compuesto cumple con lo requerido, pues
+
+\[
+5(12) + 12(1) + 32 = 104
+\]
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/2.jpg}
+\end{figure}
+
+\subsection*{Fragmentaciones principales}
+
+\begin{enumerate}
+    \item \textbf{Pérdida de \ce{SH^.}}  
+    El tiol terminal pierde un radical \ce{SH^.} (33 uma), formando el catión pentilo:
+    \[
+    \ce{C5H12S ->[EI] C5H11+ + SH^.}
+    \]
+    \[
+    104 - 33 = \textbf{71 (m/z)}
+    \]
+    \ce{C5H11+} es el ion \textbf{pentilio}.
+
+    \item \textbf{Clivaje $\alpha$ al azufre.}  
+    La ruptura del enlace C–C cerca del azufre genera el catión butilio:
+    \[
+    \ce{CH3-CH2-CH2-CH2-CH2-SH ->[EI] C4H9+ + CH2SH^.}
+    \]
+    \[
+    4(12) + 9(1) = \textbf{57 (m/z)}
+    \]
+
+    \item \textbf{Formación del catión propilio (\ce{C3H7+}).}  
+    Es el ion más estable y el \textbf{pico base} en el espectro:
+    \[
+    \ce{C5H12S ->[reordenamiento] C3H7+ + resto}
+    \]
+    \[
+    3(12) + 7(1) = \textbf{43 (m/z)}
+    \]
+
+    \item \textbf{Deshidrogenación secuencial:}
+    \[
+    \ce{C3H7+ ->[-H] C3H6+ ->[-H] C3H5+}
+    \]
+    Generando los picos:
+    \[
+    \textbf{m/z = 42 (C3H6+), 41 (C3H5+)}
+    \]
+
+    \item \textbf{Fragmentos de menor masa:}  
+    \[
+    \ce{C2H3+ (m/z = 27)}, \quad \ce{C2H5+ (m/z = 29)}
+    \]
+
+    \item \textbf{Fragmentos con azufre retenido:}
+    \[
+    \ce{C4H5S+ (m/z = 85)}, \quad \ce{C4H4S+ (m/z = 84)}
+    \]
+\end{enumerate}
+
+\subsection*{Resumen de picos observados}
+
+\begin{center}
+\begin{tabular}{c c c}
+\hline
+\textbf{m/z} & \textbf{Ion propuesto} & \textbf{Comentario} \\
+\hline
+104 & \ce{M+} & Ion molecular débil \\
+85, 84 & \ce{C4H5S+}, \ce{C4H4S+} & Fragmentos con azufre \\
+71 & \ce{C5H11+} & Pérdida de \ce{SH^.} \\
+57 & \ce{C4H9+} & Clivaje $\alpha$ al azufre \\
+43 & \ce{C3H7+} & Pico base (catión propilio) \\
+42 & \ce{C3H6+} & Deshidrogenación \\
+41 & \ce{C3H5+} & Deshidrogenación \\
+29 & \ce{C2H5+} & Fragmento etilo \\
+27 & \ce{C2H3+} & Fragmento vinilo \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Estructura del 1-pentanotiol}
+
+\[
+\chemfig{CH3-CH2-CH2-CH2-CH2-SH}
+\]

@@ -1,0 +1,66 @@
+una línea del espectro de hidrógeno correspondiente a la serie de
+Balmer tiene una longitud de onda igual a $434.05$ $\mathrm{nm}$.
+
+\begin{enumerate}
+    \item ¿Cuál es el valor de $n$ correspondiente al nivel superior
+    que interviene en la transición?
+    \item Calcula el potencial de ionización del hidrógeno en J/mol.
+    \item Calcular la frecuencia de la radiación que tendría que incidir
+    sobre un átomo de hidrógeno en estado fundamental, si queremos que
+    arranque un electrón este posea una energía cinética de $3.10^{-19}$ J.
+\end{enumerate}
+
+\vspace{12pt}
+\textit{SOLUCIÓN.} (a), para la serie de Balmer se tiene
+
+\begin{equation}\label{eq:balmer}
+    \frac{1}{\lambda} = R\left(
+        \frac{1}{2^2} - \frac{1}{n^2}
+    \right)
+\end{equation}
+
+Despejando
+
+\begin{equation*}
+    \frac{1}{\lambda R} = \frac{1}{2^2} - \frac{1}{n^2}
+    \implies n^2 = \frac{4\lambda R}{\lambda R - 4}
+    \implies n = 2\sqrt{\frac{\lambda R}{\lambda R - 4}}
+\end{equation*}
+
+Remplazando los valores de las constantes
+$\lambda = 4.3502\times10^{-7}$ m y $R = 1.097\times10^{7}$ $\mathrm{m^{-1}}$
+
+\begin{equation*}
+    n = 2\sqrt{\frac{4.3502\times10^{-7} \times 1.097\times10^{7}}{4.3502\times10^{-7} \times 1.097\times10^{7} - 4}}
+    \approx 5
+\end{equation*}
+
+(b) Se pide calcular la energía de ionización en J/mol,
+está es la mínima energía para arrancar un electrón,
+llevándolo del estado fundamental ($n=1$) al infinito ($n=\infty$),
+por lo qué remplazando en la eq-\ref{eq:balmer} tenemos:
+
+\begin{equation*}
+    \frac{1}{\lambda} = R
+\end{equation*}
+
+Remplazando en la energía
+
+\begin{equation*}
+    E = \frac{hc}{\lambda} = hcr
+\end{equation*}
+
+Entonces la energía en J/mol es
+\begin{equation*}
+   E = \frac{6.626\times10^{-34} \mathrm{Js}
+   \cdot 3 \times 10^8 \mathrm{m/s}\cdot 1.097\times10^7 \mathrm{m^{-1}}}{1}
+    \cdot 6.023\times10^{23} \mathrm{atom/mol}
+\end{equation*}
+
+\begin{equation*}
+    \therefore E = 1.312\times10^6\quad\mathrm{J/mol}
+\end{equation*}
+
+(c) %TODO: FALTA Este inciso
+
+\hfill $\blacksquare$

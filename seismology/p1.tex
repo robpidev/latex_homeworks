@@ -1,0 +1,100 @@
+\section{Introducción}
+Al científico chino chang Heng
+se le atribuye la inveción en el año 132 d.C, 
+hace casi dos mi años, del primer sismoscopio funcional
+
+\section{Teoría elástica}
+Describe el comportamiento de materiales sometidos a tensiones y deformaciones dentro del límite elástico, utilizando ecuaciones matemáticas para relacionar fuerzas, desplazamientos y propiedades del material.
+
+\subsection{Tensión (\textit{Stress})}
+La tensión es la fuerza interna por unidad de área que actúa dentro de un material:
+\[
+\sigma = \frac{F}{A}
+\]
+Donde:
+\begin{itemize}
+    \item \(\sigma\): tensión (Pa o N/m\(^2\)).
+    \item \(F\): fuerza aplicada (N).
+    \item \(A\): área de la sección transversal (m\(^2\)).
+\end{itemize}
+
+En un sistema tridimensional, se representa mediante el \textbf{tensor de tensiones}:
+\[
+\sigma_{ij} = 
+\begin{bmatrix}
+\sigma_{xx} & \tau_{xy} & \tau_{xz} \\
+\tau_{yx} & \sigma_{yy} & \tau_{yz} \\
+\tau_{zx} & \tau_{zy} & \sigma_{zz}
+\end{bmatrix}
+\]
+Donde:
+\begin{itemize}
+    \item \(\sigma_{xx}, \sigma_{yy}, \sigma_{zz}\): tensiones normales.
+    \item \(\tau_{xy}, \tau_{yz}, \tau_{zx}\): tensiones cortantes.
+\end{itemize}
+
+y están dadas por
+\begin{equation}
+    \sigma_{ij} = \lim_{A_j \to 0 }\frac{F_{i}}{A_j}
+\end{equation}
+
+\subsection{Deformación (\textit{Strain})}
+La deformación es el cambio relativo en la forma o tamaño de un material. En una dimensión:
+\[
+\varepsilon = \frac{\Delta L}{L}
+\]
+Donde:
+\begin{itemize}
+    \item \(\varepsilon\): deformación (sin unidades).
+    \item \(\Delta L\): cambio de longitud (m).
+    \item \(L\): longitud original (m).
+\end{itemize}
+
+En 3D, se utiliza el \textbf{tensor de deformaciones}:
+\[
+\varepsilon_{ij} = 
+\begin{bmatrix}
+\varepsilon_{xx} & \gamma_{xy} & \gamma_{xz} \\
+\gamma_{yx} & \varepsilon_{yy} & \gamma_{yz} \\
+\gamma_{zx} & \gamma_{zy} & \varepsilon_{zz}
+\end{bmatrix}
+\]
+Donde:
+\begin{itemize}
+    \item \(\varepsilon_{xx}, \varepsilon_{yy}, \varepsilon_{zz}\): deformaciones normales.
+    \item \(\gamma_{xy}, \gamma_{yz}, \gamma_{zx}\): deformaciones cortantes.
+\end{itemize}
+
+Donde
+
+\begin{equation}
+    \varepsilon_{ij} = \frac{\partial u_i}{\partial x_j}
+\end{equation}
+
+Además se tiene las siguientes relaciones
+
+\begin{equation}
+    \varepsilon_{yy} = -v\varepsilon \wedge \varepsilon_{zz}
+    = - v \varepsilon_{xx}
+\end{equation}
+
+\subsection{Ley de Hooke Generalizada}
+La relación entre tensiones y deformaciones para materiales elásticos lineales está dada por:
+\[
+\sigma_{ij} = \sum_{k=1}^3 \sum_{l=1}^3 C_{ijkl} \varepsilon_{kl}
+\]
+Donde:
+\begin{itemize}
+    \item \(C_{ijkl}\): tensor de rigidez elástica.
+\end{itemize}
+
+Para materiales isotrópicos, se simplifica utilizando el \textbf{módulo de elasticidad} (\(E\)) y el \textbf{coeficiente de Poisson} (\(\nu\)):
+\[
+\varepsilon_{xx} = \frac{1}{E} \left( \sigma_{xx} - \nu (\sigma_{yy} + \sigma_{zz}) \right)
+\]
+
+\subsection{Energía de Deformación}
+La energía almacenada por unidad de volumen en un material elástico es:
+\[
+U = \frac{1}{2} \sigma_{ij} \varepsilon_{ij}
+\]

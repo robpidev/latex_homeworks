@@ -1,0 +1,73 @@
+\subsection{Parámetros que determinan la calidad de imagen}
+
+La calidad de imagen en tomografía computarizada (TC) describe la capacidad del sistema para producir imágenes que permitan una correcta interpretación diagnóstica, garantizando al mismo tiempo una dosis de radiación mínima al paciente. Dicha calidad depende tanto de las características físicas del equipo (tubo de rayos X, detectores, sistema de reconstrucción) como de los parámetros de adquisición y procesamiento seleccionados por el operador.
+
+Los principales parámetros que determinan la calidad de imagen son: la \textbf{resolución espacial}, el \textbf{contraste}, el \textbf{ruido}, la \textbf{uniformidad} y la presencia de \textbf{artefactos}. Cada uno de ellos influye de manera particular en la capacidad del sistema para representar estructuras anatómicas con precisión.
+
+\subsubsection{Resolución espacial}
+
+La resolución espacial se define como la capacidad del sistema para distinguir dos objetos pequeños y cercanos entre sí como entidades separadas. En la TC, esta resolución depende del tamaño del píxel en la imagen reconstruida, del espesor de corte y del tamaño del punto focal del tubo de rayos X. 
+
+Matemáticamente, la resolución espacial puede expresarse en términos de la \textbf{frecuencia espacial máxima} (\(f_{max}\)) que el sistema puede reproducir sin pérdida significativa de información. Se representa mediante la \textbf{función de transferencia de modulación} (MTF, \textit{Modulation Transfer Function}), definida como:
+
+\[
+MTF(f) = \frac{C_{\text{salida}}(f)}{C_{\text{entrada}}(f)}
+\]
+
+donde \(C_{\text{entrada}}\) y \(C_{\text{salida}}\) son los contrastes del objeto y de la imagen respectivamente, y \(f\) representa la frecuencia espacial (ciclos por milímetro). Un sistema con alta resolución espacial presenta una MTF que conserva valores elevados hasta frecuencias altas.
+
+En la práctica, la resolución espacial se evalúa mediante un fantoma con patrones de barras o líneas de diferente espaciado. La resolución es adecuada cuando el sistema logra distinguir estructuras de aproximadamente 0.5 a 1.0 mm de separación.
+
+\subsubsection{Contraste}
+
+El contraste es la diferencia de niveles de gris entre regiones con distintas densidades o coeficientes de atenuación. Un buen contraste permite diferenciar estructuras anatómicas con composiciones similares, lo que es esencial para detectar lesiones o anomalías.
+
+El contraste en una imagen de TC depende de la diferencia de número de Hounsfield (HU) entre dos tejidos. Se expresa como:
+
+\[
+C = \frac{|HU_1 - HU_2|}{HU_{\text{medio}}}
+\]
+
+donde \(HU_1\) y \(HU_2\) son los valores medios de las regiones de interés y \(HU_{\text{medio}}\) es su valor promedio. 
+
+El contraste puede mejorarse ajustando parámetros como el voltaje del tubo (kVp), la corriente (mA), el tiempo de exposición y los algoritmos de reconstrucción. Sin embargo, aumentar el contraste suele implicar un incremento de dosis, por lo que es necesario mantener un equilibrio entre calidad y seguridad radiológica.
+
+\subsubsection{Ruido}
+
+El ruido corresponde a las variaciones aleatorias en los valores de píxel que no representan información real del objeto. En la TC, el ruido proviene principalmente de la naturaleza estadística de la emisión y detección de fotones de rayos X (ruido cuántico), así como del procesamiento electrónico del sistema.
+
+Se cuantifica mediante la desviación estándar de los valores de píxel en una región homogénea:
+
+\[
+\sigma = \sqrt{\frac{1}{N} \sum_{i=1}^{N} {(x_i - \bar{x})}^2}
+\]
+
+donde \(x_i\) representa el valor de cada píxel y \(\bar{x}\) la media. Un mayor ruido implica menor capacidad de distinguir estructuras de bajo contraste.
+
+El ruido disminuye al aumentar el número de fotones detectados, lo que puede lograrse incrementando la corriente del tubo (mA) o el tiempo de rotación. No obstante, esto también incrementa la dosis absorbida, por lo que se debe optimizar según el principio ALARA.
+
+\subsubsection{Uniformidad}
+
+La uniformidad mide el grado de homogeneidad en los valores de densidad en regiones del fantoma que deberían ser uniformes. En una imagen ideal, todas las áreas de un material homogéneo deberían tener el mismo número de Hounsfield; sin embargo, desviaciones por calibración o atenuación no lineal pueden generar variaciones.
+
+La uniformidad se evalúa midiendo el valor promedio de HU en el centro y en los bordes del fantoma. Se considera aceptable una diferencia menor a 5 HU entre el centro y la periferia, según las tolerancias establecidas por la ACR. 
+
+Las variaciones en la uniformidad pueden deberse a problemas de calibración de detectores, al envejecimiento del tubo de rayos X o a artefactos de reconstrucción.
+
+\subsubsection{Artefactos}
+
+Los artefactos son distorsiones o errores visuales que aparecen en la imagen y no corresponden a estructuras reales del paciente. Pueden afectar la interpretación diagnóstica y, por tanto, constituyen un indicador importante de la calidad del sistema.
+
+Entre los artefactos más comunes en tomografía se encuentran:
+\begin{itemize}
+    \item \textbf{Artefactos por movimiento:} causados por desplazamientos del paciente durante la adquisición, generando imágenes borrosas o duplicadas.
+    \item \textbf{Artefactos metálicos:} producidos por la presencia de implantes o prótesis metálicas que generan líneas brillantes o sombras debido a la alta atenuación y endurecimiento del haz.
+    \item \textbf{Artefactos en anillo:} generados por detectores defectuosos que producen círculos concéntricos en la imagen reconstruida.
+    \item \textbf{Endurecimiento del haz (\textit{beam hardening}):} causado por la absorción preferencial de fotones de baja energía, lo que modifica el espectro del haz y genera bandas oscuras en regiones densas.
+\end{itemize}
+
+La detección y corrección de artefactos requiere un mantenimiento regular del equipo, así como el uso de algoritmos de corrección y calibraciones periódicas.
+
+\subsubsection{Relación entre parámetros de calidad}
+
+Los parámetros mencionados están interrelacionados. Por ejemplo, al aumentar la resolución espacial (reduciendo el tamaño del píxel), se incrementa el ruido; al incrementar la corriente del tubo para reducir el ruido, aumenta la dosis. Por tanto, la optimización de la calidad de imagen en TC implica encontrar un punto de equilibrio entre resolución, contraste, ruido y dosis, maximizando la información diagnóstica sin comprometer la seguridad del paciente.

@@ -1,0 +1,95 @@
+\documentclass[twocolumn, 12pt, a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}    % Soporte para caracteres especiales
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{float}
+\usepackage[right=3cm, left=2.5cm, top=3cm, bottom=3.5cm]{geometry}
+%\usepackage{hyperref}          % Enlaces y referencias
+%\usepackage[style=apa]{biblatex}
+%\usepackage{csquotes}          % Manejo de citas (opcional, útil para biblatex)
+%\addbibresource{references.bib}
+%\usepackage[spanish]{babel}
+
+\newcommand\BackgroundPic{
+    \put(0,0){%
+        \parbox[b][\paperheight]{\paperwidth}{%
+            \includegraphics[width=\paperwidth,height=\paperheight]{img/back.pdf}%
+        }%
+    }
+}
+
+\newcommand*{\exer}[8]{
+    \item #1
+    \begin{center}
+        \includegraphics[width=0.3\textwidth]{img/f#2.png}
+    \end{center}
+    \begin{tabular*}{0.4\textwidth}{@{\extracolsep{\fill}}lll}    % 3 columnas sin líneas
+                (A) $#3$ #8 & (B) $#4$ #8 & (C) $#5$ #8\\
+                (D) $#6$ #8 &  & (E) $#7$ #8
+    \end{tabular*}
+}
+
+\newcommand{\T}[1]{°#1}
+
+\newcommand*{\ex}[7]{
+    \item #1.
+        
+    \vspace{12pt}
+    \begin{tabular*}{0.4\textwidth}{@{\extracolsep{\fill}}lll}    % 3 columnas sin líneas
+                (A) $#2$ #7 & (B) $#3$ #7 & (C) $#4$ #7\\
+                (D) $#5$ #7 &  & (E) $#6$ #7
+    \end{tabular*}
+}
+
+\begin{document}
+\AddToShipoutPicture*{\BackgroundPic}
+    \begin{enumerate}
+        \ex{Determine el calor específico en cal/g°C de un cuerpo cuya masa es 400 g, si necesita 80 cal para elevar su temperatura de 20 °C a 25 °C}{0.02}{0.002}{0.03}{0.04}{0.5}{ }
+        \ex{Se tiene 2 litros de agua a 10 °C en un recipiente de capacidad calorífica despreciable. Determine qué cantidad de agua a 100 °C se debe de agregar al recipiente para que la temperatura final de equilibrio sea de 20 °C}{1}{2}{0.25}{1.5}{2.5}{L}
+        \exer{El calor que recibe 10 g de un líquido hace que su
+        temperatura cambie del modo que se indica en el gráfico
+        Q versus T. Se pide encontrar el valor de su calor
+        específico en cal/g°C.}{1}{0.2}{0.25}{0.3}{0.4}{0.7}{ }
+        \ex{ En un recipiente de capacidad calorífica despreciable,
+        se mezclan 20; 30 y 50g de agua a 80°C, 50°C y 10°C
+        respectivamente. Hallar la temperatura de equilibrio}{31}{21}{30}{36}{69}{°C}
+        \exer{Una muestra de mineral de 10 g de masa recibe calor
+        de modo que su temperatura tiene un comportamiento
+        como el mostrado en la figura. Determinar los calores
+        latentes específicos de fusión y vaporización en cal/g}{2}{3;8}{10;15}{8;15}{6;15}{7;10}{ }
+        \ex{Se tiene 5 g de hielo a -10°C, hallar el calor total
+        suministrado para que se convierta en vapor de agua a
+        100°C}{3 625}{7 200}{4 000}{5 250}{5 800}{cal}
+        \ex{ Tenemos 2 g de agua a 0°C. ¿Qué cantidad de calor se
+        le debe extraer para convertirlo en hielo a 0°C}{80}{160}{200}{250}{300}{cal}
+        \ex{ Se dispara una bala de 5g contra un bloque de hielo,
+        donde inicia su penetración con una velocidad de
+        300m/s, se introduce una distancia de 10cm,
+        fundiéndose parte del hielo. ¿Qué cantidad de hielo se
+        convierte en agua; en gramos? (el hielo debe estar a
+        0°C)}{0.535}{0.672}{0.763}{0.824}{0.763}{ }
+        \ex{ Hallar el calor que libera 2g de vapor de agua que se
+        encuentra a 120°C de manera que se logre obtener
+        agua a 90°C.}{800}{880}{1100}{1120}{1200}{cal}
+        \ex{ Un sistema está constituido por la mezcla de 500 g de
+        agua y 100g de hielo a 0°C. Se introduce en este
+        sistema 200g de vapor de agua a 100°C. Suponiendo
+        la mezcla libre de influencias externas. ¿Cuál es la
+        temperatura de la mezcla en °C y la cantidad de vapor final en g?}{150; 116}{100; 126}{150; 42}{100; 74}{75; 0}{ }
+        \ex{En un vaso lleno de agua a 0°C se deposita un cubo de
+        hielo de 40 g a -24°C, si no hay pérdida de calor al
+        ambiente. ¿Qué cantidad de agua se solidificará en
+        gramos?}{3}{6}{12}{15}{0}{ }
+        \ex{Un cuerpo se encuentra a 120°F e incrementa su temperatura en 90 K. Determinar su temperatura fincal}{180}{210}{273}{55.55}{138.88}{°C}
+        \ex{Dos varillas de igual lon gitud y de coeficientes $\alpha_1 = 18\mu$°C${}^{-1}$ y $\alpha_2 = 15\mu$°C${}^{-1}$ se someten a un calentamiendo de manera que experimentan la misma dilataci'on. Si el primero se calento en 80 °C, en cuanto debe aumentar su temperatura el segundo en °C}{94}{95}{96}{97}{98}{ }
+        \ex{Determine la longitud en cm de una barilla de $\alpha_1 = 8\times 10^{-5} \T{C}^{-1}$ para que al ser calentada lo mismo que otra varilla de $\alpha_2 = 32\times 10^{-6} \T{C}^{-1}$ y de 125 cm se dilaten exactamente lo mismo}{10}{20}{30}{40}{50}{ }
+        \ex{En cuantos $cm^2$ se dilata una lámina metálica que se caliente en 240 \T{C} si se sabe que el calentarse en 300 \T{C} la dilatación aumentaría en 8 $cm^2$}{32}{33}{34}{35}{36}{ }
+        \ex{Una placa de metal tiene las dimenciones de $10\times10$ m cuando su temperatura es de 10 \T{C}. Se oberva que cada lado se incrmenta en 20 mm cuando se calienta hasta 110 \T{C}. Determine su coeficiente de dilatación superficial en $m\T{C}^{-1}$}{3}{4}{2}{5}{40}{ }
+        \ex{Determine la relación en que se encuentran las dilataciones de dos laminas cuyos radios son $r_1 = 2R \wedge r_2 = 3R$ y $\beta_1 = 1.5\beta_2$}{2:3}{2:4}{2:5}{2:6}{2:7}{ }
+        \ex{Un recipiente metálico de coeficiente de dilatación cubígo $\gamma_1$ contiene un líquido $\gamma_2$ hasta 1/2 de su capacidad. En cuánto se debe incrmentar la temperatura para que el recipiente se llene totalmente de mercurio. $\gamma_2 = 2\gamma_1; \gamma_1 = 50\mu\T{C}^{-1}$}{100}{250}{150}{180}{200}{\T{C}}
+        \ex{Determine en $cm^3$ el cambio en volumen de un bloque metálico de 5 cm, 15 cm y 10 cm cuando la temperatura cambia de 10\T{C} a 80 \T{C} $\gamma = 400\mu\T{C}^{-1}$}{12}{15}{16}{18}{20}{ }
+    \end{enumerate}
+\end{document}

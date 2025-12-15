@@ -1,0 +1,85 @@
+\section{La corriente en la union PN}
+
+Para calcular la relación corriente-voltaje de una unión PN,
+consideremos el dispositivo ideal esbozado en la Fig.4.8.
+El dispositivo se compone de una región de carga espacial y
+dos regiones neutras en los lados de tipo P y N.
+Se proporcionan contactos óhmicos en cada extremo del dispositivo.
+El modelo de diodo ideal es mono-dimensional y se calcula la densidad
+de corriente $J$, de modo que la corriente medible es $I = JA$,
+donde $A$ es el área de la sección transversal del dispositivo.
+
+
+El voltaje aplicado se encuentra casi por completo a través de la capa de agotamiento.
+Esta es una suposición fundamental para el estudio de la corriente a través del dispositivo.
+Como consecuencia, los campos eléctricos en ambas zonas neutras son nulos,
+por lo que ninguna corriente de deriva puede fluir a través de la masa del semiconductor.
+Como resultado del voltaje aplicado, la energía de carga en el semiconductor de tipo P se desplaza en una cantidad $qV_A$,
+mientras que la energía de carga en el semiconductor de tipo N permanece sin cambios.
+Esto significa que el cambio en la energía de los electrones en el lado del tipo P es $-qV_A$.
+De este modo, el potencial incorporado se convierte en $q\phi_i = q(\phi_i - VA)$,
+de modo que todos los cuantizaciones que dependen del potencial incorporado
+cambian como consecuencia.
+Por ejemplo, el tamaño de la capa de agotamiento se convierte en:
+
+\begin{equation}
+    x_d = x_n + x_p =
+    \sqrt{
+        \frac{2(\phi_i - V_A) \e_s}{q}
+        \left(
+            \frac{1}{N_A} + \frac{1}{N_D}
+        \right)
+    }
+\end{equation}
+
+El potencial incorporado ($\phi_i$) mantiene todo el sistema en equilibrio
+cuando la corriente total en cada sección del dispositivo es cero.
+En la condición de equilibrio,
+las concentraciones de cargas mayoritarias y minoritarias en las zonas
+neutrales obedecen a la ley de acción de masas.
+
+
+El cambio en la barrera de potencial incorporada depende del signo del voltaje aplicado.
+La condición $V_A > 0$ se conoce como polarización directa, que corresponde al caso de reducción de la barrera potencial.
+El cambio en el potencial hace que la ley ya no sea válida.
+La reducción de barreras aumenta la concentración de cargas minoritarias en ambas zonas neutrales.
+El potencial incorporado, de hecho, evita que las cargas mayoritarias se difundan en la otra región, donde su concentración es mucho menor.
+Por lo tanto, con respecto a la condición de equilibrio, se observa un exceso de cargas minoritarias en las zonas neutras:
+
+\begin{equation}
+    n_p \to \frac{n_i^2}{N_A}+n;\quad
+    p_n \to \frac{n_i^2}{N_D}+p'
+\end{equation}
+
+Dónde $n_p$ es la concentración de electrones y $p_n$ es la concentración
+de huecos en el material de tipo P.
+
+El exceso de cargos minoritarios es responsable de la corriente.
+Sin embargo, en las regiones entre la capa de agotamiento y los electrodos,
+no hay campo eléctrico, por lo que la recolección de carga en los
+electrodos no es sencilla. Más bien, la corriente es impulsada por
+fenómenos de recombinación.
+
+Bajo la condición de polarización opuesta ($V_A < 0$), conocida como
+polarización inversa, la barrera de potencial aumenta, de modo que se
+favorece la transferencia de cargas minoritarias de un material a otro.
+Debido al diferente número de cargos mayoritarios y minoritarios,
+las dos corrientes son obviamente diferentes a nivel cuantitativo.
+Esta misma diferencia conduce al carácter rectificador de la unión PN\@.
+De hecho, bajo el sesgo directo, la gran población de cargos mayoritarios
+se transfiere a la otra región, donde dan lugar a un exceso de cargos
+menores, que a su vez se recombinan de acuerdo con la ley de recombinación
+de Shockley-Hall-Read (SHR). Por el contrario, con arreglo al sesgo
+inverso, la misma transferencia hacia la otra región se refiere a la
+pequeña población de cargos minoritarios, lo que se traduce en un aumento
+casi insignificante de los cargos mayoritarios. Eventualmente,
+las propiedades de la unión PN dependen del destino de las cargas
+minoritarias.
+
+La corriente total a través del dispositivo se compone de dos
+contribuciones principales. El componente dominante es la corriente
+debido al aumento de las tasas minoritarias en la zona neutral.
+El segundo término adicional, que es dominante en el sesgo inverso,
+se debe a los procesos de generación y recombinación en la región
+de carga espacial. La primera contribución a la corriente también
+se conoce como corriente de diodo ideal.

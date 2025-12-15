@@ -1,0 +1,132 @@
+$(a)$ Considere un gas de partículas libres en una caja
+cúbica de lado $L$. Las partículas pueden ser Bosones,
+Fermiones o partículas clásicas. Muestre que
+la función densidad de estados $D(E)$, es decir el
+número de niveles por unidad de energía en el rango de
+$E$, $E + dE$, es 
+
+\begin{equation*}
+    D(E) = \frac{m^{3/2}}{\sqrt{2}\pi^2\hbar^3} V E ^ {1/2}
+\end{equation*}
+
+$(b)$ Utilice el resultado anterior para demostrar que
+partículas de Maxwell-Boltzmann la energía media es
+
+\begin{equation*}
+    \bk{E} = \frac{3}{2} kT
+\end{equation*}
+
+\sol\ $(a)$ Sea un gas ideal cuántico en una caja de volumen
+$V$ con $V = L^3$, entonces el hamiltoniano está dado por:
+
+\begin{equation*}
+    H = \frac{p^2}{2m} = - \frac{\hbar^2}{2m}\Delta^2
+\end{equation*}
+
+donde
+
+\begin{equation*}
+    \vec{\Delta} = \left(
+        \frac{\partial}{\partial x},
+        \frac{\partial}{\partial y},
+        \frac{\partial}{\partial z},
+        \right)
+\end{equation*}
+
+Utilizando la ecuación de Schrodinger tenemos la solución
+
+\begin{equation*}
+    \psi_{\vec{k}}(\vec{r})
+    = \sqrt{\frac{8}{L^3}}
+    \sin(k_x x)
+    \sin(k_y y)
+    \sin(k_z z)
+\end{equation*}
+
+Para cumplir con las condiciones iniciales se debe cumplir que
+
+\begin{equation*}
+    k_x = \frac{n_x \pi}{L},
+    k_y = \frac{n_y \pi}{L},
+    k_z = \frac{n_z \pi}{L},
+\end{equation*}
+
+por lo que la ecuación de onda es:
+
+\begin{equation*}
+    \psi_{\vec{k}}(\vec{r})
+    = \sqrt{\frac{8}{L^3}}
+    \sin(\frac{n_x \pi}{L}x)
+    \sin(\frac{n_y \pi}{L}y)
+    \sin(\frac{n_z \pi}{L}z)
+\end{equation*}
+
+aplicando el hamiltoniano para calcular la energía
+
+\begin{equation*}
+    H\psi_{\vec{k}}(\vec{r})
+    = - \frac{\hbar^2}{2m}\vec{\nabla}^2\phi_{\vec{k}}(\vec{r})
+    = \frac{\hbar^2}{2m}(k_x^2 + k_y^2 + k_z^2)\psi_{\vec{k}}(\vec{r})
+    = \epsilon_{\vec{k}}\psi_{\vec{k}}(\vec{r})
+\end{equation*}
+
+\begin{equation*}
+    \implies \epsilon_{\vec{k}}
+    = \frac{\hbar^2}{2m}(k_x^2 + k_y^2 + k_z^2)
+    = \frac{\hbar^2\pi^2}{2mL^2}(n_x^2 + n_y^2 + n_z^2)
+    = \epsilon_{\vec{n}}
+\end{equation*}
+
+ahora definimos
+\begin{equation*}
+    k^2 = k_x^2 + k_y^2 + k_z^2 \wedge n^2 = n_x^2 + n_y^2 + n_z^2
+\end{equation*}
+
+por lo que podemos escribir de forma compacta
+
+\begin{equation*}
+    \epsilon_{\vec{k}} = \frac{\hbar^2}{2m}k^2 = 
+     \frac{\hbar^2\pi^2}{2mL^2}n^2
+     = \epsilon_{\vec{k}} 
+\end{equation*}
+
+Ahora calculamos la densidad de estados como una función de energía
+para eso utilizamos la función delta de Dirac así tenemos
+
+\begin{align*}
+    D(E) &=
+    \int_{0}^{\infty}dn_x
+    \int_{0}^{\infty}dn_y
+    \int_{0}^{\infty}dn_z\\
+    &= \frac{1}{8}\int_{0}^{\infty}4\pi n^2 dn
+    \delta\left(E - \frac{\hbar^2\pi^2}{2mL^2}n^2\right)\\
+    &= \frac{\pi}{4}
+    \left(
+       \frac{2mL^2}{\hbar^2\pi^2}^{3/2}
+    \right)
+    \int_{0}^{\infty}x^{1/2 dx}\delta(E - x)\\
+    &= \frac{V}{4\pi^2}{(\frac{2m}{\hbar^2})}^{3/2}E^{1/2}
+\end{align*}
+
+\begin{equation*}
+    \therefore
+    D(E) = \frac{m^{3/2}}{\sqrt{2}\pi^2\hbar^3}VE^{1/2}
+\end{equation*}
+
+
+$(b)$ Cálculo de la energía media del sistema. Primero calculamos
+la función de partición
+
+\begin{equation*}
+    Z = \int_{0}^{\infty}D(E)e^{-\beta E}dE
+    = \frac{m^{3/2}}{\sqrt{2}\pi^2\hbar^3}V
+    \int_{0}^{\infty}E^{1/2} e^{-\beta E}dE
+    = \frac{m^{3/2}}{\sqrt{2}\pi^2\hbar^3}V\frac{1}{\beta^{3/2}}\frac{\sqrt{\pi}}{2}
+\end{equation*}
+
+\begin{equation*}
+    \therefore
+    \bk{E} = -\frac{\partial}{\partial \beta}\ln Z = \frac{3}{2}kT
+\end{equation*}
+
+\solend\

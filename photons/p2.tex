@@ -1,0 +1,56 @@
+\section{El oscilador armónico simple}
+El hamiltoniano en una dimensión está dado por
+\begin{equation}
+    H = \frac{1}{2}Kx^2 + \frac{p^2}{2m}
+    = \frac{1}{2}Kx^2 - \frac{\hbar^2}{2m}\frac{d^2}{dx^2}
+\end{equation}
+
+donde $m$ es la masa de la partícula y $K$ la constante elástica.
+Se tiene una solución no trivial a la ecuación de Schrödinger para
+$n = 0,1,\ldots,\infty$ con energía.
+
+\begin{equation}
+    \label{eq:sho:energy}
+    E_n = \hbar\omega\left(n + \frac{1}{2}\right)
+\end{equation}
+
+La frecuencia angular $\omega$ es identico al valor classico.
+\begin{equation}
+    \label{eq:angular:frecuency}
+    \omega = \sqrt{\frac{K}{m}}
+\end{equation}
+
+Como la función de partición está dada por
+
+\begin{equation*}
+    Z = \sum_{n=0}^{\infty} \exp(-\beta E_n)
+\end{equation*}
+
+Con $\beta = 1/k_B T$ remplazando se tiene
+
+\begin{equation}
+   Z  = \sum_{0}^{\infty} \exp(-\beta\hbar\omega(n + 1/2))
+      = \frac{\exp(-\beta\hbar\omega/2)}{1 - \exp(-\beta\hbar\omega)}
+\end{equation}
+
+Donde se a utilizado el hecho que
+\begin{equation*}
+    \sum_{n = 0}^{\infty} x^{-n}= \frac{1}{1 - x}
+\end{equation*}
+
+Utilizando física estadística para calcular la energía tenemos
+
+\begin{align}
+    U = - \frac{\partial}{\partial} \ln{Z}
+     = \frac{1}{2}\hbar\omega + \frac{\hbar\omega}{\exp(\beta\hbar\omega) - 1}
+\end{align}
+
+Comparando con la energía media
+\begin{gather}
+    \langle E_n \rangle = \frac{1}{2}\hbar\omega + \hbar\omega\langle n \rangle
+\end{gather}
+
+Se puede ver que el número promedio de excitaciones del oscilador armónico es
+\begin{gather}
+    \langle n \rangle = \frac{1}{\exp(\beta\hbar\omega) - 1}
+\end{gather}

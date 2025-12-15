@@ -1,0 +1,36 @@
+\section{Configuración CMOS}
+El MOSFET descrito en las secciones anteriores se ha fabricado en un
+sustrato de tipo p, donde el canal está hecho de electrones. Por
+supuesto, la configuración complementaria también se puede fabricar
+en un sustrato de tipo n y un canal hecho de agujeros. Los
+diferentes dispositivos se indican como n-mos y p-mos
+respectivamente. Las características de p mos son opuestas a las de
+los n-mos. Por ejemplo, el voltaje umbral es negativo y se necesita
+un voltaje de puerta más negativo para activar el canal. En la
+práctica, las condiciones de formación del canal son $V_G - V_T > 0$
+para un n-mos y $V_G - V_T < 0$ para p-mos, con la consideración de que $V_T$,
+en el caso de p-mos, es negativo fig. 8
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{img/f8.png}
+    \caption{Esquema constructivo de la estructura CMOS}
+\end{figure}
+
+Los dos dispositivos complementarios se pueden formar sobre el mismo
+sustrato, donde se crea un pozo dopado de forma opuesta a la del
+sustrato. El pozo alberga el segundo dispositivo, como se muestra en
+la Fig. 9 Esta oportunidad da lugar a un dispositivo compuesto
+llamado CMOS (MOS complementario). El aspecto más interesante del
+CMOS es el hecho de que se puede utilizar como un inversor que
+genera funciones lógicas, funcionando como bloque de construcción
+primario de circuitos lógicos.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{img/f9.png}
+    \caption{Inversor como generador de funciones fabricado con
+    MOSFETs complementarios, y física de implementación con una
+    estructura CMOS}
+\end{figure}
+
