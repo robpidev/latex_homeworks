@@ -1,0 +1,205 @@
+\appendix
+\section{Anexo: Deducciones complementarias}
+
+\subsection*{1. Operador momento angular y sus propiedades}
+
+El operador de momento angular orbital $\hat{\vec{L}}$ se define en mecánica cuántica como:
+\begin{equation}
+\hat{\vec{L}} = \hat{\vec{r}} \times \hat{\vec{p}},
+\end{equation}
+donde $\hat{\vec{p}} = -i\hbar \nabla$ es el operador momento lineal.  
+En coordenadas cartesianas, las componentes de $\hat{\vec{L}}$ son:
+\begin{equation}
+\hat{L}_x = -i\hbar (y \partial_z - z \partial_y), \quad
+\hat{L}_y = -i\hbar (z \partial_x - x \partial_z), \quad
+\hat{L}_z = -i\hbar (x \partial_y - y \partial_x).
+\end{equation}
+
+Estas componentes satisfacen las relaciones de conmutación:
+\begin{equation}
+[\hat{L}_x, \hat{L}_y] = i\hbar \hat{L}_z, \quad
+[\hat{L}_y, \hat{L}_z] = i\hbar \hat{L}_x, \quad
+[\hat{L}_z, \hat{L}_x] = i\hbar \hat{L}_y,
+\end{equation}
+lo que demuestra que el momento angular es un generador de rotaciones.  
+A partir de estas relaciones, se deduce que $\hat{L}^2 = \hat{L}_x^2 + \hat{L}_y^2 + \hat{L}_z^2$ conmuta con cada componente $\hat{L}_i$, permitiendo la existencia de funciones propias simultáneas:
+\[
+\hat{L}^2 Y_{J,M} = \hbar^2 J(J+1) Y_{J,M}, \qquad
+\hat{L}_z Y_{J,M} = \hbar M Y_{J,M}.
+\]
+
+\subsection*{2. Masa reducida del sistema diatómico}
+
+Considérese una molécula diatómica de masas $m_1$ y $m_2$ y coordenadas $\vec{r}_1$ y $\vec{r}_2$.  
+El vector de posición relativa es $\vec{r} = \vec{r}_2 - \vec{r}_1$ y el centro de masas:
+\begin{equation}
+\vec{R} = \frac{m_1 \vec{r}_1 + m_2 \vec{r}_2}{m_1 + m_2}.
+\end{equation}
+El lagrangiano total puede separarse en una parte asociada al movimiento del centro de masas y otra al movimiento relativo.  
+La masa efectiva que gobierna este movimiento relativo es la \textbf{masa reducida}:
+\begin{equation}
+\mu = \frac{m_1 m_2}{m_1 + m_2}.
+\end{equation}
+El momento de inercia del sistema respecto al centro de masas es entonces:
+\[
+I = \mu r^2.
+\]
+
+\subsection*{3. Armónicos esféricos y sus propiedades}
+
+Las soluciones angulares de la ecuación de Schrödinger para un rotor rígido o para el átomo de hidrógeno son los \textbf{armónicos esféricos}:
+\begin{equation}
+Y_{J,M}(\theta, \phi) =
+(-1)^M
+\sqrt{\frac{(2J+1)}{4\pi}
+\frac{(J-M)!}{(J+M)!}}
+P_J^M(\cos \theta) e^{iM\phi},
+\end{equation}
+donde $P_J^M$ son los polinomios asociados de Legendre.  
+Los armónicos esféricos cumplen:
+\begin{equation}
+\int_0^{2\pi}\int_0^\pi
+Y_{J,M}^*(\theta, \phi) Y_{J',M'}(\theta, \phi)
+\sin \theta\, d\theta\, d\phi =
+\delta_{J,J'} \delta_{M,M'}.
+\end{equation}
+
+\begin{table}[h!]
+\centering
+\caption{Propiedades relevantes de los armónicos esféricos.}
+\begin{tabular}{lll}
+\hline
+\textbf{Propiedad} & \textbf{Expresión} & \textbf{Comentario} \\
+\hline
+Ortogonalidad & $\displaystyle \int Y_{J,M}^* Y_{J',M'} d\Omega = \delta_{J,J'}\delta_{M,M'}$ & Estados distintos son ortogonales.\\
+Norma & $\displaystyle \int |Y_{J,M}|^2 d\Omega = 1$ & Normalización unitaria.\\
+Simetría & $Y_{J,-M} = (-1)^M Y_{J,M}^*$ & Propiedad de paridad compleja.\\
+Número cuántico & $J = 0, 1, 2, \ldots$; $M = -J, \ldots, J$ & Describe los estados rotacionales.\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection*{4. Deducción del Hamiltoniano rotacional}
+
+El operador Hamiltoniano para un sistema de dos partículas sometidas únicamente a fuerzas internas es:
+\begin{equation}
+\hat{H} = -\frac{\hbar^2}{2m_1} \nabla_1^2 - \frac{\hbar^2}{2m_2} \nabla_2^2 + V(|\vec{r}_1 - \vec{r}_2|).
+\end{equation}
+Transformando a coordenadas del centro de masas $(\vec{R}, \vec{r})$, se separa la ecuación de Schrödinger en dos partes:
+\[
+\hat{H} = -\frac{\hbar^2}{2M} \nabla_R^2 - \frac{\hbar^2}{2\mu} \nabla_r^2 + V(r),
+\]
+donde $M = m_1 + m_2$.  
+La segunda parte describe el movimiento relativo.  
+En coordenadas esféricas, el laplaciano se escribe:
+\[
+\nabla_r^2 = \frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2 \frac{\partial}{\partial r}\right)
+- \frac{\hat{L}^2}{\hbar^2 r^2}.
+\]
+Sustituyendo en la ecuación de Schrödinger, se obtiene:
+\begin{equation}
+\hat{H} = -\frac{\hbar^2}{2\mu} \left[
+\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2 \frac{\partial}{\partial r}\right)
+- \frac{\hat{L}^2}{\hbar^2 r^2}
+\right] + V(r).
+\end{equation}
+Si la longitud del enlace se mantiene fija en $r = r_e$, el término radial desaparece y el Hamiltoniano se reduce a:
+\begin{equation}
+\hat{H}_{\text{rot}} = \frac{\hat{L}^2}{2I},
+\end{equation}
+con $I = \mu r_e^2$.  
+Este operador describe la energía cinética rotacional pura de la molécula diatómica, tal como se presenta en la Ecuación~(6) del cuerpo principal del texto.
+
+\subsection*{5. Deducción del operador momento angular en coordenadas esféricas}
+
+En mecánica cuántica, el operador de momento angular total se define en términos del operador posición $\vec{r}$ y el operador momento lineal $\vec{p}$ como:
+\[
+\hat{\vec{L}} = \hat{\vec{r}} \times \hat{\vec{p}}.
+\]
+En el espacio de coordenadas, el operador momento lineal es:
+\[
+\hat{\vec{p}} = -i\hbar \nabla,
+\]
+por lo que:
+\[
+\hat{\vec{L}} = -i\hbar (\vec{r} \times \nabla).
+\]
+
+Para expresar $\hat{\vec{L}}$ en coordenadas esféricas $(r, \theta, \phi)$, se utiliza el operador nabla en su forma correspondiente:
+\[
+\nabla = \hat{r} \frac{\partial}{\partial r}
+        + \hat{\theta} \frac{1}{r} \frac{\partial}{\partial \theta}
+        + \hat{\phi} \frac{1}{r \sin\theta} \frac{\partial}{\partial \phi}.
+\]
+Luego, tomando el producto vectorial $\vec{r} \times \nabla$ y considerando que $\vec{r} = r \hat{r}$, se obtiene:
+
+\[
+\vec{r} \times \nabla = 
+\hat{\theta}\left(-\frac{\partial}{\partial \phi}\right)
++ \hat{\phi}\left(\frac{\partial}{\partial \theta}\right).
+\]
+
+Por lo tanto, los componentes cartesianos del operador de momento angular en coordenadas esféricas son:
+
+\[
+\begin{aligned}
+\hat{L}_x &= i\hbar \left(\sin\phi \frac{\partial}{\partial \theta}
+ + \cot\theta \cos\phi \frac{\partial}{\partial \phi} \right), \\[6pt]
+\hat{L}_y &= i\hbar \left(-\cos\phi \frac{\partial}{\partial \theta}
+ + \cot\theta \sin\phi \frac{\partial}{\partial \phi} \right), \\[6pt]
+\hat{L}_z &= -i\hbar \frac{\partial}{\partial \phi}.
+\end{aligned}
+\]
+
+El operador del momento angular total se define como:
+\[
+\hat{L}^2 = \hat{L}_x^2 + \hat{L}_y^2 + \hat{L}_z^2,
+\]
+y su forma explícita en coordenadas esféricas es:
+\[
+\boxed{
+\hat{L}^2 = -\hbar^2 \left[
+\frac{1}{\sin\theta} \frac{\partial}{\partial \theta}
+\left(\sin\theta \frac{\partial}{\partial \theta}\right)
++ \frac{1}{\sin^2\theta} \frac{\partial^2}{\partial \phi^2}
+\right].
+}
+\]
+
+Esta expresión aparece directamente en la ecuación de Schrödinger para el rotor rígido y es fundamental en la deducción de las funciones de onda esféricas armónicas $Y_{J,M}(\theta,\phi)$, que constituyen los autoestados simultáneos de $\hat{L}^2$ y $\hat{L}_z$:
+\[
+\hat{L}^2 Y_{J,M} = \hbar^2 J(J+1) Y_{J,M}, \qquad
+\hat{L}_z Y_{J,M} = \hbar M Y_{J,M}.
+\]
+
+
+\subsection*{6. Operador momento dipolar y teoría de perturbaciones}
+
+El \textbf{momento dipolar eléctrico} de una molécula se define clásicamente como:
+\begin{equation}
+\vec{\mu} = \sum_i q_i \vec{r}_i,
+\end{equation}
+donde $q_i$ son las cargas parciales de los átomos y $\vec{r}_i$ sus posiciones relativas al centro de masas.  
+En el marco cuántico, se promueve a operador:
+\begin{equation}
+\hat{\vec{\mu}} = \sum_i q_i \hat{\vec{r}}_i.
+\end{equation}
+
+Cuando la molécula se somete a un campo electromagnético externo $\vec{E}(t)$, la energía de interacción viene dada por:
+\begin{equation}
+\hat{H}'(t) = -\hat{\vec{\mu}} \cdot \vec{E}(t).
+\end{equation}
+De acuerdo con la \textbf{teoría de perturbaciones dependiente del tiempo}, la probabilidad de transición entre un estado inicial $|i\rangle$ y uno final $|f\rangle$ es:
+\begin{equation}
+P_{i \to f} \propto 
+\left| \langle f | \hat{\vec{\mu}} \cdot \vec{E} | i \rangle \right|^2
+\delta(E_f - E_i - h\nu),
+\end{equation}
+lo que implica que solo se observan transiciones cuando la integral de momento de transición es diferente de cero.  
+De aquí se deduce la regla de selección rotacional:
+\[
+\Delta J = \pm 1,
+\]
+ya que el operador dipolar se comporta como un tensor de rango 1, y su acción conecta estados angulares con diferencia unitaria de momento angular total.
+
+Este análisis muestra cómo la teoría de perturbaciones proporciona el marco formal que justifica la interacción radiación–molécula y el origen cuántico de las líneas observadas en la espectroscopía de microondas.

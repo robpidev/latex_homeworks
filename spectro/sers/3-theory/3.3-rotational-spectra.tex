@@ -1,0 +1,49 @@
+\subsection{Espectro rotacional y constante rotacional}
+
+Una vez establecidas las reglas de selección y los niveles de energía del rotor rígido, es posible deducir las expresiones que describen el \textbf{espectro rotacional} observable en la región de microondas. Las transiciones entre niveles consecutivos de energía rotacional ($J \rightarrow J+1$) están determinadas por la ecuación:
+
+\[
+\Delta E = E_{J+1} - E_J = B[(J+1)(J+2) - J(J+1)] = 2B(J+1),
+\]
+donde $B$ es la \textbf{constante rotacional}, relacionada directamente con el momento de inercia $I$ de la molécula a través de:
+\[
+B = \frac{h}{8\pi^2 I c}.
+\]
+
+Dado que cada transición cumple la condición de selección $\Delta J = +1$, el espectro rotacional de una molécula diatómica rígida consiste en una serie de líneas igualmente espaciadas, cuya \textbf{frecuencia} está dada por:
+\[
+\nu = \frac{\Delta E}{h} = 2B(J+1),
+\]
+con $J = 0, 1, 2, \ldots$.
+Cada línea corresponde a una transición entre dos niveles consecutivos de energía rotacional. El espaciamiento constante entre las líneas permite determinar experimentalmente el valor de la constante rotacional $B$ mediante la diferencia entre frecuencias adyacentes:
+\[
+2B = \nu_{J+1 \rightarrow J+2} - \nu_{J \rightarrow J+1}.
+\]
+
+\subsubsection*{Determinación del momento de inercia y del enlace molecular}
+
+A partir del valor experimental de $B$, se puede calcular el \textbf{momento de inercia} $I$ utilizando la relación:
+\[
+I = \frac{h}{8\pi^2 B c}.
+\]
+Para una molécula diatómica, el momento de inercia depende de la \textbf{masa reducida} $\mu$ y de la distancia internuclear $r$ según:
+\[
+I = \mu r^2,
+\]
+donde
+\[
+\mu = \frac{m_1 m_2}{m_1 + m_2},
+\]
+siendo $m_1$ y $m_2$ las masas de los átomos constituyentes.
+
+Por tanto, midiendo las frecuencias de las líneas rotacionales, se puede determinar con alta precisión la longitud de enlace $r$:
+\[
+r = \sqrt{\frac{I}{\mu}} = \sqrt{\frac{h}{8\pi^2 \mu B c}}.
+\]
+Este procedimiento constituye una de las aplicaciones más importantes de la espectroscopía de microondas, ya que permite obtener \textbf{parámetros estructurales moleculares} con una precisión del orden de $10^{-4}$~\AA{} \cite[p.~214]{bernath2016spectra}.
+
+\subsubsection*{Interpretación física del espectro}
+
+Cada línea observada en el espectro rotacional corresponde a una transición entre niveles cuánticos de energía rotacional del rotor. El hecho de que las líneas estén igualmente espaciadas es consecuencia directa del carácter cuadrático de la dependencia $E_J = B J(J+1)$. En moléculas no rígidas (consideradas en secciones posteriores), este espaciado se desvía ligeramente debido a la corrección centrífuga, lo cual permite estudiar efectos de \textbf{vibración-rotación acoplada}.
+
+Finalmente, es importante resaltar que sólo las moléculas que poseen un \textbf{momento dipolar permanente} pueden presentar espectros rotacionales activos en microondas, ya que la interacción con la radiación electromagnética depende del acoplamiento entre el campo eléctrico y el dipolo molecular. Por ejemplo, moléculas como HCl o CO son activas, mientras que N$_2$ y O$_2$ no presentan espectros rotacionales debido a su simetría homonuclear \cite[p.~89]{hollas2004modern}.

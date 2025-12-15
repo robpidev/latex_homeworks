@@ -1,0 +1,149 @@
+\subsection{Equipos y principio de funcionamiento}
+
+La espectroscopía de microondas utiliza una variedad de equipos diseñados para generar, detectar y analizar la radiación electromagnética en el rango de 1 a 300~GHz. A continuación se describen los principales dispositivos empleados en investigación y sus principios de operación.
+
+\subsubsection{Espectrómetro de microondas de cavidad resonante}
+Este tipo de espectrómetro utiliza una cavidad metálica cerrada en la cual se establece una onda estacionaria de microondas.  
+Cuando una muestra gaseosa con moléculas polares se introduce en la cavidad, la absorción de radiación ocurre únicamente a frecuencias resonantes con las transiciones rotacionales.
+
+\vspace{12pt}
+\textbf{Principio de funcionamiento:}
+\begin{itemize}
+    \item Un generador de microondas (magnetrón o klystron) produce radiación coherente.
+    \item La radiación es dirigida hacia la cavidad resonante donde se encuentra la muestra.
+    \item Un detector de microondas mide la intensidad transmitida o reflejada.
+    \item Las pérdidas de energía en resonancia corresponden a transiciones rotacionales.
+\end{itemize}
+
+Este tipo de espectrómetro fue ampliamente utilizado en los primeros estudios de HCl, CO y NH$_3$, permitiendo determinar con precisión sus constantes rotacionales.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=1.1, every node/.style={font=\small}]
+% Fuente de microondas
+\node (fuente) at (0,0) [draw, rectangle, rounded corners, minimum width=2cm, minimum height=1cm, fill=blue!10] {Fuente de microondas};
+\node[below=2pt of fuente] {Generador de señal};
+
+% Modulador
+\node (modulador) [right=2cm of fuente, draw, rectangle, rounded corners, minimum width=2cm, minimum height=1cm, fill=green!10] {Modulador};
+\node[below=2pt of modulador] {Control de frecuencia};
+
+% Cavidad resonante
+\node (cavidad) [right=2cm of modulador, draw, rectangle, rounded corners, minimum width=2cm, minimum height=1cm, fill=yellow!20] {Cavidad resonante};
+\node[below=2pt of cavidad] {Interacción molécula–campo};
+
+% Detector
+\node (detector) [right=2cm of cavidad, draw, rectangle, rounded corners, minimum width=2cm, minimum height=1cm, fill=red!10] {Detector};
+\node[below=2pt of detector] {Registro del espectro};
+
+% Flechas de conexión
+\draw[->, thick] (fuente) -- (modulador);
+\draw[->, thick] (modulador) -- (cavidad);
+\draw[->, thick] (cavidad) -- (detector);
+\end{tikzpicture}
+\caption{Esquema general de un espectrómetro de microondas.}
+\label{fig:espectrometro}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/microwave.png}    
+    \caption{Espectrómetro de microondas con cavidad resonante. (\cite{quimicamoderna_microondas})}
+\end{figure}
+
+
+\subsubsection{Espectrómetro de Transformada de Fourier de microondas (FTMW)}
+El espectrómetro FTMW (\textit{Fourier Transform Microwave Spectrometer}) utiliza pulsos breves de microondas que excitan las moléculas, y posteriormente mide la señal de emisión libre (\textit{free induction decay}) en el dominio del tiempo.  
+Mediante una transformada de Fourier se obtiene el espectro en el dominio de la frecuencia.
+
+\textbf{Principio de funcionamiento:}
+\begin{itemize}
+    \item Un pulso de microondas coherente excita las transiciones rotacionales.
+    \item Las moléculas reemiten radiación coherente cuando regresan a su estado base.
+    \item Una antena o guía de onda detecta esta señal de emisión libre.
+    \item La transformada de Fourier convierte la señal temporal en el espectro de frecuencia.
+\end{itemize}
+
+Este método proporciona una resolución extremadamente alta (del orden de kHz) y permite estudiar mezclas complejas o especies reactivas generadas en celdas de descarga.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/ftmw.png}
+    \caption{Espectro de un FTMW. (\cite{kiel_ftmw_spectrometer})}
+\end{figure}
+
+\subsubsection{Radiotelescopios para observaciones astronómicas}
+En astronomía, los radiotelescopios detectan la radiación de microondas emitida por moléculas en el espacio interestelar. Las antenas parabólicas concentran la radiación hacia receptores sensibles refrigerados criogénicamente.
+
+\textbf{Principio de funcionamiento:}
+\begin{itemize}
+    \item La antena parabólica concentra las ondas de microondas hacia el receptor.
+    \item El receptor (normalmente un \textit{mezclador heterodino}) convierte la señal a una frecuencia intermedia.
+    \item Un analizador espectral o sistema digital extrae las líneas de emisión rotacionales.
+    \item Los datos se procesan para determinar la intensidad, desplazamiento Doppler y abundancia molecular.
+\end{itemize}
+
+Ejemplos notables de equipos son el \textbf{Atacama Large Millimeter/submillimeter Array (ALMA)} en Chile y el \textbf{Green Bank Telescope (GBT)} en Estados Unidos.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/alma.png}
+    \caption{ALMA. (\cite{cooper_alma_space})}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/gbt.png}
+    \caption{GBT. (\cite{nrao_gbt})}
+\end{figure}
+
+
+
+\subsubsection{Analizadores vectoriales de redes (VNA)}
+Los analizadores de redes se utilizan para estudiar materiales o sistemas mediante la medición de parámetros de dispersión (\(S_{11}, S_{21}\)) de microondas incidentes.  
+En el contexto espectroscópico, permiten estudiar la respuesta dieléctrica y la absorción en gases o sólidos.
+
+\textbf{Principio de funcionamiento:}
+\begin{itemize}
+    \item El VNA genera una señal de microondas de frecuencia variable.
+    \item Mide las señales reflejadas y transmitidas a través de la muestra.
+    \item Calcula los parámetros \(S_{ij}\), que contienen información sobre la absorción y la fase.
+    \item De estos parámetros se puede inferir la constante dieléctrica y las resonancias rotacionales.
+\end{itemize}
+
+Estos instrumentos son ampliamente empleados en ingeniería y en el desarrollo de sensores de microondas aplicados a biomedicina y materiales.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/vna.png}
+    \caption{VNA. (\cite{rohdeschwarz_lcr_vna})}
+\end{figure}
+
+\subsubsection{Sistemas láser acoplados a espectroscopía rotacional}
+En investigaciones avanzadas, los espectrómetros de microondas pueden acoplarse a láseres de alta precisión para excitar o detectar estados rotacionales y vibracionales simultáneamente.  
+Este enfoque es fundamental para estudiar moléculas con estructuras electrónicas complejas.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/brown.png}
+    \caption{Esquema de un espectrómetro de microondas de transformada de Fourier con pulso chirpado, introducido por Brown \textit{et al.} (2008). 
+    Un pulso de microondas de 12\,GHz de ancho de banda (de 1\,$\mu$s de duración) es generado por un generador de formas de onda arbitrarias (AWG), convertido a frecuencias en el rango de 6.8--18.5\,GHz y amplificado hasta varios cientos de vatios (1), antes de ingresar a la cámara del haz molecular (2). 
+    La decadencia de inducción libre coherente (FID) de las moléculas excitadas, que contiene la información espectral, es posteriormente registrada y analizada mediante un osciloscopio digital de alta velocidad. 
+    Reproducido con permiso de \cite{brown2008}.}
+    \label{fig:chirped_spectrometer}
+\end{figure}
+
+
+\textbf{Ejemplo:}
+\begin{itemize}
+    \item Sistemas \textit{Chirped Pulse FTMW}, que usan pulsos amplios en frecuencia (1–20~GHz) para cubrir grandes regiones espectrales.
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\textwidth]{img/cpftmw.png}
+        \caption{Chiperd Pulse FTMW}
+    \end{figure}
+    \item Equipos \textit{Lamb-dip microwave} que permiten mediciones hiperfinas de alta resolución.
+\end{itemize}
+
+\vspace{1em}
+En conjunto, estos equipos permiten cubrir desde la caracterización básica de moléculas simples hasta el estudio de sistemas astrofísicos y materiales avanzados, consolidando a la espectroscopía de microondas como una herramienta esencial en la física moderna.

@@ -1,0 +1,54 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amssymb, amsfonts}
+\usepackage[utf8]{inputenc}    % Soporte para caracteres especiales
+\usepackage{amsfonts}
+%\usepackage[right=3cm, left=2.5cm, top=3cm, bottom=3.5cm]{geometry}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{graphicx}
+\usepackage{float}
+%\usepackage{hyperref}          % Enlaces y referencias
+%\usepackage[style=apa]{biblatex}
+%\usepackage{csquotes}          % Manejo de citas (opcional, útil para biblatex)
+%\addbibresource{references.bib}
+%\usepackage[spanish]{babel}
+
+\usepackage[style=apa, backend=biber]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+\addbibresource{references.bib}
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+\usepackage{setspace}
+
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, decorations.markings, positioning}
+
+
+\title{Título del documento}
+\author{Autor del documento}
+
+\begin{document}
+
+\input{0-port.tex}
+\input{1-abstract.tex}
+\newpage
+\tableofcontents
+\newpage
+\input{2-intro.tex}
+\input{3-theory/mod.tex}
+
+\input{4-analisys/mod.tex}
+
+\input{5-aplications/mod.tex}
+
+\input{6-conclutions.tex}
+
+\input{7-recomendations.tex}
+
+\input{apedix-a.tex}
+\input{apendix-b.tex}
+\printbibliography
+
+\end{document}
