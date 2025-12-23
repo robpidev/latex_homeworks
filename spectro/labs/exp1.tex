@@ -1,0 +1,383 @@
+\section{Determinación de la concentración de glucosa por un método enzimático colorimétrico}
+
+\subsection{Objetivos}
+\begin{enumerate}
+    \item Construir la curva de calibración de glucosa utilizando disoluciones patrón y medir su absorbancia a 505 nm.
+    \item Ajustar los datos a una línea recta mediante regresión lineal para establecer la relación entre absorbancia y concentración de glucosa.
+    \item Determinar la concentración de glucosa en los tubos preparados con las muestras problema (tubos 6 a 11) utilizando la ecuación de la recta de calibración.
+    \item Calcular la concentración de glucosa en las muestras originales (A y B) corrigiendo por el factor de dilución de cada tubo.
+\end{enumerate}
+
+\subsection{Materiales}
+\begin{enumerate}
+  \item Dos muestras problema para la determinación de la concentración de glucosa.
+  \item Disolución patrón de glucosa, concentración $10\,\mathrm{mg/dL}$.
+  \item Disolución salina de NaCl, concentración $0.9\,\mathrm{g/L}$.
+  \item Reactivo cromógeno (R), que contiene:
+    \begin{itemize}
+      \item Glucosa oxidasa (EC~1.1.3.4).
+      \item Peroxidasa (EC~1.11.1.7).
+      \item Fenol.
+      \item 4-aminofenazona (PubChem CID: 6009; InChIKey: RMMXTBMQSGEXHJ-UHFFFAOYSA-N).
+      \item Tampón Tris $92\,\mathrm{mM}$, $\mathrm{pH}=7.4$.
+    \end{itemize}
+  \item Espectrofotómetro ajustable a una longitud de onda de $505\,\mathrm{nm}$.
+  \item Micropipetas de volumen variable P200 y P1000.
+  \item Tubos de ensayo.
+\end{enumerate}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/e2.png}
+    \caption{Materiales del laboratorio virtual.}
+    \label{fig:e1}
+\end{figure}
+
+
+\subsection{Procedimiento}
+\begin{enumerate}
+  \item Encender el espectrofotómetro y dejarlo estabilizar durante unos minutos.
+        Ajustar la longitud de onda a $\lambda = 505\,\mathrm{nm}$.
+
+  \item Rotular doce tubos de ensayo del 0 al 11, correspondientes al blanco,
+        los patrones de glucosa y las muestras problema.
+
+  \item Preparar el blanco (tubo 0) añadiendo $1000\,\mu\mathrm{L}$ de disolución
+        salina de NaCl $0.9\,\mathrm{g/L}$.
+
+  \item Preparar los tubos patrón de glucosa (tubos 1 a 5) pipeteando los volúmenes
+        indicados de disolución patrón de glucosa ($10\,\mathrm{mg/dL}$) y completando
+        hasta un volumen total de $1000\,\mu\mathrm{L}$ con disolución salina.
+
+  \item Preparar los tubos de las muestras problema (tubos 6 a 11) añadiendo los
+        volúmenes correspondientes de las muestras A y B, y completando cada tubo
+        hasta $1000\,\mu\mathrm{L}$ con disolución salina.
+
+  \item Añadir a cada tubo un volumen fijo de reactivo cromógeno (R), asegurando que
+        el mismo volumen se agregue a todos los tubos, incluido el blanco.
+
+  \item Mezclar suavemente el contenido de cada tubo mediante agitación manual o
+        con un vortex, evitando la formación de burbujas.
+
+  \item Incubar las mezclas durante el tiempo indicado por el método (por ejemplo,
+        $10$--$15$ minutos) a temperatura ambiente para permitir el desarrollo del
+        color.
+
+  \item Ajustar el espectrofotómetro con el blanco (tubo 0) a absorbancia cero.
+
+  \item Medir la absorbancia de los tubos patrón (1 a 5) a $\lambda = 505\,\mathrm{nm}$
+        y registrar los valores obtenidos.
+
+  \item Construir la curva de calibración graficando la absorbancia en función de la
+        concentración de glucosa de los patrones y obtener la recta de aproximación.
+
+  \item Medir la absorbancia de las muestras problema (tubos 6 a 11) a
+        $\lambda = 505\,\mathrm{nm}$.
+
+  \item Calcular la concentración de glucosa en cada tubo de muestra utilizando la
+        ecuación de la recta de calibración.
+
+  \item Corregir la concentración obtenida en cada tubo por el factor de dilución
+        correspondiente para determinar la concentración de glucosa en las muestras
+        originales A y B.
+\end{enumerate}
+
+\subsection{Datos para la calibración}
+\begin{table}[h]
+\centering
+\begin{tabular}{ccc}
+\toprule
+Tubo & Patrón de glucosa ($\mu$L) & Disolución salina ($\mu$L) \\
+\midrule
+0 & 0   & 1000 \\
+1 & 30  & 970  \\
+2 & 90  & 910  \\
+3 & 150 & 850  \\
+4 & 300 & 700  \\
+5 & 500 & 500  \\
+\bottomrule
+\end{tabular}
+\caption{Preparación de los tubos patrón para la curva de calibración de glucosa (tubos 0–5).}
+\end{table}
+
+\subsubsection{Cálculo de la concentración de clucosa}
+
+La concentración del patrón madre de glucosa es:
+
+\[
+C_0 = 10 \, \text{mg/dL}
+\]
+
+El volumen total en cada tubo es constante:
+
+\[
+V_{\text{total}} = 1000 \, \mu\text{L}
+\]
+
+La concentración de glucosa en cada tubo patrón se calcula mediante:
+
+\[
+C_i = C_0 \frac{V_{\text{patrón},i}}{V_{\text{total}}}
+\]
+
+Sustituyendo los valores experimentales:
+
+\[
+C_i = 10 \frac{V_{\text{patrón},i}}{1000} \quad (\text{mg/dL})
+\]
+
+La relación entre la absorbancia y la concentración está dada por la recta de calibración:
+
+\[
+A = a C + b
+\]
+
+donde \(a\) es la pendiente y \(b\) la ordenada al origen.  
+Despejando la concentración:
+
+\[
+C = \frac{A - b}{a}
+\]
+
+\vspace{0.5cm}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{cccc}
+\toprule
+Tubo & Patrón de glucosa ($\mu$L) & Disolución salina ($\mu$L) & Concentración (mg/dL) \\
+\midrule
+0 & 0   & 1000 & 0.00 \\
+1 & 30  & 970  & 0.30 \\
+2 & 90  & 910  & 0.90 \\
+3 & 150 & 850  & 1.50 \\
+4 & 300 & 700  & 3.00 \\
+5 & 500 & 500  & 5.00 \\
+\bottomrule
+\end{tabular}
+\caption{Preparación de los tubos patrón y concentraciones de glucosa utilizadas para la curva de calibración.}
+\end{table}
+
+
+\subsubsection{Resultados de Absorbancia}
+\begin{table}[h]
+\centering
+\begin{tabular}{ccc}
+\toprule
+Tubo & Concentración de glucosa (mg/dL) & Absorbancia (505 nm) \\
+\midrule
+0 & 0.00 & 0.000 \\
+1 & 0.30 & 0.058 \\
+2 & 0.90 & 0.159 \\
+3 & 1.50 & 0.261 \\
+4 & 3.00 & 0.519 \\
+5 & 5.00 & 0.835 \\
+\bottomrule
+\end{tabular}
+\caption{Absorbancia medida a 505 nm en función de la concentración de glucosa para los tubos patrón.}
+\end{table}
+
+
+\subsubsection{Regresión lineal de la curva de calibración}
+
+A partir de los datos experimentales de concentración de glucosa \(C\) y
+absorbancia \(A\), se realiza un ajuste lineal del tipo:
+
+\begin{equation*}
+A = aC + b
+\end{equation*}
+
+El número de puntos experimentales es:
+
+\begin{equation*}
+n = 6
+\end{equation*}
+
+Los valores promedio de las variables son:
+
+\begin{equation*}
+\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i = 1.7833 \, \text{mg/dL}
+\end{equation*}
+
+\begin{equation*}
+\bar{y} = \frac{1}{n}\sum_{i=1}^{n} y_i = 0.3053
+\end{equation*}
+
+Las sumas necesarias para la regresión lineal se definen como:
+
+\begin{equation*}
+S_{xx} = \sum_{i=1}^{n} (x_i - \bar{x})^2 = 18.0683
+\end{equation*}
+
+\begin{equation*}
+S_{yy} = \sum_{i=1}^{n} (y_i - \bar{y})^2
+\end{equation*}
+
+\begin{equation*}
+S_{xy} = \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y}) = 3.0169
+\end{equation*}
+
+La pendiente de la recta de calibración se obtiene mediante:
+
+\begin{equation*}
+a = \frac{S_{xy}}{S_{xx}} = 0.16697
+\end{equation*}
+
+La ordenada al origen está dada por:
+
+\begin{equation*}
+b = \bar{y} - a\bar{x} = 0.00756
+\end{equation*}
+
+Por lo tanto, la ecuación final de la recta de calibración es:
+
+\begin{equation*}
+A = 0.16697\,C + 0.00756
+\end{equation*}
+
+El coeficiente de determinación se calcula como:
+
+\begin{equation*}
+R^2 = \frac{S_{xy}^2}{S_{xx} S_{yy}} = 0.9995
+\end{equation*}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/e12.png}
+    \caption{Regresión lineal de la curva de calibración.}
+\end{figure}
+
+
+
+\subsection{Muestras}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ccc}
+\toprule
+Tubo & Muestra A ($\mu$L) & Disolución salina ($\mu$L) \\
+\midrule
+6 & 80 & 920 \\
+7 & 40 & 960 \\
+8 & 20 & 980 \\
+\bottomrule
+\end{tabular}
+\caption{Preparación de los tubos correspondientes a la muestra A.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ccc}
+\toprule
+Tubo & Muestra B ($\mu$L) & Disolución salina ($\mu$L) \\
+\midrule
+9  & 200 & 800 \\
+10 & 400 & 600 \\
+11 & 700 & 300 \\
+\bottomrule
+\end{tabular}
+\caption{Preparación de los tubos correspondientes a la muestra B.}
+\end{table}
+
+\subsubsection{Cálculo de la concentración de glucosa a partir de la absorbancia}
+La concentración de glucosa en cada tubo correspondiente a las muestras problema se
+obtiene despejando la concentración a partir de la ecuación de la recta:
+
+\begin{equation}
+C_{\text{tubo}} = \frac{A - b}{a}
+\end{equation}
+
+Asi para los datos se tiene
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ccc}
+\toprule
+Tubo & Muestra A ($\mu$L) & Concentración en el tubo (mg/dL) \\
+\midrule
+6 & 80 & 7.76 \\
+7 & 40 & 3.91 \\
+8 & 20 & 1.91 \\
+\bottomrule
+\end{tabular}
+\caption{Concentración de glucosa en los tubos correspondientes a la muestra A.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ccc}
+\toprule
+Tubo & Muestra B ($\mu$L) & Concentración en el tubo (mg/dL) \\
+\midrule
+9  & 200 & 0.06 \\
+10 & 400 & 0.02 \\
+11 & 700 & 0.09 \\
+\bottomrule
+\end{tabular}
+\caption{Concentración de glucosa en los tubos correspondientes a la muestra B.}
+\end{table}
+
+\subsubsection{Cálculo de la concentración de glucosa en las muestras originales}
+
+La concentración de glucosa en la muestra original se obtiene aplicando la ecuación:
+
+\begin{equation}
+\label{eq:conc_muestra}
+C_{\text{muestra}} = C_{\text{tubo}} \frac{V_{\text{total}}}{V_{\text{muestra}}}
+\end{equation}
+
+donde:
+\begin{itemize}
+    \item $C_{\text{tubo}}$ es la concentración de glucosa calculada en el tubo de ensayo a partir de la curva de calibración,
+    \item $V_{\text{total}} = 1000 \, \mu\text{L}$ es el volumen total del tubo,
+    \item $V_{\text{muestra}}$ es el volumen de muestra añadido al tubo.
+\end{itemize}
+
+\subsection{Resultados}
+
+\paragraph{Muestra A (tubos 6--8)}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{cccc}
+\toprule
+Tubo & Muestra A ($\mu$L) & Concentración en el tubo (mg/dL) & Concentración real (mg/dL) \\
+\midrule
+6 & 80 & 7.76 & 97.0 \\
+7 & 40 & 3.91 & 97.8 \\
+8 & 20 & 1.91 & 95.5 \\
+\bottomrule
+\end{tabular}
+\caption{Concentración de glucosa en los tubos y concentración final en la muestra A.}
+\end{table}
+
+Promedio de la muestra A: $\bar{C}_A \approx 96.8 \, \text{mg/dL}$
+
+\paragraph{Muestra B (tubos 9--11)}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{cccc}
+\toprule
+Tubo & Muestra B ($\mu$L) & Concentración en el tubo (mg/dL) & Concentración real (mg/dL) \\
+\midrule
+9  & 200 & 0.063 & 0.315 \\
+10 & 400 & 0.021 & 0.0525 \\
+11 & 700 & 0.093 & 0.133 \\
+\bottomrule
+\end{tabular}
+\caption{Concentración de glucosa en los tubos y concentración final en la muestra B.}
+\end{table}
+
+Promedio de la muestra B: $\bar{C}_B \approx 0.167 \, \text{mg/dL}$
+
+
+\subsection{Conclusiones}
+\begin{enumerate}
+    \item \textbf{Construcción de la curva de calibración:} La curva de calibración permitió correlacionar de manera directa la absorbancia medida con la concentración de glucosa en los tubos patrón.  
+    \item \textbf{Ajuste lineal:} El ajuste de los datos a una línea recta fue adecuado, obteniendo la ecuación $A = 0.16697\,C + 0.00756$, que sirve para estimar concentraciones en tubos con muestras problema.
+    \item \textbf{Determinación en los tubos problema:} Las concentraciones calculadas en los tubos 6 a 11 muestran que las muestras se encuentran dentro del rango medible por la curva de calibración, permitiendo su cuantificación precisa.
+    \item \textbf{Concentración en las muestras originales:} Aplicando el factor de dilución, se obtuvieron las concentraciones finales de glucosa: $\bar{C}_A \approx 96.8 \, \text{mg/dL}$ y $\bar{C}_B \approx 0.167 \, \text{mg/dL}$, mostrando que la muestra A es significativamente más concentrada que la B.
+\end{enumerate}

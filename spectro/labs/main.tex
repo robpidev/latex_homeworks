@@ -8,52 +8,46 @@
 \geometry{margin=2.5cm}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{booktabs}
 %\usepackage{hyperref}          % Enlaces y referencias
 %\usepackage[style=apa]{biblatex}
 %\usepackage{csquotes}          % Manejo de citas (opcional, útil para biblatex)
 %\addbibresource{references.bib}
 %\usepackage[spanish]{babel}
 
-
-\usepackage[
-  style=apa,
-  backend=biber,
-  language=spanish
-]{biblatex}
+\usepackage[style=apa, backend=biber]{biblatex}
 \DeclareLanguageMapping{spanish}{spanish-apa}
 \addbibresource{references.bib}
 \usepackage[T1]{fontenc}
 \usepackage{csquotes}
 \usepackage{setspace}
-\usepackage[
-  hidelinks
-]{hyperref}
-
 
 
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta, decorations.markings, positioning}
 
 
-\title{Título del documento}
-\author{Autor del documento}
-
 \begin{document}
-
 \input{0-port.tex}
-\input{1-abstract.tex}
-\newpage
 \tableofcontents
+\setcounter{enumi}{0}
 \newpage
-\input{2-intro.tex}
-\input{3-theory/mod.tex}
+\input{teo.tex}
+\newpage
+\input{exp1.tex}
+\newpage
+\input{exp2.tex}
+\newpage
+\input{exp3.tex}
+\newpage
 
-% \input{4-analisys/mod.tex}
+\section{Referencias}
 
-\input{5-aplications/mod.tex}
+American Diabetes Association. (2024). Standards of care in diabetes—2024. Diabetes Care, 47(Suppl. 1), S1-S350.
 
-\input{6-conclutions.tex}
+Delanaye, P., Glassock, R. J., and Pottel, H. (2022). An age-calibrated definition of chronic kidney disease: Rationale and benefits. Clinical Biochemistry, 101, 1-6.
 
-\printbibliography
+Murray, R. K., Bender, D. A., Botham, K. M., Kennelly, P. J., Rodwell, V. W., and Weil, P. A. (2021). Harper's Illustrated Biochemistry (32nd ed.). McGraw-Hill.
 
+Sapan, C. V., Lundblad, R. L., and Price, N. C. (2020). Colorimetric protein assay techniques. Biotechnology and Applied Biochemistry, 67(1), 1-9.
 \end{document}
