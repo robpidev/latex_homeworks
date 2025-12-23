@@ -1,0 +1,321 @@
+\section{Determinación de la concentración de proteínas por un método colorimétrico: método de Lowry}
+
+\subsection{Objetivos}
+
+\begin{enumerate}
+    \item Determinar la concentración de proteínas en muestras problema mediante el método colorimétrico de Lowry, utilizando seroalbúmina bovina como proteína patrón.
+    \item Establecer una curva de calibración a partir de soluciones patrón de albúmina y emplearla para calcular la concentración de proteínas en las muestras de partida A y B a partir de sus valores de absorbancia.
+\end{enumerate}
+
+\subsection{Materiales}
+
+\begin{enumerate}
+    \item Dos muestras problema en las que se desea determinar la concentración de proteínas.
+    \item Disolución patrón de seroalbúmina bovina (BSA), concentración 2 g/L.
+    \item Reactivo C, preparado mezclando los reactivos A, B1 y B2 en proporción 100 : 1 : 1 (v/v).
+    \item Reactivo A: carbonato sódico (Na$_2$CO$_3$) al 2\% en hidróxido sódico (NaOH) 0.1 M.
+    \item Reactivo B1: sulfato de cobre pentahidratado (CuSO$_4\cdot$5H$_2$O) al 1\%.
+    \item Reactivo B2: tartrato sódico-potásico al 2\%.
+    \item Reactivo de Folin--Ciocalteau diluido 1/4 en agua.
+\end{enumerate}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/e3.png}
+    \caption{Materiales del laboratorio virtual.}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/e32.png}
+    \caption{Compuestos reales.}
+\end{figure}
+
+\subsection{Procedimiento}
+
+\begin{enumerate}
+    \item Se conecta el espectrofotómetro y se ajusta la longitud de onda a 580 nm.
+    \item Empleando micropipetas P200 y P1000, se preparan los tubos de ensayo con un volumen total de 400~$\mu$L según la Tabla~\ref{tab:lowry_preparacion}.
+    \item A cada tubo se añaden 2 mL del reactivo C y se deja reaccionar durante 10 minutos virtuales.
+    \item Posteriormente, se añaden 200~$\mu$L del reactivo de Folin--Ciocalteau diluido a cada tubo y se espera 15 minutos virtuales para el desarrollo del color.
+    \item El contenido del tubo 0 se transfiere a la cubeta del espectrofotómetro y se ajusta el blanco pulsando ``A = 0''.
+    \item Se mide la absorbancia de los tubos restantes (1 a 9) y se registran los valores obtenidos.
+\end{enumerate}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c c c c}
+\hline
+Tubo & BSA ($\mu$L) & Muestra ($\mu$L) & Agua ($\mu$L) \\
+\hline
+0 & 0   & -- & 400 \\
+1 & 30  & -- & 370 \\
+2 & 60  & -- & 340 \\
+3 & 90  & -- & 310 \\
+4 & 120 & -- & 280 \\
+5 & 150 & -- & 250 \\
+6 & --  & 120 (A) & 280 \\
+7 & --  & 200 (A) & 200 \\
+8 & --  & 120 (B) & 280 \\
+9 & --  & 200 (B) & 200 \\
+\hline
+\end{tabular}
+\caption{Preparación de tubos para la determinación de proteínas por el método de Lowry.}
+\label{tab:lowry_preparacion}
+\end{table}
+
+\subsection{Datos experimentales}
+
+Las absorbancias se miden a una longitud de onda de $\lambda = 580$ nm. Los valores obtenidos se muestran en la Tabla~\ref{tab:lowry_abs}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c c}
+\hline
+Tubo & Absorbancia (580 nm) \\
+\hline
+1 & 0.233 \\
+2 & 0.445 \\
+3 & 0.612 \\
+4 & 0.798 \\
+5 & 0.850 \\
+6 & 0.306 \\
+7 & 0.458 \\
+8 & 0.760 \\
+9 & 0.436 \\
+\hline
+\end{tabular}
+\caption{Valores de absorbancia obtenidos para el método de Lowry.}
+\label{tab:lowry_abs}
+\end{table}
+
+\subsubsection{Curva de calibración con proteína patrón}
+
+La concentración de proteína en cada tubo patrón se calcula a partir de la disolución de BSA de 2 g/L y el volumen total de 400~$\mu$L.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c c c}
+\hline
+Tubo & Concentración de proteína (g/L) & Absorbancia (580 nm) \\
+\hline
+0 & 0.00 & 0.000 \\
+1 & 0.15 & 0.233 \\
+2 & 0.30 & 0.445 \\
+3 & 0.45 & 0.612 \\
+4 & 0.60 & 0.798 \\
+5 & 0.75 & 0.850 \\
+\hline
+\end{tabular}
+\caption{Datos de calibración para el método de Lowry empleando albúmina bovina como patrón.}
+\label{tab:lowry_calibracion}
+\end{table}
+
+Para la curva de calibración del método de Lowry se ajusta una recta de la forma:
+
+\begin{equation*}
+A = m\,c + b
+\end{equation*}
+
+donde $A$ es la absorbancia y $c$ la concentración de proteína (g/L).  
+El ajuste se realiza mediante el método de mínimos cuadrados, definiendo las siguientes magnitudes:
+
+\begin{equation*}
+\bar{c} = \frac{1}{n}\sum c_i
+\qquad
+\bar{A} = \frac{1}{n}\sum A_i
+\end{equation*}
+
+\begin{equation*}
+S_{xx} = \sum (c_i - \bar{c})^2
+\qquad
+S_{xy} = \sum (c_i - \bar{c})(A_i - \bar{A})
+\end{equation*}
+
+A partir de los datos de calibración (tubos 1 a 5):
+
+\[
+\begin{array}{c c}
+c \,(\text{g/L}) & A \\
+0.15 & 0.233 \\
+0.30 & 0.445 \\
+0.45 & 0.612 \\
+0.60 & 0.798 \\
+0.75 & 0.850 \\
+\end{array}
+\]
+
+con $n = 5$, se obtienen los valores medios:
+
+\begin{equation*}
+\bar{c} = 0.45
+\qquad
+\bar{A} = 0.588
+\end{equation*}
+
+A continuación, se calculan las sumas:
+
+\begin{equation*}
+S_{xx} = (0.15-0.45)^2 + (0.30-0.45)^2 + (0.45-0.45)^2 + (0.60-0.45)^2 + (0.75-0.45)^2
+= 0.225
+\end{equation*}
+
+\begin{gather*}
+S_{xy} =
+(0.15-0.45)(0.233-0.588) +
+(0.30-0.45)(0.445-0.588) +\\
+(0.45-0.45)(0.612-0.588) +\\
+(0.60-0.45)(0.798-0.588) +
+(0.75-0.45)(0.850-0.588)
+= 0.236
+\end{gather*}
+
+La pendiente de la recta se calcula como:
+
+\begin{equation*}
+m = \frac{S_{xy}}{S_{xx}} = \frac{0.236}{0.225} = 1.05
+\end{equation*}
+
+La ordenada al origen se obtiene mediante:
+
+\begin{equation*}
+b = \bar{A} - m\,\bar{c} = 0.588 - (1.05)(0.45) = 0.12
+\end{equation*}
+
+Por lo tanto, la ecuación de la recta de calibración es:
+
+\begin{equation*}
+A = 1.05\,c + 0.12
+\end{equation*}
+
+Para $R^2$ Se tiene:
+
+\begin{equation*}
+S_{yy} = \sum (A_i - \bar{A})^2
+\end{equation*}
+
+Usando $\bar{A} = 0.588$, se obtiene:
+
+\begin{equation*}
+S_{yy} =
+(0.233-0.588)^2 +
+(0.445-0.588)^2 +
+(0.612-0.588)^2 +
+(0.798-0.588)^2 +
+(0.850-0.588)^2
+= 0.259
+\end{equation*}
+
+
+\begin{equation*}
+R^2 = \frac{S_{xy}^2}{S_{xx}\,S_{yy}}
+\end{equation*}
+
+Sustituyendo los valores obtenidos:
+
+\begin{equation*}
+R^2 = \frac{(0.236)^2}{(0.225)(0.259)} = 0.96
+\end{equation*}
+
+Por lo que el es un buen ajuste.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/e33.png}
+    \caption{Curva de calibración del método de Lowry: absorbancia a 580 nm en función de la concentración de proteína (BSA).}
+    \label{fig:lowry_calibracion}
+\end{figure}
+
+\subsection{Concentración real del patrón y concentración en los tubos de calibración}
+
+La disolución patrón de seroalbúmina bovina (BSA) tiene una concentración real de:
+
+\[
+c_{\text{real}} = 2 \; \text{g/L}
+\]
+
+La concentración de proteína en cada tubo de calibración se calcula considerando la dilución producida al preparar un volumen total de 400~$\mu$L:
+
+\begin{equation*}
+c_{\text{tubo}} = c_{\text{real}} \cdot \frac{V_{\text{patrón}}}{V_{\text{total}}}
+\end{equation*}
+
+donde $V_{\text{total}} = 400~\mu\text{L}$.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c c c c}
+\hline
+Tubo & Volumen de BSA ($\mu$L) & Concentración real (g/L) & Concentración en el tubo (g/L) \\
+\hline
+0 & 0   & 2.00 & 0.00 \\
+1 & 30  & 2.00 & 0.15 \\
+2 & 60  & 2.00 & 0.30 \\
+3 & 90  & 2.00 & 0.45 \\
+4 & 120 & 2.00 & 0.60 \\
+5 & 150 & 2.00 & 0.75 \\
+\hline
+\end{tabular}
+\caption{Concentración real del patrón de BSA y concentración efectiva en los tubos de calibración.}
+\label{tab:calibracion_real_tubo}
+\end{table}
+
+\subsection{Cálculo de la concentración de proteínas en las muestras}
+
+La recta de calibración obtenida mediante mínimos cuadrados es:
+
+\begin{equation*}
+A = 1.058\,c + 0.112
+\end{equation*}
+
+Despejando la concentración de proteína en el tubo:
+
+\begin{equation*}
+c_{\text{tubo}} = \frac{A - 0.112}{1.058}
+\end{equation*}
+
+La concentración real de la muestra se obtiene corrigiendo por el factor de dilución aplicado durante la preparación del tubo:
+
+\begin{equation*}
+c_{\text{real}} = c_{\text{tubo}} \cdot \frac{V_{\text{total}}}{V_{\text{muestra}}}
+\end{equation*}
+
+donde $V_{\text{total}} = 400~\mu$L.
+
+\subsubsection{Muestra A}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c c c c}
+\hline
+Tubo & $V_{\text{muestra}}$ ($\mu$L) & $c_{\text{tubo}}$ (g/L) & $c_{\text{real}}$ (g/L) \\
+\hline
+6 & 120 & 0.184 & 0.613 \\
+7 & 200 & 0.328 & 0.655 \\
+\hline
+\end{tabular}
+\caption{Concentración de proteínas en el tubo y concentración real para la muestra A.}
+\label{tab:muestraA_final}
+\end{table}
+
+\subsubsection{Muestra B}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c c c c}
+\hline
+Tubo & $V_{\text{muestra}}$ ($\mu$L) & $c_{\text{tubo}}$ (g/L) & $c_{\text{real}}$ (g/L) \\
+\hline
+8 & 120 & 0.613 & 2.043 \\
+9 & 200 & 0.307 & 0.613 \\
+\hline
+\end{tabular}
+\caption{Concentración de proteínas en el tubo y concentración real para la muestra B.}
+\label{tab:muestraB_final}
+\end{table}
+
+\subsection{Conclusiones}
+\begin{enumerate}
+    \item Determinar la concentración de proteínas en muestras problema mediante el método colorimétrico de Lowry, utilizando seroalbúmina bovina como proteína patrón.
+    \item Establecer una curva de calibración a partir de soluciones patrón de albúmina y emplearla para calcular la concentración de proteínas en las muestras de partida A y B a partir de sus valores de absorbancia.
+\end{enumerate}

@@ -1,0 +1,191 @@
+\section{Determinación de la concentración de glucosa por un método enzimático colorimétrico}
+
+\subsection{Objetivos}
+
+\begin{enumerate}
+    \item Determinar la concentración de glucosa en muestras de suero sanguíneo mediante un método espectrofotométrico basado en la reacción enzimática glucosa oxidasa--peroxidasa y la ley de Lambert--Beer.
+    \item Calcular la glucemia de los sueros problema (A y B) a partir de la comparación de sus absorbancias con un control patrón de glucosa, considerando las diluciones aplicadas durante el procedimiento experimental.
+\end{enumerate}
+
+
+\subsection{Materiales}
+
+\begin{enumerate}
+    \item Dos muestras de suero en las que se quiere determinar la concentración de glucosa.
+    \item Disolución control de glucosa (o patrón), con concentración verificada de 100 mg/dL.
+    \item Disolución salina: NaCl 0.9 g/L.
+    \item Reactivo cromógeno (R), que contiene:
+    \begin{enumerate}
+        \item Glucosa oxidasa (EC 1.1.3.4).
+        \item Peroxidasa (EC 1.11.1.7).
+        \item Fenol.
+        \item 4-aminofenazona (PubChem CID: 6009; InChIKey: RMMXTBMQSGEXHJ-UHFFFAOYSA-N).
+        \item Tampón Tris 92 mM, pH = 7.4.
+    \end{enumerate}
+\end{enumerate}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/e2.png}
+    \caption{Materiales del laboratorio virtual.}
+    \label{fig:e1}
+\end{figure}
+
+\subsection{Procedimiento}
+
+\begin{enumerate}
+    \item Conectar el espectrofotómetro y ajustar la longitud de onda a 505 nm.
+
+    \item Tener en cuenta las siguientes notas importantes:
+    \begin{enumerate}
+        \item El control de glucosa se analiza por triplicado (tubos 1, 2 y 3).
+        \item Las diluciones del suero no se realizan manualmente en el laboratorio virtual; sin embargo, se aplican internamente. Aunque la pipeta tome la muestra del frasco sin diluir, el contenido de los tubos 7 y 10 se considera diluido 1/2, y el de los tubos 8 y 11 diluido 1/5.
+    \end{enumerate}
+
+    \item Empleando las micropipetas de volumen variable P200 y P1000, preparar en tubos de ensayo las mezclas indicadas.
+
+    \item Una vez preparados todos los tubos, añadir 2 mL del reactivo cromógeno a cada uno y esperar 15 minutos virtuales para el desarrollo de la reacción.
+
+    \item Transferir con una pipeta Pasteur el contenido del tubo n.º 0 a la cubeta del espectrofotómetro, introducir la cubeta en el equipo y pulsar el botón ``A = 0'' para ajustar el blanco. Retirar la cubeta y vaciarla.
+
+    \item Transferir el contenido del tubo n.º 1 a la cubeta, introducirla en el espectrofotómetro y anotar el valor de absorbancia en el cuaderno de laboratorio. Si se desea, pulsar el botón correspondiente para registrar la lectura en la pantalla inferior.
+
+    \item Repetir el procedimiento descrito en el paso anterior para el resto de los tubos.
+
+    \item Construir una tabla con todas las medidas de absorbancia obtenidas. Opcionalmente, utilizar el botón correspondiente para copiar el listado de valores.
+\end{enumerate}
+
+\subsection{calibración}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c c c}
+\hline
+Tubo & Concentración de glucosa (mg/dL) & Absorbancia (505 nm) \\
+\hline
+1 & 100 & 0.322 \\
+2 & 100 & 0.321 \\
+3 & 100 & 0.321 \\
+\hline
+\end{tabular}
+\caption{Tabla de calibración espectrofotométrica (tubos 0 a 3) con valores de absorbancia medidos a 505 nm.}
+\label{tab:calibracion_abs}
+\end{table}
+
+Con estos datos la media de la absorbancia es:
+
+\begin{equation*}
+\bar{A}_{\text{control}} = \frac{0.322 + 0.321 + 0.321}{3} = \frac{0.964}{3} = 0.321
+\end{equation*}
+
+La concentración de glucosa se calcula por comparación con el control patrón, según:
+
+\begin{equation*}
+c = \frac{A}{\bar{A}_{\text{control}}} \times c_{\text{control}}
+\end{equation*}
+
+donde $\bar{A}_{\text{control}} = 0.321$ y $c_{\text{control}} = 100$ mg/dL.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c c c}
+\hline
+Tubo & Absorbancia (505 nm) & Concentración de glucosa (mg/dL) \\
+\hline
+1 & 0.322 & 100.3 \\
+2 & 0.321 & 100.0 \\
+3 & 0.321 & 100.0 \\
+\hline
+\end{tabular}
+\caption{Concentración de glucosa calculada para los tubos control (1 a 3).}
+\label{tab:control_conc}
+\end{table}
+
+\subsection{Cálculo de la concentración de glucosa en las muestras problema}
+
+La concentración de glucosa se calcula empleando la ley de Lambert--Beer:
+
+\begin{equation*}
+A = \varepsilon \cdot L \cdot c
+\end{equation*}
+
+donde $A$ es la absorbancia, $\varepsilon$ es el coeficiente de extinción molar, $L$ es la longitud del camino óptico y $c$ es la concentración. Dado que $\varepsilon$ y $L$ se mantienen constantes para todas las mediciones, la concentración de glucosa se determina por comparación con el control patrón:
+
+\begin{equation*}
+c = \frac{A}{\bar{A}_{\text{control}}} \cdot c_{\text{control}}
+\end{equation*}
+
+donde $\bar{A}_{\text{control}} = 0.321$ y $c_{\text{control}} = 100$ mg/dL.  
+En todos los casos se emplea un volumen de muestra de 20~$\mu$L, al que se añaden 2~mL de reactivo cromógeno.
+
+\subsubsection{Suero A}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c c c c}
+\hline
+Tubo & Volumen de muestra ($\mu$L) & Absorbancia (505 nm) & Concentración de glucosa (mg/dL) \\
+\hline
+6 & 20 & 0.488 & 152.0 \\
+7 & 20 & 0.249 & 77.6 \\
+8 & 20 & 0.085 & 26.5 \\
+\hline
+\end{tabular}
+\caption{Volumen empleado, absorbancias medidas y concentraciones de glucosa calculadas para el suero A.}
+\label{tab:sueroA}
+\end{table}
+
+La concentración del suero de partida se calcula como:
+
+\begin{equation*}
+c_{\text{A}} =
+\frac{
+152.0
++ (77.6 \times 2)
++ (26.5 \times 5)
+}{3}
+=
+\frac{152.0 + 155.2 + 132.5}{3}
+=
+146.6 \ \text{mg/dL}
+\end{equation*}
+
+
+\subsubsection{Suero B}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c c c c}
+\hline
+Tubo & Volumen de muestra ($\mu$L) & Absorbancia (505 nm) & Concentración de glucosa (mg/dL) \\
+\hline
+9  & 20 & 0.480 & 149.5 \\
+10 & 20 & 0.231 & 71.9 \\
+11 & 20 & 0.085 & 26.5 \\
+\hline
+\end{tabular}
+\caption{Volumen empleado, absorbancias medidas y concentraciones de glucosa calculadas para el suero B.}
+\label{tab:sueroB}
+\end{table}
+
+La concentración del suero de partida se calcula como:
+
+\begin{equation*}
+c_{\text{B}} =
+\frac{
+149.5
++ (71.9 \times 2)
++ (26.5 \times 5)
+}{3}
+=
+\frac{149.5 + 143.8 + 132.5}{3}
+=
+141.9 \ \text{mg/dL}
+\end{equation*}
+
+\subsection{Conclusiones}
+
+\begin{itemize}
+    \item Se cumplió el objetivo de determinar la concentración de glucosa en muestras de suero sanguíneo mediante un método espectrofotométrico basado en la reacción enzimática glucosa oxidasa--peroxidasa y la aplicación de la ley de Lambert--Beer.
+    \item Se alcanzó el objetivo de calcular la glucemia de los sueros problema A y B a partir de la comparación de sus absorbancias con un control patrón de glucosa, teniendo en cuenta las diluciones aplicadas durante el procedimiento experimental.
+\end{itemize}
